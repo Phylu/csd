@@ -22,7 +22,7 @@ $( document ).ready(function() {
     attackTypes = ['Phishing', 'Information leakage', 'Injection attacks' ,'Malicious code',
         'Ransomware/Cryptoware', 'Denial of service', 'Botnets', 'Cyber espionage',
         'Data breaches', 'Hacking/Cracking', 'Overige', 'Anders', 'Niet van toepassing',
-        'Spam', 'Illegal content']
+        'Spam', 'Illegal content'];
 
     var monthLabels = [];
     var attacksTotal = [];
@@ -31,12 +31,6 @@ $( document ).ready(function() {
     for(attack of attackTypes) {
         attacksNumbers[attack] = [];
     }
-
-    var attacksPhishing = [];
-    var attacksInformationLeakage = [];
-    var attacksInjectionAttacks = [];
-
-    //console.log(attacksNumbers);
 
     for (obj of data) {
         monthLabels.push(obj['month']);
@@ -47,8 +41,6 @@ $( document ).ready(function() {
         }
 
     }
-
-    console.log(monthLabels);
 
 
     /* Configurations */
