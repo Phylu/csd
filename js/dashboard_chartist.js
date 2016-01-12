@@ -36,10 +36,9 @@ $( document ).ready(function() {
     var attacksInformationLeakage = [];
     var attacksInjectionAttacks = [];
 
-    console.log(attacksNumbers);
+    //console.log(attacksNumbers);
 
     for (obj of data) {
-        console.log(obj);
         monthLabels.push(obj['month']);
         attacksTotal.push(obj['total']);
         attacksPhishing.push(obj['Phishing']);
@@ -104,6 +103,33 @@ $( document ).ready(function() {
     }, configBig);
     charts.push(chartIncidents);
 
+    var attackCounter = 1
+
+    for (attack of attackTypes) {
+        attackDescriptor = attack.replace(/\s/g, "").replace(/\//g, "");
+
+        var chartClass, chartConfig;
+        if (attackCounter == attackTypes.length) {
+            chartClass = "mini-last";
+            chartConfig = configMiniLast;
+        } else {
+            chartClass = "mini";
+            chartConfig = configMini;
+        }
+
+        $("#charts-incidents-type").append("<div class=\"col-lg-2 vcenter\">" + attack.replace(/\//g, "/ ") + "</div><!--\n" +
+            "--><div class=\"col-lg-10 vcenter ct-chart ct-golden-section autoscaleaxis " + chartClass + "\" id=\"chart-" +
+            attackDescriptor + "\"></div>");
+        chart = new Chartist.Line('#chart-' + attackDescriptor, {
+            labels: monthLabels,
+            series: [attacksNumbers[attack]],
+        }, chartConfig);
+        charts.push(chart);
+
+        attackCounter++;
+    }
+
+    /*
     var chartPhishing = new Chartist.Line('#chart-phishing', {
         labels: monthLabels,
         series: [attacksNumbers['Phishing']],
@@ -127,6 +153,7 @@ $( document ).ready(function() {
         series: [attacksNumbers['Malicious code']],
     }, configMini);
     charts.push(chartMaliciousCode);
+    */
 
     // Remove Grid from all charts
     for(chart of charts) {
