@@ -25,3 +25,19 @@
     vertical-align: middle;
     float: none;
 }
+
+.indicator {
+    padding-left: 0px;
+}
+
+.rotate-45-left {
+    display: inline-block;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.rotate-45-right {
+    display: inline-block;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

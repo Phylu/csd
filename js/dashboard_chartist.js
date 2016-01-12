@@ -41,10 +41,6 @@ $( document ).ready(function() {
     for (obj of data) {
         monthLabels.push(obj['month']);
         attacksTotal.push(obj['total']);
-        attacksPhishing.push(obj['Phishing']);
-        attacksInformationLeakage.push(obj['Information leakage']);
-
-        attacksInjectionAttacks.push(obj['Injection attacks']);
 
         for(attackType of attackTypes) {
             attacksNumbers[attackType].push(obj[attackType]);
@@ -109,6 +105,7 @@ $( document ).ready(function() {
         attackDescriptor = attack.replace(/\s/g, "").replace(/\//g, "");
 
         var chartClass, chartConfig;
+        // Last Chart should have the months depicted on the X-axis
         if (attackCounter == attackTypes.length) {
             chartClass = "mini-last";
             chartConfig = configMiniLast;
@@ -117,43 +114,21 @@ $( document ).ready(function() {
             chartConfig = configMini;
         }
 
-        $("#charts-incidents-type").append("<div class=\"col-lg-2 vcenter\">" + attack.replace(/\//g, "/ ") + "</div><!--\n" +
-            "--><div class=\"col-lg-10 vcenter ct-chart ct-golden-section autoscaleaxis " + chartClass + "\" id=\"chart-" +
-            attackDescriptor + "\"></div>");
+        // Add the chart DIV element to the dom
+        $("#charts-incidents-type").append("<div class=\"col-lg-2 vcenter\">" + attack.replace(/\//g, "/ ") +
+            "</div><!--\n" + "--><div class=\"col-lg-9 vcenter ct-chart ct-golden-section autoscaleaxis " +
+            chartClass + "\" id=\"chart-" + attackDescriptor + "\"></div><div class=\"col-lg-1 vcenter indicator\">" +
+            "<i class=\"fa fa-arrow-up fa-lg\"></i></div>");
+        // Create the new chart
         chart = new Chartist.Line('#chart-' + attackDescriptor, {
             labels: monthLabels,
             series: [attacksNumbers[attack]],
         }, chartConfig);
+        // Add it to the list of charts
         charts.push(chart);
 
         attackCounter++;
     }
-
-    /*
-    var chartPhishing = new Chartist.Line('#chart-phishing', {
-        labels: monthLabels,
-        series: [attacksNumbers['Phishing']],
-    }, configMini);
-    charts.push(chartPhishing);
-
-    var chartInformationLeakage = new Chartist.Line('#chart-information-leakage', {
-        labels: monthLabels,
-        series: [attacksNumbers['Information leakage']],
-    }, configMini);
-    charts.push(chartInformationLeakage);
-
-    var chartInjectionAttacks = new Chartist.Line('#chart-injection-attacks', {
-        labels: monthLabels,
-        series: [attacksNumbers['Injection attacks']],
-    }, configMini);
-    charts.push(chartInjectionAttacks)
-
-    var chartMaliciousCode = new Chartist.Line('#chart-malicious-code', {
-        labels: monthLabels,
-        series: [attacksNumbers['Malicious code']],
-    }, configMini);
-    charts.push(chartMaliciousCode);
-    */
 
     // Remove Grid from all charts
     for(chart of charts) {
