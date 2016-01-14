@@ -14,6 +14,15 @@ $( document ).ready(function() {
 
     /* Prepare Data */
 
+    if (typeof getData == "undefined") {
+        function getData() {
+            return 'month,total,Phishing,Information leakage\n' +
+                'Jan 2016,4,1,3\n' +
+                'Feb 2016,4,1,3\n' +
+                'Mar 2016,12,8,4\n'
+        }
+    }
+
     var csv = getData();
     var data = $.csv.toObjects(csv);
 
