@@ -14,6 +14,7 @@ $( document ).ready(function() {
 
     /* Prepare Data */
 
+    // Create Dummy Data if datasource is not available
     if (typeof getData == "undefined") {
         function getData() {
             return 'month,total,Phishing,Information leakage\n' +

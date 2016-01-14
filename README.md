@@ -4,9 +4,9 @@ Cyber Security Dashboard for my Master's Thesis at TUM
 
 ## Data Input
 
-Beware that you will need to get your data from somewhere.
+Beware that you will need to get your data from somewhere if you want to have a useful dashboard.
 
-Currently the data is provided by an function that looks like this:
+The data is provided by an function that looks like this:
 
 ```javascript
 function getData() {
@@ -15,3 +15,5 @@ function getData() {
     'Feb 2016,3,3,0\n';
 }
 ```
+
+If there is no data source available, dummy data is used instead.
