@@ -83,3 +83,12 @@ if (typeof getData == "undefined") {
             'Mar 2016,12,8,4\n'
     }
 }
+
+if (typeof getSectorData == "undefined") {
+    getSectorData = function() {
+        return 'month,Public,Private,International\n' +
+            'Jan 2016,30,60,80\n' +
+            'Feb 2016,90,60,80\n' +
+            'Mar 2016,80,80,80\n';
+    }
+}
