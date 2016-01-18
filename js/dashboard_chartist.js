@@ -10,13 +10,14 @@ $( document ).ready(function() {
         if(data.type === 'grid' && data.index !== 0) {
             data.element.remove();
         }
-    }
+    };
+    
 
     /* Prepare Data */
 
     // Create Dummy Data if datasource is not available
     if (typeof getData == "undefined") {
-        function getData() {
+        getData = function() {
             return 'month,total,Phishing,Information leakage\n' +
                 'Jan 2016,3,1,2\n' +
                 'Feb 2016,4,1,3\n' +
