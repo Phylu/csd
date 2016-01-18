@@ -17,9 +17,12 @@
     <script src="https://cdn.jsdelivr.net/jstat/1.5.2/jstat.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.8.0/is.min.js"></script>
 
     <!-- Build up the Dashboard -->
-    <script type="text/javascript" src="js/dashboard_chartist.js"></script>
+    <script type="text/javascript" src="js/chartist_config.js"></script>
+    <script type="text/javascript" src="js/chartist_helpers.js"></script>
+    <script type="text/javascript" src="js/chartist_dashboard.js"></script>
 
     <!-- Provides getData function. Not included in repo due to sensitivity of dat -->
     <script type="text/javascript" src="/run/media/janosch/UsbStorage/data.js"></script>
@@ -38,7 +41,12 @@
 
     <h1>Cyber Security Dashboard</h1>
 
-    <div class="row">
+    <div class="col-lg-12" id="not-supported">
+        <h2>Browser not supported</h2>
+        <div>Please use a recent version of Firefox to show the dashboard.</div>
+    </div>
+
+    <div class="row" id="dashboard" style="display: none;">
 
 
         <div class="col-lg-4">
@@ -47,9 +55,15 @@
         </div>
 
         <div class="col-lg-6">
-            <h2>Reported Incidents</h2>
+            <h2 id="heading-incidents">Reported Incidents (<span id="trend-indicator-incidents"></span>)</h2>
             <div class="ct-chart ct-golden-section autoscaleaxis" id="chart-incidents"></div>
         </div>
+
+        <div class="col-lg-6">
+            <h2>Incidents by Sector</h2>
+            <div class="ct-chart autoscaleaxis" id="chart-sector-incidents"></div>
+        </div>
+
     </div>
 
 

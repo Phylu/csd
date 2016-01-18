@@ -1,32 +1,19 @@
 $( document ).ready(function() {
 
-    /* Helper Functions */
-
-    /**
-     * Remove the grid from a chart
-     * @param data
-     */
-    var removeGrid = function(data) {
-        if(data.type === 'grid' && data.index !== 0) {
-            data.element.remove();
-        }
-    };
-
+    if (is.firefox()) {
+        $("#not-supported").hide();
+        $("#dashboard").show();
+    }
 
     /* Prepare Data */
 
-    // Create Dummy Data if datasource is not available
-    if (typeof getData == "undefined") {
-        getData = function() {
-            return 'month,total,Phishing,Information leakage\n' +
-                'Jan 2016,3,1,2\n' +
-                'Feb 2016,4,1,3\n' +
-                'Mar 2016,12,8,4\n'
-        }
-    }
-
     var csv = getData();
     var data = $.csv.toObjects(csv);
+
+    csv = getSectorData();
+    var sectorData = $.csv.toObjects(csv);
+
+    console.log(sectorData);
 
     // attackTypes in the data
     var attackTypesOriginal = ['Phishing', 'Information leakage', 'Injection attacks' ,'Malicious code',
@@ -64,48 +51,22 @@ $( document ).ready(function() {
         var otherValue = parseInt(obj[others[0]]) + parseInt(obj[others[1]]) + parseInt(obj[others[2]]);
         attacksNumbers[other].push(otherValue);
 
-
-
     }
 
+    var sectorLabels = ['Public', 'Private', 'International'];
+    var sectorNumbers = [];
 
-    /* Configurations */
+    for (var sector in sectorLabels) {
+        sectorNumbers[sector] = 0;
+    }
 
-    var configBig = {
-        lineSmooth: false,
-        axisY: {
-            type: Chartist.AutoScaleAxis,
-            low: 0,
-            high: 100,
-            onlyInteger: true
+    for (var obj of sectorData) {
+        for (var sector in sectorLabels) {
+            sectorNumbers[sector] += parseInt(obj[sectorLabels[sector]]);
         }
-    };
+    }
 
-    var configMini = {
-        lineSmooth: false,
-        axisY: {
-            type: Chartist.AutoScaleAxis,
-            low: 0,
-            high: 30,
-            onlyInteger: true,
-            showGrid: false,
-        },
-        axisX: {
-            showLabel: false,
-            offset: 0,
-        }
-    };
-
-    var configMiniLast = {
-        lineSmooth: false,
-        axisY: {
-            type: Chartist.AutoScaleAxis,
-            low: 0,
-            high: 30,
-            onlyInteger: true
-        },
-    };
-
+    console.log(sectorNumbers);
 
     /* Create Charts */
 
@@ -116,6 +77,11 @@ $( document ).ready(function() {
         series: [attacksTotal],
     }, configBig);
     charts.push(chartIncidents);
+
+    [lastMonth, mean, sd] = getStatistics(attacksTotal.slice().map(Number));
+    var trendIndicator = getTrendIndicator(lastMonth, mean, sd);
+
+    $("#trend-indicator-incidents").html(trendIndicator);
 
     var attackCounter = 1
 
@@ -135,26 +101,9 @@ $( document ).ready(function() {
         // Convert array to contain numbers
         var currAttackNumbers = attacksNumbers[attack].slice().map(Number);
 
-        // Remove last month from array
-        var lastMonth = currAttackNumbers.pop();
+        [lastMonth, mean, sd] = getStatistics(currAttackNumbers);
 
-        // Calculate Mean and Standard Deviation
-        var mean = jStat.mean(currAttackNumbers);
-        var sd = jStat.stdev(currAttackNumbers, true);
-
-        // Calculate correct trend inicator
-        var trendIndicator = $("<i>").addClass("fa fa-lg");
-        if (lastMonth >= mean + (3 * sd)) {
-            trendIndicator.addClass("fa-arrow-up");
-        } else if (lastMonth >= mean + sd) {
-            trendIndicator.addClass("fa-arrow-up rotate-45-right");
-        } else if (lastMonth <= mean - (3 * sd)) {
-            trendIndicator.addClass("fa-arrow-down");
-        } else if (lastMonth <= mean - sd) {
-            trendIndicator.addClass("fa-arrow-down rotate-45-left");
-        } else {
-            trendIndicator.addClass("fa-arrow-right");
-        }
+        var trendIndicator = getTrendIndicator(lastMonth, mean, sd);
 
         // Create DIVs
         var labelDiv = $("<div>").addClass("col-lg-2 vcenter").html(attack.replace(/\//g, "/ "));
@@ -168,7 +117,7 @@ $( document ).ready(function() {
         $("#charts-incidents-type").append(trendDiv);
 
         // Create the new chart
-        chart = new Chartist.Line('#' + chartDivId, {
+        var chart = new Chartist.Line('#' + chartDivId, {
             labels: monthLabels,
             series: [attacksNumbers[attack]],
         }, chartConfig);
@@ -179,6 +128,13 @@ $( document ).ready(function() {
         // Increase the attack counter to make sure classes are set correctly
         attackCounter++;
     }
+
+    var chartSectors = new Chartist.Bar('#chart-sector-incidents', {
+        labels: sectorLabels,
+        series: sectorNumbers
+    }, configBarBig);
+
+    charts.push(chartSectors);
 
     // Remove Grid from all charts
     for(chart of charts) {
