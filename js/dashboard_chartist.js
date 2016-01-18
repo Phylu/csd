@@ -11,7 +11,7 @@ $( document ).ready(function() {
             data.element.remove();
         }
     };
-    
+
 
     /* Prepare Data */
 
@@ -28,18 +28,24 @@ $( document ).ready(function() {
     var csv = getData();
     var data = $.csv.toObjects(csv);
 
-    console.log(data);
-
-    attackTypes = ['Phishing', 'Information leakage', 'Injection attacks' ,'Malicious code',
+    // attackTypes in the data
+    var attackTypesOriginal = ['Phishing', 'Information leakage', 'Injection attacks' ,'Malicious code',
         'Ransomware/Cryptoware', 'Denial of service', 'Botnets', 'Cyber espionage',
         'Data breaches', 'Hacking/Cracking', 'Overige', 'Anders', 'Niet van toepassing',
         'Spam', 'Illegal content'];
+
+    // Summing up 'others'
+    var others = ['Overige', 'Anders', 'Niet van toepassing'];
+    var other = 'Other'
+
+    var attackTypes = _.without(attackTypesOriginal, others[0], others[1], others[2]);
+    attackTypes.push(other);
 
     var monthLabels = [];
     var attacksTotal = [];
     var attacksNumbers = [];
 
-    for(attack of attackTypes) {
+    for(var attack of attackTypes) {
         attacksNumbers[attack] = [];
     }
 
@@ -47,9 +53,18 @@ $( document ).ready(function() {
         monthLabels.push(obj['month']);
         attacksTotal.push(obj['total']);
 
-        for(attackType of attackTypes) {
-            attacksNumbers[attackType].push(obj[attackType]);
+        for(var attackType of attackTypes) {
+            // Only work on the non-others values
+            if (attackType != other) {
+                attacksNumbers[attackType].push(obj[attackType]);
+            }
         }
+
+        // Sum up the 'others' values
+        var otherValue = parseInt(obj[others[0]]) + parseInt(obj[others[1]]) + parseInt(obj[others[2]]);
+        attacksNumbers[other].push(otherValue);
+
+
 
     }
 
