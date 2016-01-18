@@ -41,6 +41,39 @@ var getStatistics = function(data) {
     return [curr, mean, sd];
 }
 
+var createOverlayChart = function(chartDivId, attackName, chartType, labels, data) {
+    $("#" + chartDivId).click(function() {
+
+        var overlayDiv = $("<div>").attr('id', 'overlay');
+        var overlayHeading = $("<h2>").html(attackName);
+        var overlayChart = $("<div>").attr('id', 'overlay-chart').addClass("ct-chart ct-double-octave autoscaleaxis");
+
+        var overlayContainer = $("<div>").attr('id', 'overlay-container').append(overlayHeading).append(overlayChart);
+
+        var overlay = overlayDiv.append(overlayContainer.append(overlayChart));
+        overlay.appendTo(document.body)
+
+        console.log(chartType)
+
+        if (chartType == 'line') {
+            var chart = new Chartist.Line('#overlay-chart', {
+                labels: labels,
+                series: [data],
+            }, configOverlay);
+        } else if (chartType == 'bar') {
+            var chart = new Chartist.Bar('#overlay-chart', {
+                labels: labels,
+                series: data,
+            }, configBarOverlay);
+        }
+
+        $("#overlay").click(function() {
+            $("#overlay").remove();
+        })
+
+    });
+}
+
 // Create Dummy Data if datasource is not available
 if (typeof getData == "undefined") {
     getData = function() {

@@ -76,6 +76,7 @@ $( document ).ready(function() {
         labels: monthLabels,
         series: [attacksTotal],
     }, configBig);
+
     charts.push(chartIncidents);
 
     [lastMonth, mean, sd] = getStatistics(attacksTotal.slice().map(Number));
@@ -83,9 +84,12 @@ $( document ).ready(function() {
 
     $("#trend-indicator-incidents").html(trendIndicator);
 
+    createOverlayChart('chart-incidents', 'Reported Incidents', 'line', monthLabels, attacksTotal);
+
     var attackCounter = 1
 
     for (var attack of attackTypes) {
+        var attackName = attack.replace(/\//g, "/ ")
         var chartDivId = "chart-" + attack.replace(/\s/g, "").replace(/\//g, "")
 
         var chartClass, chartConfig;
@@ -106,7 +110,7 @@ $( document ).ready(function() {
         var trendIndicator = getTrendIndicator(lastMonth, mean, sd);
 
         // Create DIVs
-        var labelDiv = $("<div>").addClass("col-lg-2 vcenter").html(attack.replace(/\//g, "/ "));
+        var labelDiv = $("<div>").addClass("col-lg-2 vcenter").html(attackName);
         var chartDiv = $("<div>").addClass("col-lg-9 vcenter ct-chart ct-golden-section autoscaleaxis")
             .addClass(chartClass).attr('id', chartDivId);
         var trendDiv = $("<div>").addClass("col-lg-1 vcenter indicator").html(trendIndicator);
@@ -125,6 +129,8 @@ $( document ).ready(function() {
         // Add it to the list of charts
         charts.push(chart);
 
+        createOverlayChart(chartDivId, attackName, 'line', monthLabels, attacksNumbers[attack]);
+
         // Increase the attack counter to make sure classes are set correctly
         attackCounter++;
     }
@@ -135,6 +141,8 @@ $( document ).ready(function() {
     }, configBarBig);
 
     charts.push(chartSectors);
+
+    createOverlayChart('chart-sector-incidents', "Incidents by Sector", 'bar', sectorLabels, sectorNumbers);
 
     // Remove Grid from all charts
     for(chart of charts) {

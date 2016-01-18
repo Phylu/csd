@@ -12,8 +12,7 @@ var configBig = {
     },
     chartPadding: {
         right: 30,
-    },
-
+    }
 };
 
 var configBarBig = {
@@ -52,4 +51,31 @@ var configMiniLast = {
         high: 30,
         onlyInteger: true
     },
+};
+
+var configOverlay = {
+    lineSmooth: false,
+    axisY: {
+        type: Chartist.AutoScaleAxis,
+        low: 0,
+        onlyInteger: true
+    },
+    chartPadding: {
+        right: 30,
+    }
+};
+
+var configBarOverlay = {
+    axisY: {
+        offset: 100,
+    },
+    axisX: {
+        onlyInteger: true,
+    },
+    chartPadding: {
+        right: 30,
+    },
+    distributeSeries: true,
+    horizontalBars: true,
+    reverseData: true,
 };
