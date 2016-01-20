@@ -66,7 +66,29 @@ $( document ).ready(function() {
         }
     }
 
-    console.log(sectorNumbers);
+    /* Create last updated label */
+
+    $("#updated").html("Last Update: " + monthLabels.slice(-1)[0] + ".");
+
+    $("#ideas-icon").click(function() {
+
+        $("#ideas").show();
+
+        $("#ideas").click(function() {
+            $("#ideas").hide();
+        });
+
+    });
+
+    $("#questions-icon").click(function() {
+
+        $("#ideas").show();
+
+        $("#ideas").click(function() {
+            $("#ideas").hide();
+        })
+
+    });
 
     /* Create Charts */
 
@@ -92,14 +114,16 @@ $( document ).ready(function() {
         var attackName = attack.replace(/\//g, "/ ")
         var chartDivId = "chart-" + attack.replace(/\s/g, "").replace(/\//g, "")
 
-        var chartClass, chartConfig;
+        var chartClass, chartConfig, centerClass;
         // Last Chart should have the months depicted on the X-axis
         if (attackCounter == attackTypes.length) {
             chartClass = "mini-last";
             chartConfig = configMiniLast;
+            centerClass = "last-center";
         } else {
             chartClass = "mini";
             chartConfig = configMini;
+            centerClass = "vertical-center";
         }
 
         // Convert array to contain numbers
@@ -110,15 +134,15 @@ $( document ).ready(function() {
         var trendIndicator = getTrendIndicator(lastMonth, mean, sd);
 
         // Create DIVs
-        var labelDiv = $("<div>").addClass("col-lg-2 vcenter").html(attackName);
-        var chartDiv = $("<div>").addClass("col-lg-9 vcenter ct-chart ct-golden-section autoscaleaxis")
+        var rowDiv = $("<div>").addClass("row").addClass(centerClass);
+        var labelDiv = $("<div>").addClass("col-lg-2 desc").html(attackName);
+        var chartDiv = $("<div>").addClass("col-lg-9 ct-chart ct-golden-section autoscaleaxis clickable")
             .addClass(chartClass).attr('id', chartDivId);
-        var trendDiv = $("<div>").addClass("col-lg-1 vcenter indicator").html(trendIndicator);
+        var trendDiv = $("<div>").addClass("col-lg-1 indicator").html(trendIndicator);
 
         // Add the chart DIV element to the dom
-        $("#charts-incidents-type").append(labelDiv);
-        $("#charts-incidents-type").append(chartDiv);
-        $("#charts-incidents-type").append(trendDiv);
+        rowDiv.append(labelDiv).append(chartDiv).append(trendDiv);
+        $("#charts-incidents-type").append(rowDiv);
 
         // Create the new chart
         var chart = new Chartist.Line('#' + chartDivId, {

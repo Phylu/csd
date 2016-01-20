@@ -39,8 +39,6 @@
 
 <div class="container-fluid">
 
-    <h1>Cyber Security Dashboard</h1>
-
     <div class="col-lg-12" id="not-supported">
         <h2>Browser not supported</h2>
         <div>Please use a recent version of Firefox to show the dashboard.</div>
@@ -48,24 +46,43 @@
 
     <div class="row" id="dashboard" style="display: none;">
 
+        <div class="vertical-center">
+            <div class="col-lg-9">
+                <h1>Cyber Security Dashboard</h1>
+            </div>
+
+            <div id="updated" class="col-lg-2"></div>
+            <div class="col-lg-1">
+                <i id="ideas-icon" class="fa fa-lightbulb-o fa-lg clickable"></i> &nbsp;
+                <i id="questions-icon" class="fa fa-question-circle fa-lg clickable"></i>
+            </div>
+        </div>
 
         <div class="col-lg-4">
-            <h2>Incidents per Attack Type</h2>
-            <div class="row" id="charts-incidents-type"></div>
+            <h2>Incidents per Type</h2>
+            <div id="charts-incidents-type"></div>
         </div>
 
         <div class="col-lg-6">
             <h2 id="heading-incidents">Reported Incidents (<span id="trend-indicator-incidents"></span>)</h2>
-            <div class="ct-chart ct-golden-section autoscaleaxis" id="chart-incidents"></div>
+            <div class="ct-chart ct-golden-section autoscaleaxis clickable" id="chart-incidents"></div>
         </div>
 
         <div class="col-lg-6">
             <h2>Incidents by Sector</h2>
-            <div class="ct-chart autoscaleaxis" id="chart-sector-incidents"></div>
+            <div class="ct-chart autoscaleaxis clickable" id="chart-sector-incidents"></div>
         </div>
 
     </div>
 
+    <div id="ideas" class="overlay" style="display: none;">
+        <div class="overlay-container">
+            <h2>Ideas &amp; Questions</h2>
+            <div class="overlay-div">Is anything missing on this dashboard? Do you have newer numbers?<br/>
+                Or do you just have a question concerning the dashboard?<br/><br/>
+                Please send an email to <a href="mailto:maierj@in.tum.de">maierj@in.tum.de</a></div>
+        </div>
+    </div>
 
 </body>
 </html>

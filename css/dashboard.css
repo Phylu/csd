@@ -20,11 +20,19 @@
     height: 100px;
 }
 
-.vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
+.vertical-center {
+    display: flex;
+    align-items: center;
 }
+
+.last-center .desc {
+    margin-top: 22px;
+}
+
+.last-center .indicator {
+    margin-top: 22px;
+}
+
 
 .indicator {
     padding-left: 0px;
@@ -42,7 +50,7 @@
     transform: rotate(45deg);
 }
 
-#overlay {
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -50,9 +58,10 @@
     height: 100%;
     background: url('../img/transparent50.png') repeat;
     z-index: 10000;
+    cursor: pointer;
 }
 
-#overlay-container {
+.overlay-container {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -62,6 +71,34 @@
     border-radius: 5px;
 }
 
-#overlay-container h2 {
+.overlay-container h2 {
     margin: 0px 0px 10px 20px;
+}
+
+.overlay-div {
+    margin: 0px 0px 10px 20px;
+}
+
+.high {
+    color: #252525
+}
+
+.raising {
+    color: #636363
+}
+
+.stable {
+    color: #969696
+}
+
+.falling {
+    color: #bdbdbd
+}
+
+.low {
+    color: #d9d9d9
+}
+
+.clickable {
+    cursor: pointer;
 }

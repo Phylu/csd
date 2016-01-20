@@ -77,5 +77,4 @@ var configBarOverlay = {
     },
     distributeSeries: true,
     horizontalBars: true,
-    reverseData: true,
 };

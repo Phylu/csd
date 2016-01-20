@@ -16,21 +16,20 @@ var removeGrid = function(data) {
 var getTrendIndicator = function(curr, mean, sd) {
     var trendIndicator = $("<i>").addClass("fa");
     if (curr >= mean + (3 * sd)) {
-        trendIndicator.addClass("fa-arrow-up");
+        trendIndicator.addClass("fa-arrow-up high");
     } else if (curr >= mean + sd) {
-        trendIndicator.addClass("fa-arrow-up rotate-45-right");
+        trendIndicator.addClass("fa-arrow-up rotate-45-right raising");
     } else if (curr <= mean - (3 * sd)) {
-        trendIndicator.addClass("fa-arrow-down");
+        trendIndicator.addClass("fa-arrow-down low");
     } else if (curr <= mean - sd) {
-        trendIndicator.addClass("fa-arrow-down rotate-45-left");
+        trendIndicator.addClass("fa-arrow-down rotate-45-left falling");
     } else {
-        trendIndicator.addClass("fa-arrow-right");
+        trendIndicator.addClass("fa-arrow-right stable");
     }
     return trendIndicator;
 };
 
 var getStatistics = function(data) {
-
     // Remove last month from array
     var curr = data.pop();
 
@@ -39,16 +38,17 @@ var getStatistics = function(data) {
     var sd = jStat.stdev(data, true);
 
     return [curr, mean, sd];
-}
+};
 
 var createOverlayChart = function(chartDivId, attackName, chartType, labels, data) {
     $("#" + chartDivId).click(function() {
 
-        var overlayDiv = $("<div>").attr('id', 'overlay');
+        var overlayDiv = $("<div>").attr('id', 'overlay').addClass("overlay");
         var overlayHeading = $("<h2>").html(attackName);
         var overlayChart = $("<div>").attr('id', 'overlay-chart').addClass("ct-chart ct-double-octave autoscaleaxis");
 
-        var overlayContainer = $("<div>").attr('id', 'overlay-container').append(overlayHeading).append(overlayChart);
+        var overlayContainer = $("<div>").attr('id', 'overlay-container').addClass("overlay-container").
+        append(overlayHeading).append(overlayChart);
 
         var overlay = overlayDiv.append(overlayContainer.append(overlayChart));
         overlay.appendTo(document.body)
@@ -72,7 +72,7 @@ var createOverlayChart = function(chartDivId, attackName, chartType, labels, dat
         })
 
     });
-}
+};
 
 // Create Dummy Data if datasource is not available
 if (typeof getData == "undefined") {
