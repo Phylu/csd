@@ -92,3 +92,13 @@ if (typeof getSectorData == "undefined") {
             'Mar 2016,80,80,80\n';
     }
 }
+
+if (typeof getLastYearData == "undefined") {
+    getLastYearData = function() {
+        return 'month,total\n' +
+            'Jan 2015,7\n' +
+            'Feb 2015,50\n' +
+            'Mar 2015,13\n';
+
+    }
+}
