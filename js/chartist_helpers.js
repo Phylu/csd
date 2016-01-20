@@ -40,7 +40,7 @@ var getStatistics = function(data) {
     return [curr, mean, sd];
 };
 
-var createOverlayChart = function(chartDivId, attackName, chartType, labels, data) {
+var createOverlayChart = function(chartDivId, attackName, chartType, labels, data, config) {
     $("#" + chartDivId).click(function() {
 
         var overlayDiv = $("<div>").attr('id', 'overlay').addClass("overlay");
@@ -58,13 +58,13 @@ var createOverlayChart = function(chartDivId, attackName, chartType, labels, dat
         if (chartType == 'line') {
             var chart = new Chartist.Line('#overlay-chart', {
                 labels: labels,
-                series: [data],
-            }, configOverlay);
+                series: data,
+            }, config);
         } else if (chartType == 'bar') {
             var chart = new Chartist.Bar('#overlay-chart', {
                 labels: labels,
-                series: data,
-            }, configBarOverlay);
+                series: data[0],
+            }, config);
         }
 
         $("#overlay").click(function() {

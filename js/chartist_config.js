@@ -7,12 +7,17 @@ var configBig = {
     axisY: {
         type: Chartist.AutoScaleAxis,
         low: 0,
-        high: 100,
         onlyInteger: true
     },
     chartPadding: {
         right: 30,
-    }
+    },
+    plugins: [
+        Chartist.plugins.legend({
+            legendNames: ['2014/15', '2013/14'],
+            clickable: false,
+        })
+    ]
 };
 
 var configBarBig = {
@@ -53,6 +58,24 @@ var configMiniLast = {
     },
 };
 
+var configBigOverlay = {
+    lineSmooth: false,
+    axisY: {
+        type: Chartist.AutoScaleAxis,
+        low: 0,
+        onlyInteger: true
+    },
+    chartPadding: {
+        right: 30,
+    },
+    plugins: [
+        Chartist.plugins.legend({
+            legendNames: ['2014/15', '2013/14'],
+            clickable: false,
+        })
+    ]
+};
+
 var configOverlay = {
     lineSmooth: false,
     axisY: {
@@ -62,7 +85,7 @@ var configOverlay = {
     },
     chartPadding: {
         right: 30,
-    }
+    },
 };
 
 var configBarOverlay = {

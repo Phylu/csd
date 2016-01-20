@@ -10,10 +10,13 @@ $( document ).ready(function() {
     var csv = getData();
     var data = $.csv.toObjects(csv);
 
+    csv = getLastYearData();
+    var lastYearData = $.csv.toObjects(csv);
+
     csv = getSectorData();
     var sectorData = $.csv.toObjects(csv);
 
-    console.log(sectorData);
+    console.log(lastYearData);
 
     // attackTypes in the data
     var attackTypesOriginal = ['Phishing', 'Information leakage', 'Injection attacks' ,'Malicious code',
@@ -29,6 +32,7 @@ $( document ).ready(function() {
     attackTypes.push(other);
 
     var monthLabels = [];
+    var monthOnlyLabels = [];
     var attacksTotal = [];
     var attacksNumbers = [];
 
@@ -36,8 +40,9 @@ $( document ).ready(function() {
         attacksNumbers[attack] = [];
     }
 
-    for (obj of data) {
+    for (var obj of data) {
         monthLabels.push(obj['month']);
+        monthOnlyLabels.push(obj['month'].substring(0,3));
         attacksTotal.push(obj['total']);
 
         for(var attackType of attackTypes) {
@@ -51,6 +56,11 @@ $( document ).ready(function() {
         var otherValue = parseInt(obj[others[0]]) + parseInt(obj[others[1]]) + parseInt(obj[others[2]]);
         attacksNumbers[other].push(otherValue);
 
+    }
+
+    var attacksTotalLastYear = [];
+    for (var obj of lastYearData) {
+        attacksTotalLastYear.push(obj['total']);
     }
 
     var sectorLabels = ['Public', 'Private', 'International'];
@@ -95,8 +105,8 @@ $( document ).ready(function() {
     var charts = [];
 
     var chartIncidents = new Chartist.Line('#chart-incidents', {
-        labels: monthLabels,
-        series: [attacksTotal],
+        labels: monthOnlyLabels,
+        series: [attacksTotal, attacksTotalLastYear],
     }, configBig);
 
     charts.push(chartIncidents);
@@ -106,7 +116,7 @@ $( document ).ready(function() {
 
     $("#trend-indicator-incidents").html(trendIndicator);
 
-    createOverlayChart('chart-incidents', 'Reported Incidents', 'line', monthLabels, attacksTotal);
+    createOverlayChart('chart-incidents', 'Reported Incidents', 'line', monthOnlyLabels, [attacksTotal, attacksTotalLastYear], configBigOverlay);
 
     var attackCounter = 1
 
@@ -153,7 +163,7 @@ $( document ).ready(function() {
         // Add it to the list of charts
         charts.push(chart);
 
-        createOverlayChart(chartDivId, attackName, 'line', monthLabels, attacksNumbers[attack]);
+        createOverlayChart(chartDivId, attackName, 'line', monthLabels, [attacksNumbers[attack]], configBig);
 
         // Increase the attack counter to make sure classes are set correctly
         attackCounter++;
@@ -166,7 +176,7 @@ $( document ).ready(function() {
 
     charts.push(chartSectors);
 
-    createOverlayChart('chart-sector-incidents', "Incidents by Sector", 'bar', sectorLabels, sectorNumbers);
+    createOverlayChart('chart-sector-incidents', "Incidents by Sector", 'bar', sectorLabels, [sectorNumbers], configBarBig);
 
     // Remove Grid from all charts
     for(chart of charts) {
