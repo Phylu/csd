@@ -163,7 +163,7 @@ $( document ).ready(function() {
         // Add it to the list of charts
         charts.push(chart);
 
-        createOverlayChart(chartDivId, attackName, 'line', monthLabels, [attacksNumbers[attack]], configBig);
+        createOverlayChart(chartDivId, attackName, 'line', monthLabels, [attacksNumbers[attack]], configOverlay);
 
         // Increase the attack counter to make sure classes are set correctly
         attackCounter++;
