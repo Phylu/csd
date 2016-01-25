@@ -1,3 +1,11 @@
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
 .ct-chart .ct-grid {
     stroke-dasharray: none;
     stroke: #999;
@@ -11,6 +19,10 @@
     color: #666;
     font-size: .9em;
  }
+
+.big {
+    height: 450px;
+}
 
 .mini {
     height: 60px;

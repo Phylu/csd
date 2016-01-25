@@ -45,7 +45,8 @@ var configMini = {
     axisX: {
         showLabel: false,
         offset: 0,
-    }
+    },
+    showArea: true,
 };
 
 var configMiniLast = {
@@ -56,6 +57,7 @@ var configMiniLast = {
         high: 30,
         onlyInteger: true
     },
+    showArea: true,
 };
 
 var configBigOverlay = {
@@ -86,6 +88,7 @@ var configOverlay = {
     chartPadding: {
         right: 30,
     },
+    showArea: true,
 };
 
 var configBarOverlay = {

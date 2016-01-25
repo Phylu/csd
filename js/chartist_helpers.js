@@ -74,13 +74,36 @@ var createOverlayChart = function(chartDivId, attackName, chartType, labels, dat
     });
 };
 
+var getBiggestValue = function(input) {
+    var max = -Infinity;
+    var maxKey;
+    for (var key in input) {
+        var value = parseInt(input[key]);
+        if (value > max) {
+            max = value;
+            maxKey = key;
+        }
+    }
+    return maxKey;
+};
+
+var getMostAttacks = function(input) {
+    var mostAttacks = [];
+
+    for (var i = 0; i < 3; i++) {
+        mostAttacks[i] = getBiggestValue(input);
+        input[mostAttacks[i]] = 0;
+    }
+    return mostAttacks;
+};
+
 // Create Dummy Data if datasource is not available
 if (typeof getData == "undefined") {
     getData = function() {
         return 'month,total,Phishing,Information leakage\n' +
             'Jan 2016,3,1,2\n' +
             'Feb 2016,4,1,3\n' +
-            'Mar 2016,12,8,4\n'
+            'Mar 2016,12,8,4\n';
     }
 }
 
@@ -90,6 +113,15 @@ if (typeof getSectorData == "undefined") {
             'Jan 2016,30,60,80\n' +
             'Feb 2016,90,60,80\n' +
             'Mar 2016,80,80,80\n';
+    }
+}
+
+if (typeof getSectorTypeData == "undefined") {
+    getSectorTypeData = function() {
+        return 'sector,Phishing,Information leakage\n' +
+            'Public,3,2\n' +
+            'Private,1,7\n' +
+            'International,12,4\n';
     }
 }
 

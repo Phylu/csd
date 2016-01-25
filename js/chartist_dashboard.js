@@ -11,7 +11,10 @@ $( document ).ready(function() {
     csv = getSectorData();
     var sectorData = $.csv.toObjects(csv);
 
-    console.log(lastYearData);
+    csv = getSectorTypeData();
+    var sectorTypeData = $.csv.toObjects(csv);
+
+    console.log(sectorTypeData);
 
     // attackTypes in the data
     var attackTypesOriginal = ['Phishing', 'Information leakage', 'Injection attacks' ,'Malicious code',
@@ -21,7 +24,7 @@ $( document ).ready(function() {
 
     // Summing up 'others'
     var others = ['Overige', 'Anders', 'Niet van toepassing'];
-    var other = 'Other'
+    var other = 'Other';
 
     var attackTypes = _.without(attackTypesOriginal, others[0], others[1], others[2]);
     attackTypes.push(other);
@@ -98,6 +101,8 @@ $( document ).ready(function() {
     /* Create Charts */
 
     var charts = [];
+
+    $('#chart-incidents').addClass('big');
 
     var chartIncidents = new Chartist.Line('#chart-incidents', {
         labels: monthOnlyLabels,
@@ -183,6 +188,18 @@ $( document ).ready(function() {
     for(chart of charts) {
         chart.on('draw', removeGrid);
     }
+
+
+
+
+    var mostAttacks= [];
+    mostAttacks['public'] = getMostAttacks(sectorTypeData[0])
+    mostAttacks['private'] = getMostAttacks(sectorTypeData[1])
+    mostAttacks['international'] = getMostAttacks(sectorTypeData[2])
+
+    $('#public-top-3').html(mostAttacks.public[0] + ", " + mostAttacks.public[1] + ", " + mostAttacks.public[2]);
+    $('#private-top-3').html(mostAttacks.private[0] + ", " + mostAttacks.private[1] + ", " + mostAttacks.private[2]);
+    $('#international-top-3').html(mostAttacks.international[0] + ", " + mostAttacks.international[1] + ", " + mostAttacks.international[2]);
 
 
 });

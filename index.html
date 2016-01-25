@@ -60,12 +60,27 @@
 
         <div class="col-lg-6">
             <h2 id="heading-incidents">Reported Incidents (<span id="trend-indicator-incidents"></span>)</h2>
-            <div class="ct-chart ct-golden-section autoscaleaxis clickable" id="chart-incidents"></div>
+            <div class="ct-chart autoscaleaxis clickable" id="chart-incidents"></div>
         </div>
 
         <div class="col-lg-6">
             <h2>Incidents by Sector</h2>
             <div class="ct-chart autoscaleaxis clickable" id="chart-sector-incidents"></div>
+            <h2>Top 3 Attacks per Sector</h2>
+            <table class="table">
+                <tr>
+                    <td>Public</td>
+                    <td id="public-top-3"></td>
+                </tr>
+                <tr>
+                    <td>Private</td>
+                    <td id="private-top-3"></td>
+                </tr>
+                <tr>
+                    <td>International</td>
+                    <td id="international-top-3"></td>
+                </tr>
+            </table>
         </div>
 
     </div>
