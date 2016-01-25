@@ -225,7 +225,7 @@ $( document ).ready(function() {
 
     console.log(advisoriesTotal);
 
-    for (var i = advisories.length - 1; i >= 0; i--) {
+    for (var i = Math.min(advisories.length - 1, 11); i >= 0; i--) {
 
         var percentage = parseInt(advisories[i]) / advisoriesTotal;
 
@@ -238,12 +238,7 @@ $( document ).ready(function() {
         var outerDiv = $("<div>").addClass("circle-container").html('<svg height="65px" width="65px" data-toggle="tooltip" data-placement="right" title="' + advisories[i] + '">' +
         '<circle cx="30" cy="30" r="' + size + '" fill="#d70206"/></svg>');
 
-
-        //var circDiv = $("<div>").addClass("col-lg-6 circle").css('height', height).css('width', height)
-        //    .css('-moz-border-radius', height).css('-webkit-border-radius', height).css('border-radius', height);
-        //.html(advisories[i]);
-        rowDiv.append(labelDiv).append(outerDiv);//.append(circDiv));
-
+        rowDiv.append(labelDiv).append(outerDiv);
         $("#advisories").append(rowDiv);
 
     }
