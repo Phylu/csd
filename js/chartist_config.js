@@ -98,6 +98,7 @@ var configBarOverlay = {
     chartPadding: {
         right: 30,
     },
+    onlyInteger: true,
     distributeSeries: true,
     horizontalBars: true,
 };

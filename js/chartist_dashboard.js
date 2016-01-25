@@ -1,10 +1,5 @@
 $( document ).ready(function() {
 
-    if (is.firefox()) {
-        $("#not-supported").hide();
-        $("#dashboard").show();
-    }
-
     /* Prepare Data */
 
     var csv = getData();
@@ -111,7 +106,10 @@ $( document ).ready(function() {
 
     charts.push(chartIncidents);
 
-    [lastMonth, mean, sd] = getStatistics(attacksTotal.slice().map(Number));
+    var stats = getStatistics(attacksTotal.slice().map(Number));
+    var lastMonth = stats[0];
+    var mean = stats[1];
+    var sd = stats[2];
     var trendIndicator = getTrendIndicator(lastMonth, mean, sd);
 
     $("#trend-indicator-incidents").html(trendIndicator);
@@ -139,7 +137,10 @@ $( document ).ready(function() {
         // Convert array to contain numbers
         var currAttackNumbers = attacksNumbers[attack].slice().map(Number);
 
-        [lastMonth, mean, sd] = getStatistics(currAttackNumbers);
+        var stats = getStatistics(currAttackNumbers);
+        var lastMonth = stats[0];
+        var mean = stats[1];
+        var sd = stats[2];
 
         var trendIndicator = getTrendIndicator(lastMonth, mean, sd);
 
@@ -176,7 +177,7 @@ $( document ).ready(function() {
 
     charts.push(chartSectors);
 
-    createOverlayChart('chart-sector-incidents', "Incidents by Sector", 'bar', sectorLabels, [sectorNumbers], configBarBig);
+    createOverlayChart('chart-sector-incidents', "Incidents by Sector", 'bar', sectorLabels, [sectorNumbers], configBarOverlay);
 
     // Remove Grid from all charts
     for(chart of charts) {
