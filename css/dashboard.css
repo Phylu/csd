@@ -37,6 +37,10 @@ h2 {
     align-items: center;
 }
 
+.desc {
+    text-align: right;
+}
+
 .last-center .desc {
     margin-top: 22px;
 }
@@ -119,7 +123,7 @@ h2 {
 /** Legend Plugin */
 .ct-legend {
     position: absolute;
-    right: 0;
+    right: 15px;
     z-index: 10;
     list-style: none;
 }
@@ -171,4 +175,17 @@ h2 {
 .ct-legend .ct-series-4:before {
     background-color: #453d3f;
     border-color: #453d3f;
+}
+
+.circle-container {
+    width: 65px;
+    height: 65px;
+}
+
+.circle {
+    background: #d70206;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    float: none;
 }

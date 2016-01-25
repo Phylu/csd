@@ -14,6 +14,9 @@ $( document ).ready(function() {
     csv = getSectorTypeData();
     var sectorTypeData = $.csv.toObjects(csv);
 
+    csv = getAdvisoriesData();
+    var advisoriesData = $.csv.toObjects(csv);
+
     console.log(sectorTypeData);
 
     // attackTypes in the data
@@ -190,7 +193,7 @@ $( document ).ready(function() {
     }
 
 
-
+    // Table
 
     var mostAttacks= [];
     mostAttacks['public'] = getMostAttacks(sectorTypeData[0])
@@ -201,5 +204,51 @@ $( document ).ready(function() {
     $('#private-top-3').html(mostAttacks.private[0] + ", " + mostAttacks.private[1] + ", " + mostAttacks.private[2]);
     $('#international-top-3').html(mostAttacks.international[0] + ", " + mostAttacks.international[1] + ", " + mostAttacks.international[2]);
 
+
+
+
+    // Advisories
+    var advisoriesLabels = [];
+    var advisories = [];
+    for (var obj of advisoriesData) {
+        advisoriesLabels.push(obj['month']);
+        advisories.push(obj['advisories']);
+    }
+
+    console.log(advisories);
+
+    var advisoriesTotal = 0;
+    for (var advisory of advisories) {
+        console.log(advisory);
+        advisoriesTotal += parseInt(advisory);
+    }
+
+    console.log(advisoriesTotal);
+
+    for (var i = advisories.length - 1; i >= 0; i--) {
+
+        var percentage = parseInt(advisories[i]) / advisoriesTotal;
+
+        // Scaling so that the biggest ones still fit the div
+        var size = percentage * 150;
+        console.log(percentage + " : " + size);
+
+        var rowDiv = $("<div>").addClass("row vertical-center");
+        var labelDiv = $("<div>").addClass("col-lg-6 desc").html(advisoriesLabels[i]);
+        var outerDiv = $("<div>").addClass("circle-container").html('<svg height="65px" width="65px" data-toggle="tooltip" data-placement="right" title="' + advisories[i] + '">' +
+        '<circle cx="30" cy="30" r="' + size + '" fill="#d70206"/></svg>');
+
+
+        //var circDiv = $("<div>").addClass("col-lg-6 circle").css('height', height).css('width', height)
+        //    .css('-moz-border-radius', height).css('-webkit-border-radius', height).css('border-radius', height);
+        //.html(advisories[i]);
+        rowDiv.append(labelDiv).append(outerDiv);//.append(circDiv));
+
+        $("#advisories").append(rowDiv);
+
+    }
+
+    /* Switch On Tooltips */
+    $('[data-toggle="tooltip"]').tooltip()
 
 });
