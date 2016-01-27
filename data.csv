@@ -1,0 +1,5 @@
+id,date,type,sector
+1,01.01.2015,Phishing,Public
+2,02.01.2015,Information leakage,Public
+3,01.02.2015,Phishing,Private
+4,01.03.2015,Spam,International

@@ -1,4 +1,36 @@
-$( document ).ready(function() {
+$(document).ready(function () {
+
+
+    $.ajax({
+        type: "GET",
+        url: "data.csv",
+        dataType: "text",
+        success: function (data) {
+            load(data);
+        }
+    });
+
+    var load = function(csv) {
+        var data = $.csv.toObjects(csv);
+        console.log(JSON.stringify(data));
+
+        var db = TAFFY(JSON.stringify(data));
+        //var db = TAFFY('[{"record":1,"text":"example"}]');
+
+        // Get all
+        console.log(db().get());
+
+        // Count
+        console.log(db().count());
+
+        // All pulic
+        console.log(db().filter({sector: "Public"}).get())
+
+        // Max value --> Create new column for sortable date?
+        console.log(db().max("date"));
+
+    };
+
 
     /* Prepare Data */
 
@@ -18,7 +50,7 @@ $( document ).ready(function() {
     var advisoriesData = $.csv.toObjects(csv);
 
     // attackTypes in the data
-    var attackTypesOriginal = ['Phishing', 'Information leakage', 'Injection attacks' ,'Malicious code',
+    var attackTypesOriginal = ['Phishing', 'Information leakage', 'Injection attacks', 'Malicious code',
         'Ransomware/Cryptoware', 'Denial of service', 'Botnets', 'Cyber espionage',
         'Data breaches', 'Hacking/Cracking', 'Overige', 'Anders', 'Niet van toepassing',
         'Spam', 'Illegal content'];
@@ -35,16 +67,16 @@ $( document ).ready(function() {
     var attacksTotal = [];
     var attacksNumbers = [];
 
-    for(var attack of attackTypes) {
+    for (var attack of attackTypes) {
         attacksNumbers[attack] = [];
     }
 
     for (var obj of data) {
         monthLabels.push(obj['month']);
-        monthOnlyLabels.push(obj['month'].substring(0,3));
+        monthOnlyLabels.push(obj['month'].substring(0, 3));
         attacksTotal.push(obj['total']);
 
-        for(var attackType of attackTypes) {
+        for (var attackType of attackTypes) {
             // Only work on the non-others values
             if (attackType != other) {
                 attacksNumbers[attackType].push(obj[attackType]);
@@ -79,21 +111,21 @@ $( document ).ready(function() {
 
     $("#updated").html("Last Update: " + monthLabels.slice(-1)[0] + ".");
 
-    $("#ideas-icon").click(function() {
+    $("#ideas-icon").click(function () {
 
         $("#ideas").show();
 
-        $("#ideas").click(function() {
+        $("#ideas").click(function () {
             $("#ideas").hide();
         });
 
     });
 
-    $("#questions-icon").click(function() {
+    $("#questions-icon").click(function () {
 
         $("#ideas").show();
 
-        $("#ideas").click(function() {
+        $("#ideas").click(function () {
             $("#ideas").hide();
         })
 
@@ -109,13 +141,11 @@ $( document ).ready(function() {
         ['2014/15', '2013/14']);
 
 
-
     /*
      * Incidents per Type
      * ==================
      */
     CSD.areaSeries('#incidents-type', 'Incidents per Type', monthLabels, attacksNumbers)
-
 
 
     /*
@@ -125,19 +155,17 @@ $( document ).ready(function() {
     CSD.bar('#sector-incidents', "Incidents by Sector", sectorLabels, sectorNumbers);
 
 
-
     /*
      * Top 3 attacks per sector
      * ========================
      */
-    var mostAttacks= [];
+    var mostAttacks = [];
     mostAttacks[0] = CSD.getTopX(sectorTypeData[0], 3);
     mostAttacks[1] = CSD.getTopX(sectorTypeData[1], 3);
     mostAttacks[2] = CSD.getTopX(sectorTypeData[2], 3);
 
     var sectors = ['Public', 'Private', 'International'];
     CSD.table('#sector-top-3', 'Top 3 Attacks per Sector', sectors, mostAttacks);
-
 
 
     /*
