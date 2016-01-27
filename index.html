@@ -19,11 +19,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
 
-    <!-- Build up the Dashboard -->
-    <script type="text/javascript" src="js/chartist_config.js"></script>
-    <script type="text/javascript" src="js/chartist_helpers.js"></script>
-    <script type="text/javascript" src="js/chartist_dashboard.js"></script>
-
     <!-- Provides getData function. Not included in repo due to sensitivity of dat -->
     <script type="text/javascript" src="/run/media/janosch/UsbStorage/data.js"></script>
 
@@ -59,35 +54,17 @@
         </div>
 
         <div class="col-lg-6">
-            <h2 id="heading-incidents">Reported Incidents (<span id="trend-indicator-incidents"></span>)</h2>
-            <div class="ct-chart autoscaleaxis clickable" id="chart-incidents"></div>
 
-            <h2>Incidents by Sector</h2>
-            <div class="ct-chart autoscaleaxis clickable" id="chart-sector-incidents"></div>
-            <h2>Top 3 Attacks per Sector</h2>
-            <table class="table">
-                <tr>
-                    <td class="desc">Public</td>
-                    <td id="public-top-3"></td>
-                </tr>
-                <tr>
-                    <td class="desc">Private</td>
-                    <td id="private-top-3"></td>
-                </tr>
-                <tr>
-                    <td class="desc">International</td>
-                    <td id="international-top-3"></td>
-                </tr>
-            </table>
+            <div id="incidents"></div>
+
+            <div id="sector-incidents"></div>
+
+            <div id="sector-top-3"></div>
         </div>
 
         <div class="col-lg-2">
 
-            <h2>Security Advisories High/High</h2>
-
-            <div id="advisories">
-
-            </div>
+            <div id="advisories"></div>
 
         </div>
 
@@ -101,6 +78,12 @@
                 Please send an email to <a href="mailto:maierj@in.tum.de">maierj@in.tum.de</a></div>
         </div>
     </div>
+
+    <!-- Build up the Dashboard -->
+    <script type="text/javascript" src="js/chartist_config.js"></script>
+    <script type="text/javascript" src="js/chartist_helpers.js"></script>
+    <script type="text/javascript" src="js/chartist_dashboard.js"></script>
+    <script type="text/javascript" src="js/csd.js"></script>
 
 </body>
 </html>

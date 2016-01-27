@@ -17,8 +17,6 @@ $( document ).ready(function() {
     csv = getAdvisoriesData();
     var advisoriesData = $.csv.toObjects(csv);
 
-    console.log(sectorTypeData);
-
     // attackTypes in the data
     var attackTypesOriginal = ['Phishing', 'Information leakage', 'Injection attacks' ,'Malicious code',
         'Ransomware/Cryptoware', 'Denial of service', 'Botnets', 'Cyber espionage',
@@ -102,10 +100,12 @@ $( document ).ready(function() {
     });
 
     /* Create Charts */
-
     var charts = [];
 
-    $('#chart-incidents').addClass('big');
+    CSD.line('#incidents', 'Reported Incidents', monthOnlyLabels, [attacksTotal, attacksTotalLastYear],
+        ['2014/15', '2013/14']);
+
+/*    $('#chart-incidents').addClass('big');
 
     var chartIncidents = new Chartist.Line('#chart-incidents', {
         labels: monthOnlyLabels,
@@ -113,6 +113,7 @@ $( document ).ready(function() {
     }, configBig);
 
     charts.push(chartIncidents);
+
 
     var stats = getStatistics(attacksTotal.slice().map(Number));
     var lastMonth = stats[0];
@@ -123,6 +124,8 @@ $( document ).ready(function() {
     $("#trend-indicator-incidents").html(trendIndicator);
 
     createOverlayChart('chart-incidents', 'Reported Incidents', 'line', monthOnlyLabels, [attacksTotal, attacksTotalLastYear], configBigOverlay);
+*/
+
 
     var attackCounter = 1
 
@@ -178,36 +181,37 @@ $( document ).ready(function() {
         attackCounter++;
     }
 
-    var chartSectors = new Chartist.Bar('#chart-sector-incidents', {
-        labels: sectorLabels,
-        series: sectorNumbers
-    }, configBarBig);
+    /*
+     * Incidents per Sector
+     * ====================
+     */
+    CSD.bar('#sector-incidents', "Incidents by Sector", sectorLabels, sectorNumbers);
 
-    charts.push(chartSectors);
 
-    createOverlayChart('chart-sector-incidents', "Incidents by Sector", 'bar', sectorLabels, [sectorNumbers], configBarOverlay);
-
+    // TODO: Remove after refactoring
     // Remove Grid from all charts
     for(chart of charts) {
         chart.on('draw', removeGrid);
     }
 
 
-    // Table
-
+    /*
+     * Top 3 attacks per sector
+     * ========================
+     */
     var mostAttacks= [];
-    mostAttacks['public'] = getMostAttacks(sectorTypeData[0])
-    mostAttacks['private'] = getMostAttacks(sectorTypeData[1])
-    mostAttacks['international'] = getMostAttacks(sectorTypeData[2])
+    mostAttacks[0] = getMostAttacks(sectorTypeData[0]);
+    mostAttacks[1] = getMostAttacks(sectorTypeData[1]);
+    mostAttacks[2] = getMostAttacks(sectorTypeData[2]);
 
-    $('#public-top-3').html(mostAttacks.public[0] + ", " + mostAttacks.public[1] + ", " + mostAttacks.public[2]);
-    $('#private-top-3').html(mostAttacks.private[0] + ", " + mostAttacks.private[1] + ", " + mostAttacks.private[2]);
-    $('#international-top-3').html(mostAttacks.international[0] + ", " + mostAttacks.international[1] + ", " + mostAttacks.international[2]);
-
+    var sectors = ['Public', 'Private', 'International'];
+    CSD.table('#sector-top-3', 'Top 3 Attacks per Sector', sectors, mostAttacks);
 
 
-
-    // Advisories
+    /*
+     * Advisories
+     * ==========
+     */
     var advisoriesLabels = [];
     var advisories = [];
     for (var obj of advisoriesData) {
@@ -215,35 +219,13 @@ $( document ).ready(function() {
         advisories.push(obj['advisories']);
     }
 
-    console.log(advisories);
+    CSD.circles('#advisories', 'Security Advisories High/High', advisoriesLabels, advisories);
 
-    var advisoriesTotal = 0;
-    for (var advisory of advisories) {
-        console.log(advisory);
-        advisoriesTotal += parseInt(advisory);
-    }
 
-    console.log(advisoriesTotal);
-
-    for (var i = Math.min(advisories.length - 1, 11); i >= 0; i--) {
-
-        var percentage = parseInt(advisories[i]) / advisoriesTotal;
-
-        // Scaling so that the biggest ones still fit the div
-        var size = percentage * 150;
-        console.log(percentage + " : " + size);
-
-        var rowDiv = $("<div>").addClass("row vertical-center");
-        var labelDiv = $("<div>").addClass("col-lg-6 desc").html(advisoriesLabels[i]);
-        var outerDiv = $("<div>").addClass("circle-container").html('<svg height="65px" width="65px" data-toggle="tooltip" data-placement="right" title="' + advisories[i] + '">' +
-        '<circle cx="30" cy="30" r="' + size + '" fill="#d70206"/></svg>');
-
-        rowDiv.append(labelDiv).append(outerDiv);
-        $("#advisories").append(rowDiv);
-
-    }
-
-    /* Switch On Tooltips */
+    /*
+     * Switch On Tooltips
+     * ==================
+     */
     $('[data-toggle="tooltip"]').tooltip()
 
 });
