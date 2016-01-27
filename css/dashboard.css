@@ -1,3 +1,7 @@
+/*
+ * General Settings
+ * ================
+ */
 h1 {
     font-size: 30px;
 }
@@ -5,20 +9,6 @@ h1 {
 h2 {
     font-size: 20px;
 }
-
-.ct-chart .ct-grid {
-    stroke-dasharray: none;
-    stroke: #999;
-}
-
-.ct-grids line {
-    color: #666;
-}
-
-.ct-labels span {
-    color: #666;
-    font-size: .9em;
- }
 
 .big {
     height: 450px;
@@ -49,6 +39,14 @@ h2 {
     margin-top: 22px;
 }
 
+.clickable {
+    cursor: pointer;
+}
+
+/*
+ * Trend Indicator Settings
+ * ========================
+ */
 
 .indicator {
     padding-left: 0px;
@@ -66,6 +64,30 @@ h2 {
     transform: rotate(45deg);
 }
 
+.high {
+    color: #252525
+}
+
+.raising {
+    color: #636363
+}
+
+.stable {
+    color: #969696
+}
+
+.falling {
+    color: #bdbdbd
+}
+
+.low {
+    color: #d9d9d9
+}
+
+/*
+ * Overlay Settings
+ * ================
+ */
 .overlay {
     position: fixed;
     top: 0;
@@ -95,32 +117,42 @@ h2 {
     margin: 0px 0px 10px 20px;
 }
 
-.high {
-    color: #252525
+/*
+ * Chart Settings
+ * ==============
+ */
+.circle-container {
+    width: 65px;
+    height: 65px;
 }
 
-.raising {
-    color: #636363
+.circle {
+    background: #d70206;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    float: none;
 }
 
-.stable {
-    color: #969696
+.ct-chart .ct-grid {
+    stroke-dasharray: none;
+    stroke: #999;
 }
 
-.falling {
-    color: #bdbdbd
+.ct-grids line {
+    color: #666;
 }
 
-.low {
-    color: #d9d9d9
-}
-
-.clickable {
-    cursor: pointer;
-}
+.ct-labels span {
+    color: #666;
+    font-size: .9em;
+ }
 
 
-/** Legend Plugin */
+/*
+ * Legend Settings
+ * ===============
+ */
 .ct-legend {
     position: absolute;
     right: 15px;
@@ -175,17 +207,4 @@ h2 {
 .ct-legend .ct-series-4:before {
     background-color: #453d3f;
     border-color: #453d3f;
-}
-
-.circle-container {
-    width: 65px;
-    height: 65px;
-}
-
-.circle {
-    background: #d70206;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    float: none;
 }
