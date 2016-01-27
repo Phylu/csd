@@ -99,87 +99,24 @@ $( document ).ready(function() {
 
     });
 
-    /* Create Charts */
-    var charts = [];
+
+    /*
+     * Reported Incidents
+     * ==================
+     */
 
     CSD.line('#incidents', 'Reported Incidents', monthOnlyLabels, [attacksTotal, attacksTotalLastYear],
         ['2014/15', '2013/14']);
 
-/*    $('#chart-incidents').addClass('big');
-
-    var chartIncidents = new Chartist.Line('#chart-incidents', {
-        labels: monthOnlyLabels,
-        series: [attacksTotal, attacksTotalLastYear],
-    }, configBig);
-
-    charts.push(chartIncidents);
 
 
-    var stats = getStatistics(attacksTotal.slice().map(Number));
-    var lastMonth = stats[0];
-    var mean = stats[1];
-    var sd = stats[2];
-    var trendIndicator = getTrendIndicator(lastMonth, mean, sd);
-
-    $("#trend-indicator-incidents").html(trendIndicator);
-
-    createOverlayChart('chart-incidents', 'Reported Incidents', 'line', monthOnlyLabels, [attacksTotal, attacksTotalLastYear], configBigOverlay);
-*/
+    /*
+     * Incidents per Type
+     * ==================
+     */
+    CSD.areaSeries('#incidents-type', 'Incidents per Type', monthLabels, attacksNumbers)
 
 
-    var attackCounter = 1
-
-    for (var attack of attackTypes) {
-        var attackName = attack.replace(/\//g, "/ ")
-        var chartDivId = "chart-" + attack.replace(/\s/g, "").replace(/\//g, "")
-
-        var chartClass, chartConfig, centerClass;
-        // Last Chart should have the months depicted on the X-axis
-        if (attackCounter == attackTypes.length) {
-            chartClass = "mini-last";
-            chartConfig = configMiniLast;
-            centerClass = "last-center";
-        } else {
-            chartClass = "mini";
-            chartConfig = configMini;
-            centerClass = "vertical-center";
-        }
-
-        // Convert array to contain numbers
-        var currAttackNumbers = attacksNumbers[attack].slice().map(Number);
-
-        var stats = getStatistics(currAttackNumbers);
-        var lastMonth = stats[0];
-        var mean = stats[1];
-        var sd = stats[2];
-
-        var trendIndicator = getTrendIndicator(lastMonth, mean, sd);
-
-        // Create DIVs
-        var rowDiv = $("<div>").addClass("row").addClass(centerClass);
-        var labelDiv = $("<div>").addClass("col-lg-2 desc").html(attackName);
-        var chartDiv = $("<div>").addClass("col-lg-9 ct-chart ct-golden-section autoscaleaxis clickable")
-            .addClass(chartClass).attr('id', chartDivId);
-        var trendDiv = $("<div>").addClass("col-lg-1 indicator").html(trendIndicator);
-
-        // Add the chart DIV element to the dom
-        rowDiv.append(labelDiv).append(chartDiv).append(trendDiv);
-        $("#charts-incidents-type").append(rowDiv);
-
-        // Create the new chart
-        var chart = new Chartist.Line('#' + chartDivId, {
-            labels: monthLabels,
-            series: [attacksNumbers[attack]],
-        }, chartConfig);
-
-        // Add it to the list of charts
-        charts.push(chart);
-
-        createOverlayChart(chartDivId, attackName, 'line', monthLabels, [attacksNumbers[attack]], configOverlay);
-
-        // Increase the attack counter to make sure classes are set correctly
-        attackCounter++;
-    }
 
     /*
      * Incidents per Sector
@@ -187,12 +124,6 @@ $( document ).ready(function() {
      */
     CSD.bar('#sector-incidents', "Incidents by Sector", sectorLabels, sectorNumbers);
 
-
-    // TODO: Remove after refactoring
-    // Remove Grid from all charts
-    for(chart of charts) {
-        chart.on('draw', removeGrid);
-    }
 
 
     /*
@@ -206,6 +137,7 @@ $( document ).ready(function() {
 
     var sectors = ['Public', 'Private', 'International'];
     CSD.table('#sector-top-3', 'Top 3 Attacks per Sector', sectors, mostAttacks);
+
 
 
     /*
