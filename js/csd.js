@@ -256,7 +256,7 @@ var CSD = (function ($, Chartist, _) {
 
             var chartClass, chartConfig, centerClass;
             // Last Chart should have the months depicted on the X-axis
-            if (attackCounter == series.length) {
+            if (attackCounter == Object.keys(series).length) {
                 chartClass = "mini-last";
                 chartConfig = configAreaLast;
                 centerClass = "last-center";
