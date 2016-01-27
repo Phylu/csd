@@ -227,6 +227,43 @@ var CSD = (function ($, Chartist, _) {
         });
     };
 
+    var getMaxKey = function(series) {
+        var max = -Infinity;
+        var maxKey;
+        for (var key in series) {
+            var value = parseInt(series[key]);
+            if (value > max) {
+                max = value;
+                maxKey = key;
+            }
+        }
+        if (max <= 0) {
+            return undefined;
+        }
+        return maxKey;
+    };
+
+    /*
+     * Public Helper functions
+     * =======================
+     */
+
+    /**
+     * Get the get the topX values of series
+     * @param series
+     * @param topx
+     * @returns {Array}
+     */
+    csd.getTopX = function(series, topx) {
+        var result = [];
+
+        for (var i = 0; i < topx; i++) {
+            result[i] = getMaxKey(series);
+            series[result[i]] = 0;
+        }
+        return result;
+    };
+
 
     /*
      * Public functions to create Dashboard Elements

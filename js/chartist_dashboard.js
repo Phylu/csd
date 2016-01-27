@@ -131,9 +131,9 @@ $( document ).ready(function() {
      * ========================
      */
     var mostAttacks= [];
-    mostAttacks[0] = getMostAttacks(sectorTypeData[0]);
-    mostAttacks[1] = getMostAttacks(sectorTypeData[1]);
-    mostAttacks[2] = getMostAttacks(sectorTypeData[2]);
+    mostAttacks[0] = CSD.getTopX(sectorTypeData[0], 3);
+    mostAttacks[1] = CSD.getTopX(sectorTypeData[1], 3);
+    mostAttacks[2] = CSD.getTopX(sectorTypeData[2], 3);
 
     var sectors = ['Public', 'Private', 'International'];
     CSD.table('#sector-top-3', 'Top 3 Attacks per Sector', sectors, mostAttacks);
