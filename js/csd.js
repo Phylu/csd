@@ -4,6 +4,7 @@
 
 var CSD = (function ($, Chartist, _) {
     var csd = {};
+    var db, typeColumn;
 
     // TODO: Implement http://www.taffydb.com/
 
@@ -119,6 +120,37 @@ var CSD = (function ($, Chartist, _) {
     };
 
     /*
+     * Initialization
+     * ==============
+     */
+
+    /**
+     * Store the database
+     * Database should be ordered by ID
+     * @param database
+     */
+    csd.setDatabase = function (database) {
+        db = database;
+
+        // Create easily searchable date fields
+        db().each(function (record) {
+            var dat = record.date.split('.');
+            record.day = dat[0];
+            record.month = dat[1];
+            record.year = dat[2];
+        });
+
+    };
+
+    /**
+     * Set the name of the type column;
+     * @param name
+     */
+    csd.setTypeColumn = function (name) {
+        typeColumn = name;
+    };
+
+    /*
      * Helper functions
      * ================
      */
@@ -138,7 +170,7 @@ var CSD = (function ($, Chartist, _) {
      */
     var createUniqueSelector = (function () {
         var id = 0;
-        var prefix = "chart-"
+        var prefix = "chart-";
         return function () {
             if (arguments[0] === 0) {
                 id = 0;
@@ -227,7 +259,12 @@ var CSD = (function ($, Chartist, _) {
         });
     };
 
-    var getMaxKey = function(series) {
+    /**
+     * Get the maximum key in a series
+     * @param series
+     * @returns {*}
+     */
+    var getMaxKey = function (series) {
         var max = -Infinity;
         var maxKey;
         for (var key in series) {
@@ -254,7 +291,7 @@ var CSD = (function ($, Chartist, _) {
      * @param topx
      * @returns {Array}
      */
-    csd.getTopX = function(series, topx) {
+    csd.getTopX = function (series, topx) {
         var result = [];
 
         for (var i = 0; i < topx; i++) {
@@ -266,9 +303,92 @@ var CSD = (function ($, Chartist, _) {
 
 
     /*
+     * Public Database Functions
+     * =========================
+     */
+    /**
+     * Create a Query Object
+     * @constructor
+     */
+    csd.Query = function () {
+        this.filter = [];
+    };
+    /**
+     * Return the Query Results
+     * @returns {V}
+     */
+    csd.Query.prototype.get = function () {
+        return db.apply(this, this.filter).get();
+    };
+    /**
+     * Filter by Attack Type
+     * @param type
+     * @returns {CSD.Query}
+     */
+    csd.Query.prototype.type = function (type) {
+        console.log(this);
+        var compObj = {};
+        compObj[typeColumn] = {};
+        compObj[typeColumn]['=='] = type;
+
+        this.filter.push(compObj);
+        return this;
+    };
+    /**
+     * Filter by Date
+     * @param d
+     * @param m
+     * @param y
+     * @returns {CSD.Query}
+     */
+    csd.Query.prototype.after = function (d, m, y) {
+        console.log(this);
+        var compObj = [
+            // Later year than submited
+            {year: {gt: y}},
+            // Later month of same year
+            {year: {'==': y}, month: {gt: m}},
+            // Later day
+            {year: {'==': y}, month: {'==': m}, day: {gte: d}}
+        ];
+        this.filter.push(compObj);
+        return this;
+    };
+    /**
+     * Filter by Date
+     * @param d
+     * @param m
+     * @param y
+     * @returns {CSD.Query}
+     */
+    csd.Query.prototype.before = function (d, m, y) {
+        console.log(this);
+        var compObj = [
+            // Later year than submited
+            {year: {lt: y}},
+            // Later month of same year
+            {year: {'==': y}, month: {lt: m}},
+            // Later day
+            {year: {'==': y}, month: {'==': m}, day: {lte: d}}
+        ];
+        this.filter.push(compObj);
+        return this;
+    };
+
+
+    /*
      * Public functions to create Dashboard Elements
      * =============================================
      */
+
+    /**
+     * Set the last updated label according to the last database element
+     * @param selector
+     */
+    csd.setLastUpdated = function (selector) {
+        var lastUpdate = db().last().date;
+        $(selector).html("Last Update: " + lastUpdate);
+    };
 
     /**
      * Create Series of area charts

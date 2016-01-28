@@ -1,5 +1,5 @@
-id,date,type,sector
-1,01.01.2015,Phishing,Public
-2,02.01.2015,Information leakage,Public
-3,01.02.2015,Phishing,Private
-4,01.03.2015,Spam,International
+id,date,CustomField.{Classificatie},CustomField.{Hulpmiddel},CustomField.{Impact},CustomField.{Sector}
+1,01.01.2016,RD-meldung,Injection attacks,Niet van toepassing,Rijksoverheid
+2,02.01.2016,NDS-Meldung,phishing,Niet van toepassing,Publiek
+3,01.02.2016,NTD-verzoek,phishing,Niet van toepassing,Telecom
+4,01.02.2016,Overige,Denial of Service,Onbekend,Zorg

@@ -1,36 +1,47 @@
-$(document).ready(function () {
+var load = function(csv) {
+
+    var data = $.csv.toObjects(csv);
+    var db = TAFFY(JSON.stringify(data));
+    CSD.setDatabase(db);
+
+    CSD.setTypeColumn('CustomField.{Hulpmiddel}');
+
+    //console.log(JSON.stringify(data));
+    /*
+    // Get all
+    console.log(db().get());
+
+    // Count
+    console.log(db().count());
+
+    // All pulic
+    console.log(db().filter({sector: "Public"}).get())
+
+    // Max value --> Create new column for sortable date?
+    console.log(db().max("date"));
+
+    // Sectors
+    // Public: "rijksoverheid";"publiek"
+    // Private: "privaat";"telecom";"secundaire";"zorg";"financieel";"water";"haven";"onbekend";"luchthaven";"energie";"spoor";"verzeker";"MSP";"multinationals"
+    // International: "internationaal";"partners"
+
+*/
+};
 
 
-    $.ajax({
-        type: "GET",
-        url: "data.csv",
-        dataType: "text",
-        success: function (data) {
-            load(data);
-        }
-    });
+var createDashboard = function() {
 
-    var load = function(csv) {
-        var data = $.csv.toObjects(csv);
-        console.log(JSON.stringify(data));
 
-        var db = TAFFY(JSON.stringify(data));
-        //var db = TAFFY('[{"record":1,"text":"example"}]');
+    /*
+     * Create Header
+     * =============
+     */
+    CSD.setLastUpdated("#updated");
 
-        // Get all
-        console.log(db().get());
-
-        // Count
-        console.log(db().count());
-
-        // All pulic
-        console.log(db().filter({sector: "Public"}).get())
-
-        // Max value --> Create new column for sortable date?
-        console.log(db().max("date"));
-
-    };
-
+    var db = new CSD.Query();
+    console.log(db.type('phishing').after(15, 1, 2016).get());
+    //console.log(db.perType("phishing"));
+    //console.log(CSD.db.after(15, 1, 2016).perType('phishing'));
 
     /* Prepare Data */
 
@@ -109,27 +120,8 @@ $(document).ready(function () {
 
     /* Create last updated label */
 
-    $("#updated").html("Last Update: " + monthLabels.slice(-1)[0] + ".");
 
-    $("#ideas-icon").click(function () {
 
-        $("#ideas").show();
-
-        $("#ideas").click(function () {
-            $("#ideas").hide();
-        });
-
-    });
-
-    $("#questions-icon").click(function () {
-
-        $("#ideas").show();
-
-        $("#ideas").click(function () {
-            $("#ideas").hide();
-        })
-
-    });
 
 
     /*
@@ -180,6 +172,36 @@ $(document).ready(function () {
     }
 
     CSD.circles('#advisories', 'Security Advisories High/High', advisoriesLabels, advisories);
+};
+
+var showLoadingError = function() {
+    var overlayHeading = $("<h1>").html("Sorry, we were not able to load the data...");
+    var overlayContainer = $("<div>").attr('id', 'overlay-container').addClass("overlay-container").append(overlayHeading);
+    var overlayDiv = $("<div>").attr('id', 'overlay').addClass("overlay");
+
+    var overlay = overlayDiv.append(overlayContainer);
+    overlay.appendTo(document.body);
+};
+
+
+/*
+ * Main Logic
+ * ==========
+ */
+$(document).ready(function () {
+
+    $.ajax({
+        type: "GET",
+        url: "data.csv",
+        dataType: "text",
+        success: function (data) {
+            db = load(data);
+            createDashboard(db);
+        },
+        error: function (data) {
+            showLoadingError();
+        }
+    });
 
 
     /*
@@ -187,5 +209,31 @@ $(document).ready(function () {
      * ==================
      */
     $('[data-toggle="tooltip"]').tooltip()
+
+
+    /*
+     * Switch On Ideas-Overlay
+     * =======================
+     */
+    $("#ideas-icon").click(function () {
+
+        $("#ideas").show();
+
+        $("#ideas").click(function () {
+            $("#ideas").hide();
+        });
+
+    });
+
+    $("#questions-icon").click(function () {
+
+        $("#ideas").show();
+
+        $("#ideas").click(function () {
+            $("#ideas").hide();
+        })
+
+    });
+
 
 });
