@@ -172,6 +172,14 @@ var createDashboard = function() {
     }
 
     CSD.circles('#advisories', 'Security Advisories High/High', advisoriesLabels, advisories);
+
+
+    /*
+     * Switch On Tooltips
+     * ==================
+     */
+    $('[data-toggle="tooltip"]').tooltip();
+
 };
 
 var showLoadingError = function() {
@@ -199,16 +207,12 @@ $(document).ready(function () {
             createDashboard(db);
         },
         error: function (data) {
-            showLoadingError();
+            var db = TAFFY();
+            CSD.setDatabase(db);
+            createDashboard(db);
+            //showLoadingError();
         }
     });
-
-
-    /*
-     * Switch On Tooltips
-     * ==================
-     */
-    $('[data-toggle="tooltip"]').tooltip()
 
 
     /*
@@ -234,6 +238,7 @@ $(document).ready(function () {
         })
 
     });
+
 
 
 });

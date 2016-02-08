@@ -292,13 +292,15 @@ var CSD = (function ($, Chartist, _) {
      * @returns {Array}
      */
     csd.getTopX = function (series, topx) {
-        var result = [];
+        var keys = [];
+        var numbers = [];
 
         for (var i = 0; i < topx; i++) {
-            result[i] = getMaxKey(series);
-            series[result[i]] = 0;
+            keys[i] = getMaxKey(series);
+            numbers[i] = series[keys[i]];
+            series[keys[i]] = 0;
         }
-        return result;
+        return [keys, numbers];
     };
 
 
@@ -326,10 +328,8 @@ var CSD = (function ($, Chartist, _) {
      * @returns {CSD.Query}
      */
     csd.Query.prototype.type = function (type) {
-        console.log(this);
         var compObj = {};
-        compObj[typeColumn] = {};
-        compObj[typeColumn]['=='] = type;
+        compObj[typeColumn] = {'==': type};
 
         this.filter.push(compObj);
         return this;
@@ -342,7 +342,6 @@ var CSD = (function ($, Chartist, _) {
      * @returns {CSD.Query}
      */
     csd.Query.prototype.after = function (d, m, y) {
-        console.log(this);
         var compObj = [
             // Later year than submited
             {year: {gt: y}},
@@ -510,16 +509,18 @@ var CSD = (function ($, Chartist, _) {
             // Scaling so that the biggest ones still fit the div
             var size = percentage * 150;
 
+            // Get selector
+            var svgSelector = createUniqueSelector();
+
             // Build up DOM with SVG element
             var rowDiv = $("<div>").addClass("row vertical-center");
-            var labelDiv = $("<div>").addClass("col-lg-6 desc").html(labels[i]);
-            var outerDiv = $("<div>").addClass("circle-container")
-                .html('<svg height="65px" width="65px" data-toggle="tooltip" data-placement="right" title="' +
+            var labelDiv = $("<div>").addClass("col-lg-4 desc").html(labels[i]);
+            var outerDiv = $("<div>").addClass("col-lg-8 circle-container")
+                .html('<svg id="' + svgSelector + '" height="65px" width="65px" data-toggle="tooltip" data-placement="right" title="' +
                     series[i] + '"><circle cx="30" cy="30" r="' + size + '" fill="#d70206"/></svg>');
 
             rowDiv.append(labelDiv).append(outerDiv);
             $(selector).append(rowDiv);
-
         }
 
     };
@@ -601,8 +602,10 @@ var CSD = (function ($, Chartist, _) {
 
             row.append($('<th>').addClass('desc').html(labels[i]));
 
-            for (dataPoint of series[i]) {
-                row.append($('<td>').html(dataPoint));
+            for (var key in series[i][0]) {
+                row.append($('<td>').append($('<div>').addClass('inline')
+                    .attr('data-toggle', 'tooltip').attr('data-placement', 'right').attr('title', series[i][1][key])
+                    .html(series[i][0][key])));
             }
 
             tabBody.append(row);

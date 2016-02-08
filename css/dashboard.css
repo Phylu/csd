@@ -27,8 +27,16 @@ h2 {
     align-items: center;
 }
 
+.row > .desc {
+    padding: 0;
+}
+
 .desc {
     text-align: right;
+}
+
+.inline {
+    display: inline;
 }
 
 .last-center .desc {
@@ -122,7 +130,6 @@ h2 {
  * ==============
  */
 .circle-container {
-    width: 65px;
     height: 65px;
 }
 
