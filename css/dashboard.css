@@ -8,6 +8,7 @@ h1 {
 
 h2 {
     font-size: 20px;
+    display: inline;
 }
 
 .big {
@@ -104,7 +105,6 @@ h2 {
     height: 100%;
     background: url('../img/transparent50.png') repeat;
     z-index: 10000;
-    cursor: pointer;
 }
 
 .overlay-container {
@@ -123,6 +123,31 @@ h2 {
 
 .overlay-div {
     margin: 0px 0px 10px 20px;
+}
+
+a.close{
+    float:right;
+    margin-top:-30px;
+    margin-right:-12px;
+    cursor:pointer;
+    color: #FFF;
+    border-radius: 30px;
+    background: #000;
+    font-size: 26px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 7px 3px 15px 3px;
+    opacity: 1;
+}
+
+a.close:hover {
+    opacity: 1;
+    color: #FFF;
+}
+
+.close:before {
+    content: "×";
 }
 
 /*
@@ -157,8 +182,8 @@ h2 {
 
 
 /*
- * Legend Settings
- * ===============
+ * Chartist Legend Settings
+ * ========================
  */
 .ct-legend {
     position: absolute;
@@ -214,4 +239,41 @@ h2 {
 .ct-legend .ct-series-4:before {
     background-color: #453d3f;
     border-color: #453d3f;
+}
+
+/*
+ * Chartist Tooltip Settings
+ * =========================
+ */
+.chartist-tooltip {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    min-width: 2em;
+    padding: .5em;
+    background: #000;
+    color: #FFF;
+    border-radius: 10%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    pointer-events: none;
+    z-index: 1070;
+}
+.chartist-tooltip:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -5px;
+    border: 5px solid transparent;
+    border-top-color: #000;
+}
+.chartist-tooltip.tooltip-show {
+    opacity: 1;
 }

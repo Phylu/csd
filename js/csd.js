@@ -41,6 +41,9 @@ var CSD = (function ($, Chartist, _) {
             offset: 0,
         },
         showArea: true,
+        plugins: [
+            Chartist.plugins.tooltip()
+        ],
     };
 
     var configAreaLast = {
@@ -52,6 +55,9 @@ var CSD = (function ($, Chartist, _) {
             onlyInteger: true
         },
         showArea: true,
+        plugins: [
+            Chartist.plugins.tooltip()
+        ],
     };
 
     var configAreaOverlay = {
@@ -65,6 +71,9 @@ var CSD = (function ($, Chartist, _) {
             right: 30,
         },
         showArea: true,
+        plugins: [
+            Chartist.plugins.tooltip()
+        ],
     };
 
     var configBar = {
@@ -78,6 +87,9 @@ var CSD = (function ($, Chartist, _) {
         distributeSeries: true,
         horizontalBars: true,
         reverseData: true,
+        plugins: [
+            Chartist.plugins.tooltip()
+        ],
     };
 
     var configBarOverlay = {
@@ -93,6 +105,9 @@ var CSD = (function ($, Chartist, _) {
         onlyInteger: true,
         distributeSeries: true,
         horizontalBars: true,
+        plugins: [
+            Chartist.plugins.tooltip()
+        ],
     };
 
     var configLine = {
@@ -117,6 +132,21 @@ var CSD = (function ($, Chartist, _) {
         chartPadding: {
             right: 30,
         },
+    };
+
+    /*
+     * Custom JQuery Functions
+     * =======================
+     */
+
+    /**
+     * Add a tooltip easily
+     * @param description
+     * @param position
+     * @returns {*}
+     */
+    jQuery.fn.addTooltip = function(description, position) {
+        return this.attr('data-toggle', 'tooltip').attr('data-placement', position).attr('title', description);
     };
 
     /*
@@ -231,10 +261,11 @@ var CSD = (function ($, Chartist, _) {
         $("#" + selector).click(function () {
 
             var overlayDiv = $("<div>").attr('id', 'overlay').addClass("overlay");
+            var overlayClose = $("<a>").addClass('close');
             var overlayHeading = $("<h2>").html(name);
             var overlayChart = $("<div>").attr('id', 'overlay-chart').addClass("ct-chart ct-double-octave autoscaleaxis");
 
-            var overlayContainer = $("<div>").attr('id', 'overlay-container').addClass("overlay-container").append(overlayHeading).append(overlayChart);
+            var overlayContainer = $("<div>").attr('id', 'overlay-container').addClass("overlay-container").append(overlayClose).append(overlayHeading).append(overlayChart);
 
             var overlay = overlayDiv.append(overlayContainer.append(overlayChart));
             overlay.appendTo(document.body);
@@ -252,7 +283,7 @@ var CSD = (function ($, Chartist, _) {
                 }, config);
             }
 
-            $("#overlay").click(function () {
+            overlayClose.click(function () {
                 $("#overlay").remove();
             })
 
@@ -279,6 +310,8 @@ var CSD = (function ($, Chartist, _) {
         }
         return maxKey;
     };
+
+
 
     /*
      * Public Helper functions
@@ -396,10 +429,11 @@ var CSD = (function ($, Chartist, _) {
      * @param labels
      * @param series
      */
-    csd.areaSeries = function (selector, name, labels, series) {
+    csd.areaSeries = function (selector, name, description, labels, series) {
 
         // Add Heading
-        $(selector).append($('<h2>').html(name));
+        var heading = $('<h2>').html(name).addTooltip(description, 'bottom');
+        $(selector).append(heading);
 
         // Counter to change config for last Element
         var attackCounter = 1;
@@ -465,12 +499,13 @@ var CSD = (function ($, Chartist, _) {
      * @param labels
      * @param series
      */
-    csd.bar = function (selector, name, labels, series) {
+    csd.bar = function (selector, name, description, labels, series) {
 
         var chartSelector = createUniqueSelector();
 
         // Add Heading
-        $(selector).append($('<h2>').html(name));
+        var heading = $('<h2>').html(name).addTooltip(description, 'bottom');
+        $(selector).append(heading);
         $(selector).append($('<div>').attr('id', chartSelector).addClass('ct-chart autoscaleaxis clickable'));
 
         var chart = new Chartist.Bar('#' + chartSelector, {
@@ -490,9 +525,10 @@ var CSD = (function ($, Chartist, _) {
      * @param labels
      * @param series
      */
-    csd.circles = function (selector, name, labels, series) {
+    csd.circles = function (selector, name, description, labels, series) {
 
-        $(selector).append($('<h2>').html(name));
+        var heading = $('<h2>').html(name).addTooltip(description, 'bottom');
+        $(selector).append(heading);
 
         // Get Total Value for last 12 month
         var total = 0;
@@ -533,12 +569,12 @@ var CSD = (function ($, Chartist, _) {
      * @param series
      * @param names
      */
-    csd.line = function (selector, name, labels, series, legend) {
+    csd.line = function (selector, name, description, labels, series, legend) {
 
         var chartSelector = createUniqueSelector();
 
         // Add Heading
-        var heading = $('<h2>').html(name);
+        var heading = $('<h2>').html(name).addTooltip(description, 'bottom');
         $(selector).append(heading);
         $(selector).append($('<div>').attr('id', chartSelector).addClass('ct-chart autoscaleaxis clickable big'));
 
@@ -547,7 +583,8 @@ var CSD = (function ($, Chartist, _) {
             Chartist.plugins.legend({
                 legendNames: legend,
                 clickable: false,
-            })
+            }),
+            Chartist.plugins.tooltip(),
         ];
 
         var chart = new Chartist.Line('#' + chartSelector, {
@@ -570,8 +607,9 @@ var CSD = (function ($, Chartist, _) {
         thisConfigOverlay.plugins = [
             Chartist.plugins.legend({
                 legendNames: legend,
-                clickable: false,
-            })
+                /*clickable: false,*/
+            }),
+            Chartist.plugins.tooltip(),
         ];
 
         createOverlayChart(chartSelector, name, 'line', labels, series, thisConfigOverlay);
@@ -587,10 +625,11 @@ var CSD = (function ($, Chartist, _) {
      * @param labels
      * @param series
      */
-    csd.table = function (selector, name, labels, series) {
+    csd.table = function (selector, name, description, labels, series) {
 
         // Add Heading
-        $(selector).append($('<h2>').html(name));
+        var heading = $('<h2>').html(name).addTooltip(description, 'bottom');
+        $(selector).append(heading);
 
         // Create Table Element
         var tabBody = $('<tbody>');
@@ -603,8 +642,7 @@ var CSD = (function ($, Chartist, _) {
             row.append($('<th>').addClass('desc').html(labels[i]));
 
             for (var key in series[i][0]) {
-                row.append($('<td>').append($('<div>').addClass('inline')
-                    .attr('data-toggle', 'tooltip').attr('data-placement', 'right').attr('title', series[i][1][key])
+                row.append($('<td>').append($('<div>').addClass('inline').addTooltip(series[i][1][key], 'right')
                     .html(series[i][0][key])));
             }
 

@@ -129,7 +129,7 @@ var createDashboard = function() {
      * ==================
      */
 
-    CSD.line('#incidents', 'Reported Incidents', monthOnlyLabels, [attacksTotal, attacksTotalLastYear],
+    CSD.line('#incidents', 'Reported Incidents', 'Reported Incidents shows how many incidents were reported to the NCSC in total for the last months.', monthOnlyLabels, [attacksTotal, attacksTotalLastYear],
         ['2014/15', '2013/14']);
 
 
@@ -137,14 +137,14 @@ var createDashboard = function() {
      * Incidents per Type
      * ==================
      */
-    CSD.areaSeries('#incidents-type', 'Incidents per Type', monthLabels, attacksNumbers)
+    CSD.areaSeries('#incidents-type', 'Incidents per Type', 'Incidents per Type shows the number of incidents reported to the NCSC where a specific attack type was used.', monthLabels, attacksNumbers)
 
 
     /*
      * Incidents per Sector
      * ====================
      */
-    CSD.bar('#sector-incidents', "Incidents by Sector", sectorLabels, sectorNumbers);
+    CSD.bar('#sector-incidents', 'Incidents by Sector', 'Incidents by Sector shows how many attacks were reported in each sector in the last year.', sectorLabels, sectorNumbers);
 
 
     /*
@@ -157,7 +157,7 @@ var createDashboard = function() {
     mostAttacks[2] = CSD.getTopX(sectorTypeData[2], 3);
 
     var sectors = ['Public', 'Private', 'International'];
-    CSD.table('#sector-top-3', 'Top 3 Attacks per Sector', sectors, mostAttacks);
+    CSD.table('#sector-top-3', 'Top 3 Attacks per Sector', 'Top 3 Attacks per Sector shows which attack were reported most from the sectors in the last year.', sectors, mostAttacks);
 
 
     /*
@@ -171,7 +171,7 @@ var createDashboard = function() {
         advisories.push(obj['advisories']);
     }
 
-    CSD.circles('#advisories', 'Security Advisories High/High', advisoriesLabels, advisories);
+    CSD.circles('#advisories', 'Security Advisories High/High', 'Security Advisories High/High shows how many security advisories with high impact and high likelihood were published by the NCSC in the last months', advisoriesLabels, advisories);
 
 
     /*
@@ -223,20 +223,16 @@ $(document).ready(function () {
 
         $("#ideas").show();
 
-        $("#ideas").click(function () {
-            $("#ideas").hide();
-        });
-
     });
 
     $("#questions-icon").click(function () {
 
         $("#ideas").show();
 
-        $("#ideas").click(function () {
-            $("#ideas").hide();
-        })
+    });
 
+    $("#ideas-close").click(function () {
+        $("#ideas").hide();
     });
 
 
