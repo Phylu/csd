@@ -141,13 +141,28 @@ var CSD = (function ($, Chartist, _) {
 
     /**
      * Add a tooltip easily
-     * @param description
-     * @param position
+     * @param description   Tooltip Content
+     * @param position      top, bottom, left, right
      * @returns {*}
      */
     jQuery.fn.addTooltip = function(description, position) {
         return this.attr('data-toggle', 'tooltip').attr('data-placement', position).attr('title', description);
     };
+
+    /*
+     * Document Settings
+     */
+
+    /**
+     * Close overlays when escape is pressed
+     */
+    $(document).keyup(function(e) {
+        if (e.keyCode == 27) { // escape key maps to keycode `27`
+            $("#overlay").remove();
+            $(".overlay").hide();
+        }
+    });
+
 
     /*
      * Initialization
@@ -652,6 +667,7 @@ var CSD = (function ($, Chartist, _) {
         // Attach Table to $(selector)
         $(selector).append(tab);
     };
+
 
     return csd;
 }(jQuery, Chartist, _));
