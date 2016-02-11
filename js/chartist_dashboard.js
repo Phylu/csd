@@ -173,7 +173,7 @@ var createDashboard = function() {
         advisories.push(obj['advisories']);
     }
 
-    CSD.circles('#advisories', 'Security Advisories High/High', 'Security Advisories High/High shows how many security advisories with high impact and high likelihood were published by the NCSC in the last months', advisoriesLabels, advisories);
+    CSD.circles('#advisories', 'Critical Security Advisories', 'Critical Security Advisories shows how many security advisories with high impact and high likelihood were published by the NCSC in the last months', advisoriesLabels, advisories);
 
 
     /*
