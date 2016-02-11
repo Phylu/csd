@@ -4,7 +4,7 @@
 
 var CSD = (function ($, Chartist, _) {
     var csd = {};
-    var db, typeColumn;
+    var db, typeColumn, sectorColumn;
 
     // TODO: Implement http://www.taffydb.com/
 
@@ -188,11 +188,35 @@ var CSD = (function ($, Chartist, _) {
     };
 
     /**
-     * Set the name of the type column;
+     * Set the name of the type column
      * @param name
      */
     csd.setTypeColumn = function (name) {
         typeColumn = name;
+    };
+
+    /**
+     * Set the name of the sector column
+     * @param name
+     */
+    csd.setSectorColumn = function (name) {
+        sectorColumn = name;
+    };
+
+    /**
+     * Remap from one column to another
+     * @param oldColumn
+     * @param newColumn
+     * @param map
+     */
+    csd.group = function (oldColumn, newColumn, map) {
+        db().each(function (record) {
+            var newValue = map[record[oldColumn].toLowerCase()];
+            if (typeof newValue == "undefined") {
+                newValue = record[oldColumn];
+            }
+            record[newColumn] = newValue;
+        });
     };
 
     /*
@@ -403,6 +427,18 @@ var CSD = (function ($, Chartist, _) {
         return this;
     };
     /**
+     * Filter by sector
+     * @param sector
+     * @returns {CSD.Query}
+     */
+    csd.Query.prototype.sector = function (sector) {
+        var compObj = {};
+        compObj[sectorColumn] = {'==': sector};
+
+        this.filter.push(compObj);
+        return this;
+    };
+    /**
      * Filter by Date
      * @param d
      * @param m
@@ -429,7 +465,6 @@ var CSD = (function ($, Chartist, _) {
      * @returns {CSD.Query}
      */
     csd.Query.prototype.before = function (d, m, y) {
-        console.log(this);
         var compObj = [
             // Later year than submited
             {year: {lt: y}},
@@ -447,25 +482,50 @@ var CSD = (function ($, Chartist, _) {
      * @constructor
      */
     csd.DataQuery = function () {
-
+        this.filterObject = {};
     };
 
-    csd.DataQuery.prototype.lastMonths = function (months) {
+    /**
+     * Filter the attacks
+     * @param filterObject
+     */
+    csd.DataQuery.prototype.attacks = function (filterObject) {
+        this.filterObject = filterObject;
+        return this;
+    };
+
+    /**
+     * Get monthly stuff
+     * @param months
+     * @param years
+     * @returns {Array}
+     */
+    csd.DataQuery.prototype.monthly = function (months, years) {
+        if (typeof years == 'undefined') {
+            years = 1;
+        }
+
         var latestMonth = db().last().month;
         var latestYear = db().last().year;
 
         var result = [];
 
-        for (var i = months - 1; i >= 0; i--) {
-            var month = latestMonth - i;
-            var year = latestYear;
-            if (month <= 0) {
-                month += 12;
-                year -= 1;
+        for (var y = 0; y < years; y++) {
+            result[y] = [];
+            for (var i = months - 1; i >= 0; i--) {
+                var month = latestMonth - i;
+                var year = latestYear - y;
+                if (month <= 0) {
+                    month += 12;
+                    year -= 1;
+                }
+                var query = new csd.Query();
+                for (var key in this.filterObject) {
+                    query[key](this.filterObject[key]);
+                }
+                var queryResult = query.after(1, month, year).before(31, month, year).count();
+                result[y].push(queryResult);
             }
-            var query = new csd.Query();
-            var queryResult = query.after(1, month, year).before(31, month, year).count();
-            result.push(queryResult);
         }
         return result;
     };

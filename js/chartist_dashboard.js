@@ -4,7 +4,38 @@ var load = function(csv) {
     var db = TAFFY(JSON.stringify(data));
     CSD.setDatabase(db);
 
-    CSD.setTypeColumn('CustomField.{Hulpmiddel}');
+    var types = {
+        Overige: 'Others',
+        Anders: 'Others',
+        'Niet van toepassing': 'Others'
+    };
+    CSD.group('CustomField.{Hulpmiddel}', 'type', types);
+    CSD.setTypeColumn('type');
+
+    var sectors = {
+        publiek: 'Public',
+        rijksoverheid: 'Public',
+        privaat: 'Private',
+        telecom: 'Private',
+        secundaire: 'Private',
+        zorg: 'Private',
+        financieel: 'Private',
+        water: 'Private',
+        haven: 'Private',
+        onbekend: 'Private',
+        luchthaven: 'Private',
+        energie: 'Private',
+        spoor: 'Private',
+        verzeker: 'Private',
+        msp: 'Private',
+        multinationals: 'Private',
+        internationaal: 'International',
+        partners: 'International',
+    };
+    CSD.group('CustomField.{Sector}', 'sector', sectors);
+    CSD.setSectorColumn('sector');
+
+    console.log(db().get());
 
     //console.log(JSON.stringify(data));
     /*
@@ -39,9 +70,9 @@ var createDashboard = function() {
     CSD.setLastUpdated("#updated");
 
     var db = new CSD.Query();
-    console.log(db.type('phishing').after(15, 1, 2016).count());
+    console.log(db.sector('Private').after(15, 1, 2016).count());
     var query = new CSD.DataQuery();
-    console.log(query.lastMonths(2));
+    console.log(query.attacks({sector: 'Public'}).monthly(12, 2));
     //console.log(db.perType("phishing"));
     //console.log(CSD.db.after(15, 1, 2016).perType('phishing'));
 
