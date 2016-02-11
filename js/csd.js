@@ -325,14 +325,19 @@ var CSD = (function ($, Chartist, _) {
      */
     var getTrendIndicator = function (curr, mean, sd) {
         var trendIndicator = $("<i>").addClass("fa");
-        if (curr >= mean + (3 * sd)) {
-            trendIndicator.addClass("fa-arrow-up high");
-        } else if (curr >= mean + sd) {
-            trendIndicator.addClass("fa-arrow-up rotate-45-right raising");
-        } else if (curr <= mean - (3 * sd)) {
-            trendIndicator.addClass("fa-arrow-down low");
-        } else if (curr <= mean - sd) {
-            trendIndicator.addClass("fa-arrow-down rotate-45-left falling");
+        // Additional check because 0-0-0 matches all the cases and I am too lazy to reorder the whole statement
+        if (curr != mean != sd) {
+            if (curr >= mean + (3 * sd)) {
+                trendIndicator.addClass("fa-arrow-up high");
+            } else if (curr >= mean + sd) {
+                trendIndicator.addClass("fa-arrow-up rotate-45-right raising");
+            } else if (curr <= mean - (3 * sd)) {
+                trendIndicator.addClass("fa-arrow-down low");
+            } else if (curr <= mean - sd) {
+                trendIndicator.addClass("fa-arrow-down rotate-45-left falling");
+            } else {
+                trendIndicator.addClass("fa-arrow-right stable");
+            }
         } else {
             trendIndicator.addClass("fa-arrow-right stable");
         }
