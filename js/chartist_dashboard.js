@@ -5,9 +5,9 @@ var load = function(csv) {
     CSD.setDatabase(db);
 
     var types = {
-        Overige: 'Others',
-        Anders: 'Others',
-        'Niet van toepassing': 'Others'
+        Overige: 'Other',
+        Anders: 'Other',
+        'Niet van toepassing': 'Other'
     };
     CSD.group('CustomField.{Hulpmiddel}', 'type', types);
     CSD.setTypeColumn('type');
@@ -151,33 +151,54 @@ var createDashboard = function() {
         }
     }
 
-    /* Create last updated label */
 
+    var types = ['Phishing', 'Information leakage', 'Injection attacks', 'Malicious code',
+        'Ransomware/Cryptoware', 'Denial of service', 'Botnets', 'Cyber espionage',
+        'Data breaches', 'Hacking/Cracking', 'Spam', 'Illegal content', 'Other'];
 
-
+    var sectors = ['Public', 'Private', 'International'];
 
 
     /*
      * Reported Incidents
      * ==================
      */
-
-    CSD.line('#incidents', 'Reported Incidents', 'Reported Incidents shows how many incidents were reported to the NCSC in total for the last months.', monthOnlyLabels, [attacksTotal, attacksTotalLastYear],
-        ['2014/15', '2013/14']);
+    CSD.line('#incidents', 'Reported Incidents', 'Reported Incidents shows how many incidents were reported to the NCSC in total for the last months.',
+        CSD.getLabels(),
+        new CSD.DataQuery().monthly(12, 2),
+        CSD.getLegend(2));
+    //CSD.line('#incidents', 'Reported Incidents', 'Reported Incidents shows how many incidents were reported to the NCSC in total for the last months.', monthOnlyLabels, [attacksTotal, attacksTotalLastYear],
+    //    ['2014/15', '2013/14']);
 
 
     /*
      * Incidents per Type
      * ==================
      */
-    CSD.areaSeries('#incidents-type', 'Incidents per Type', 'Incidents per Type shows the number of incidents reported to the NCSC where a specific attack type was used.', monthLabels, attacksNumbers)
+    var attackNumbers = {};
+    for (var type of types) {
+        attackNumbers[type] = new CSD.DataQuery().attacks({type: type}).monthly(12)[0];
+    }
+    CSD.areaSeries('#incidents-type', 'Incidents per Type', 'Incidents per Type shows the number of incidents reported to the NCSC where a specific attack type was used.',
+        CSD.getLabels(true),
+        attackNumbers);
+    console.log(attackNumbers);
+    //CSD.areaSeries('#incidents-type', 'Incidents per Type', 'Incidents per Type shows the number of incidents reported to the NCSC where a specific attack type was used.', monthLabels, attacksNumbers)
 
 
     /*
      * Incidents per Sector
      * ====================
      */
-    CSD.bar('#sector-incidents', 'Incidents by Sector', 'Incidents by Sector shows how many attacks were reported in each sector in the last year.', sectorLabels, sectorNumbers);
+    var attackNumbersSector = [];
+    for (var sector of sectors) {
+        attackNumbersSector.push(new CSD.DataQuery().attacks({sector: sector}).yearly());
+    }
+    console.log(attackNumbersSector);
+    CSD.bar('#sector-incidents', 'Incidents by Sector', 'Incidents by Sector shows how many attacks were reported in each sector in the last year.',
+        sectors,
+        attackNumbersSector);
+    //CSD.bar('#sector-incidents', 'Incidents by Sector', 'Incidents by Sector shows how many attacks were reported in each sector in the last year.', sectorLabels, sectorNumbers);
 
 
     /*

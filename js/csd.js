@@ -5,6 +5,7 @@
 var CSD = (function ($, Chartist, _) {
     var csd = {};
     var db, typeColumn, sectorColumn;
+    var monthLabels = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
     // TODO: Implement http://www.taffydb.com/
 
@@ -215,8 +216,59 @@ var CSD = (function ($, Chartist, _) {
             if (typeof newValue == "undefined") {
                 newValue = record[oldColumn];
             }
-            record[newColumn] = newValue;
+            record[newColumn] = newValue.toLowerCase();
         });
+    };
+
+    /**
+     * Get the labels for the last 12 months according to last data point
+     * @param years     Add years to the label if true
+     * @returns {Array}
+     */
+    csd.getLabels = function (years) {
+        var latestMonth = db().last().month;
+        var latestYear = db().last().year;
+
+        var result = [];
+
+        for (var i = 11; i >= 0; i--) {
+            var month = latestMonth - i;
+            var year = latestYear;
+            if (month <= 0) {
+                month += 12;
+                year -= 1;
+            }
+            var label = monthLabels[month];
+            if (typeof years != "undefined" && years == true) {
+                label = label + " " + year;
+            }
+            result.push(label);
+        }
+
+        return result;
+    };
+
+    /**
+     * Get the different years for the legend
+     * @param years
+     */
+    csd.getLegend = function (years) {
+        var latestMonth = db().last().month;
+        var latestYear = db().last().year;
+
+        var result = [];
+
+        for (var i = 0; i < years; i++) {
+            if (latestMonth == 12) {
+                result.push(latestYear - i);
+            } else {
+                var currYear = latestYear - i;
+                var year = currYear - 1;
+                year += "/" + String(currYear).substr(2, 4);
+                result.push(year);
+            }
+        }
+        return result;
     };
 
     /*
@@ -421,7 +473,7 @@ var CSD = (function ($, Chartist, _) {
      */
     csd.Query.prototype.type = function (type) {
         var compObj = {};
-        compObj[typeColumn] = {'==': type};
+        compObj[typeColumn] = {'==': type.toLowerCase()};
 
         this.filter.push(compObj);
         return this;
@@ -433,9 +485,10 @@ var CSD = (function ($, Chartist, _) {
      */
     csd.Query.prototype.sector = function (sector) {
         var compObj = {};
-        compObj[sectorColumn] = {'==': sector};
+        compObj[sectorColumn] = {'==': sector.toLowerCase()};
 
         this.filter.push(compObj);
+        console.log(this.filter);
         return this;
     };
     /**
@@ -528,6 +581,28 @@ var CSD = (function ($, Chartist, _) {
             }
         }
         return result;
+    };
+
+    csd.DataQuery.prototype.yearly = function () {
+        var latestMonth = db().last().month;
+        var latestYear = db().last().year;
+
+        var startMonth, startYear;
+        if (latestMonth == 12) {
+            startMonth = 1;
+            startYear = latestYear;
+        } else {
+            startMonth = latestMonth + 1;
+            startYear = latestYear - 1;
+        }
+
+        var query = new csd.Query();
+        for (var key in this.filterObject) {
+            query[key](this.filterObject[key]);
+        }
+
+        var queryResult = query.after(1, startMonth, startYear - 1).before(31, latestMonth, latestYear).count();
+        return queryResult;
     };
 
 
