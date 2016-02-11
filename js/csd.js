@@ -364,11 +364,31 @@ var CSD = (function ($, Chartist, _) {
         this.filter = [];
     };
     /**
+     * Reset the Query
+     */
+    csd.Query.prototype.reset = function () {
+        this.filter = [];
+    };
+    /**
      * Return the Query Results
      * @returns {V}
      */
     csd.Query.prototype.get = function () {
-        return db.apply(this, this.filter).get();
+        if (this.filter != []) {
+            return db.apply(this, this.filter).get();
+        } else {
+            return db.get();
+        }
+    };
+    /**
+     * Count the Query Results
+     */
+    csd.Query.prototype.count = function () {
+        if (this.filter != []) {
+            return db.apply(this, this.filter).count();
+        } else {
+            return db.count();
+        }
     };
     /**
      * Filter by Attack Type
@@ -422,6 +442,34 @@ var CSD = (function ($, Chartist, _) {
         return this;
     };
 
+    /**
+     * Create a Query Object
+     * @constructor
+     */
+    csd.DataQuery = function () {
+
+    };
+
+    csd.DataQuery.prototype.lastMonths = function (months) {
+        var latestMonth = db().last().month;
+        var latestYear = db().last().year;
+
+        var result = [];
+
+        for (var i = months - 1; i >= 0; i--) {
+            var month = latestMonth - i;
+            var year = latestYear;
+            if (month <= 0) {
+                month += 12;
+                year -= 1;
+            }
+            var query = new csd.Query();
+            var queryResult = query.after(1, month, year).before(31, month, year).count();
+            result.push(queryResult);
+        }
+        return result;
+    };
+
 
     /*
      * Public functions to create Dashboard Elements
@@ -434,7 +482,8 @@ var CSD = (function ($, Chartist, _) {
      */
     csd.setLastUpdated = function (selector) {
         var lastUpdate = db().last().date;
-        $(selector).html("Last Update: " + lastUpdate);
+        // TODO: Remove after screenshot
+        $(selector).html("Last Update: Apr 15");// + lastUpdate);
     };
 
     /**

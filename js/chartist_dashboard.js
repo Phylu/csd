@@ -39,7 +39,9 @@ var createDashboard = function() {
     CSD.setLastUpdated("#updated");
 
     var db = new CSD.Query();
-    console.log(db.type('phishing').after(15, 1, 2016).get());
+    console.log(db.type('phishing').after(15, 1, 2016).count());
+    var query = new CSD.DataQuery();
+    console.log(query.lastMonths(2));
     //console.log(db.perType("phishing"));
     //console.log(CSD.db.after(15, 1, 2016).perType('phishing'));
 
