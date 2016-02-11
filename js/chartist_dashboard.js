@@ -35,7 +35,7 @@ var load = function(csv) {
     CSD.group('CustomField.{Sector}', 'sector', sectors);
     CSD.setSectorColumn('sector');
 
-    console.log(db().get());
+    //console.log(db().get());
 
     //console.log(JSON.stringify(data));
     /*
@@ -69,10 +69,10 @@ var createDashboard = function() {
      */
     CSD.setLastUpdated("#updated");
 
-    var db = new CSD.Query();
-    console.log(db.sector('Private').after(15, 1, 2016).count());
-    var query = new CSD.DataQuery();
-    console.log(query.attacks({sector: 'Public'}).monthly(12, 2));
+    //var db = new CSD.Query();
+    //console.log(db.sector('Private').after(15, 1, 2016).count());
+    //var query = new CSD.DataQuery();
+    //console.log(query.attacks({sector: 'Public'}).monthly(12, 2));
     //console.log(db.perType("phishing"));
     //console.log(CSD.db.after(15, 1, 2016).perType('phishing'));
 
@@ -182,7 +182,6 @@ var createDashboard = function() {
     CSD.areaSeries('#incidents-type', 'Incidents per Type', 'Incidents per Type shows the number of incidents reported to the NCSC where a specific attack type was used.',
         CSD.getLabels(true),
         attackNumbers);
-    console.log(attackNumbers);
     //CSD.areaSeries('#incidents-type', 'Incidents per Type', 'Incidents per Type shows the number of incidents reported to the NCSC where a specific attack type was used.', monthLabels, attacksNumbers)
 
 
@@ -194,7 +193,6 @@ var createDashboard = function() {
     for (var sector of sectors) {
         attackNumbersSector.push(new CSD.DataQuery().attacks({sector: sector}).yearly());
     }
-    console.log(attackNumbersSector);
     CSD.bar('#sector-incidents', 'Incidents by Sector', 'Incidents by Sector shows how many attacks were reported in each sector in the last year.',
         sectors,
         attackNumbersSector);
@@ -205,13 +203,23 @@ var createDashboard = function() {
      * Top 3 attacks per sector
      * ========================
      */
-    var mostAttacks = [];
-    mostAttacks[0] = CSD.getTopX(sectorTypeData[0], 3);
-    mostAttacks[1] = CSD.getTopX(sectorTypeData[1], 3);
-    mostAttacks[2] = CSD.getTopX(sectorTypeData[2], 3);
+    var attackNumbersSectorType = [];
 
-    var sectors = ['Public', 'Private', 'International'];
-    CSD.table('#sector-top-3', 'Top 3 Attacks per Sector', 'Top 3 Attacks per Sector shows which attack were reported most from the sectors in the last year.', sectors, mostAttacks);
+    // Iterate over Sectors
+    for (sector of sectors) {
+        var attackNumbersThisSector = {};
+        // Get attack type + number of attacks in this sector
+        for (var type of types) {
+            attackNumbersThisSector[type] = new CSD.DataQuery().attacks({type: type, sector: sector}).yearly();
+        }
+        // Store the top 3 for this sector
+        attackNumbersSectorType.push(CSD.getTopX(attackNumbersThisSector, 3));
+    }
+
+    CSD.table('#sector-top-3', 'Top 3 Attacks per Sector', 'Top 3 Attacks per Sector shows which attack were reported most from the sectors in the last year.',
+        sectors,
+        attackNumbersSectorType);
+    //CSD.table('#sector-top-3', 'Top 3 Attacks per Sector', 'Top 3 Attacks per Sector shows which attack were reported most from the sectors in the last year.',sectors, mostAttacks);
 
 
     /*

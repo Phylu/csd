@@ -488,7 +488,6 @@ var CSD = (function ($, Chartist, _) {
         compObj[sectorColumn] = {'==': sector.toLowerCase()};
 
         this.filter.push(compObj);
-        console.log(this.filter);
         return this;
     };
     /**
