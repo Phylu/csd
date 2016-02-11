@@ -4,15 +4,15 @@ var load = function(csv) {
     var db = TAFFY(JSON.stringify(data));
     CSD.setDatabase(db);
 
-    var types = {
+    var typeMap = {
         Overige: 'Other',
         Anders: 'Other',
         'Niet van toepassing': 'Other'
     };
-    CSD.group('CustomField.{Hulpmiddel}', 'type', types);
+    CSD.group('CustomField.{Hulpmiddel}', 'type', typeMap);
     CSD.setTypeColumn('type');
 
-    var sectors = {
+    var sectorMap = {
         publiek: 'Public',
         rijksoverheid: 'Public',
         privaat: 'Private',
@@ -32,7 +32,7 @@ var load = function(csv) {
         internationaal: 'International',
         partners: 'International',
     };
-    CSD.group('CustomField.{Sector}', 'sector', sectors);
+    CSD.group('CustomField.{Sector}', 'sector', sectorMap);
     CSD.setSectorColumn('sector');
 
     //console.log(db().get());
@@ -78,78 +78,8 @@ var createDashboard = function() {
 
     /* Prepare Data */
 
-    var csv = getData();
-    var data = $.csv.toObjects(csv);
-
-    csv = getLastYearData();
-    var lastYearData = $.csv.toObjects(csv);
-
-    csv = getSectorData();
-    var sectorData = $.csv.toObjects(csv);
-
-    csv = getSectorTypeData();
-    var sectorTypeData = $.csv.toObjects(csv);
-
-    csv = getAdvisoriesData();
+    var csv = getAdvisoriesData();
     var advisoriesData = $.csv.toObjects(csv);
-
-    // attackTypes in the data
-    var attackTypesOriginal = ['Phishing', 'Information leakage', 'Injection attacks', 'Malicious code',
-        'Ransomware/Cryptoware', 'Denial of service', 'Botnets', 'Cyber espionage',
-        'Data breaches', 'Hacking/Cracking', 'Overige', 'Anders', 'Niet van toepassing',
-        'Spam', 'Illegal content'];
-
-    // Summing up 'others'
-    var others = ['Overige', 'Anders', 'Niet van toepassing'];
-    var other = 'Other';
-
-    var attackTypes = _.without(attackTypesOriginal, others[0], others[1], others[2]);
-    attackTypes.push(other);
-
-    var monthLabels = [];
-    var monthOnlyLabels = [];
-    var attacksTotal = [];
-    var attacksNumbers = [];
-
-    for (var attack of attackTypes) {
-        attacksNumbers[attack] = [];
-    }
-
-    for (var obj of data) {
-        monthLabels.push(obj['month']);
-        monthOnlyLabels.push(obj['month'].substring(0, 3));
-        attacksTotal.push(obj['total']);
-
-        for (var attackType of attackTypes) {
-            // Only work on the non-others values
-            if (attackType != other) {
-                attacksNumbers[attackType].push(obj[attackType]);
-            }
-        }
-
-        // Sum up the 'others' values
-        var otherValue = parseInt(obj[others[0]]) + parseInt(obj[others[1]]) + parseInt(obj[others[2]]);
-        attacksNumbers[other].push(otherValue);
-
-    }
-
-    var attacksTotalLastYear = [];
-    for (var obj of lastYearData) {
-        attacksTotalLastYear.push(obj['total']);
-    }
-
-    var sectorLabels = ['Public', 'Private', 'International'];
-    var sectorNumbers = [];
-
-    for (var sector in sectorLabels) {
-        sectorNumbers[sector] = 0;
-    }
-
-    for (var obj of sectorData) {
-        for (var sector in sectorLabels) {
-            sectorNumbers[sector] += parseInt(obj[sectorLabels[sector]]);
-        }
-    }
 
 
     var types = ['Phishing', 'Information leakage', 'Injection attacks', 'Malicious code',
