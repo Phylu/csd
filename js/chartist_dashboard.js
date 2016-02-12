@@ -97,8 +97,6 @@ var createDashboard = function() {
         CSD.getLabels(),
         new CSD.DataQuery().monthly(12, 2),
         CSD.getLegend(2));
-    //CSD.line('#incidents', 'Reported Incidents', 'Reported Incidents shows how many incidents were reported to the NCSC in total for the last months.', monthOnlyLabels, [attacksTotal, attacksTotalLastYear],
-    //    ['2014/15', '2013/14']);
 
 
     /*
@@ -112,8 +110,6 @@ var createDashboard = function() {
     CSD.areaSeries('#incidents-type', 'Incidents per Type', 'Incidents per Type shows the number of incidents reported to the NCSC where a specific attack type was used.',
         CSD.getLabels(true),
         attackNumbers);
-    //CSD.areaSeries('#incidents-type', 'Incidents per Type', 'Incidents per Type shows the number of incidents reported to the NCSC where a specific attack type was used.', monthLabels, attacksNumbers)
-
 
     /*
      * Incidents per Sector
@@ -126,8 +122,6 @@ var createDashboard = function() {
     CSD.bar('#sector-incidents', 'Incidents by Sector', 'Incidents by Sector shows how many attacks were reported in each sector in the last year.',
         sectors,
         attackNumbersSector);
-    //CSD.bar('#sector-incidents', 'Incidents by Sector', 'Incidents by Sector shows how many attacks were reported in each sector in the last year.', sectorLabels, sectorNumbers);
-
 
     /*
      * Top 3 attacks per sector
@@ -149,8 +143,6 @@ var createDashboard = function() {
     CSD.table('#sector-top-3', 'Top 3 Attacks per Sector', 'Top 3 Attacks per Sector shows which attack were reported most from the sectors in the last year.',
         sectors,
         attackNumbersSectorType);
-    //CSD.table('#sector-top-3', 'Top 3 Attacks per Sector', 'Top 3 Attacks per Sector shows which attack were reported most from the sectors in the last year.',sectors, mostAttacks);
-
 
     /*
      * Advisories
