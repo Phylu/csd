@@ -1,23 +1,30 @@
 var load = function(csv) {
 
+    // Create Database
     var data = $.csv.toObjects(csv);
     var db = TAFFY(JSON.stringify(data));
-    CSD.setDatabase(db);
 
+    // Give Database to CSD
+    CSD.setAttackDatabase(db);
+
+    // Data cleaning for attack type
     var typeMap = {
-        Overige: 'Other',
-        Anders: 'Other',
-        'Niet van toepassing': 'Other'
+        overige: 'Other',
+        anders: 'Other',
+        'niet van toepassing': 'Other',
+        'malicious code: worms/trojans': 'malicious code',
     };
     CSD.group('CustomField.{Hulpmiddel}', 'type', typeMap);
     CSD.setTypeColumn('type');
 
+    // Data cleaning for sectors
     var sectorMap = {
         publiek: 'Public',
         rijksoverheid: 'Public',
         privaat: 'Private',
         telecom: 'Private',
         secundaire: 'Private',
+        'secundaire doelgroep': 'Private',
         zorg: 'Private',
         financieel: 'Private',
         water: 'Private',
@@ -35,9 +42,6 @@ var load = function(csv) {
     CSD.group('CustomField.{Sector}', 'sector', sectorMap);
     CSD.setSectorColumn('sector');
 
-    //console.log(db().get());
-
-    //console.log(JSON.stringify(data));
     /*
     // Get all
     console.log(db().get());
@@ -51,12 +55,7 @@ var load = function(csv) {
     // Max value --> Create new column for sortable date?
     console.log(db().max("date"));
 
-    // Sectors
-    // Public: "rijksoverheid";"publiek"
-    // Private: "privaat";"telecom";"secundaire";"zorg";"financieel";"water";"haven";"onbekend";"luchthaven";"energie";"spoor";"verzeker";"MSP";"multinationals"
-    // International: "internationaal";"partners"
-
-*/
+    */
 };
 
 
@@ -69,23 +68,14 @@ var createDashboard = function() {
      */
     CSD.setLastUpdated("#updated");
 
-    //var db = new CSD.Query();
-    //console.log(db.sector('Private').after(15, 1, 2016).count());
-    //var query = new CSD.DataQuery();
-    //console.log(query.attacks({sector: 'Public'}).monthly(12, 2));
-    //console.log(db.perType("phishing"));
-    //console.log(CSD.db.after(15, 1, 2016).perType('phishing'));
 
-    /* Prepare Data */
-
-    var csv = getAdvisoriesData();
-    var advisoriesData = $.csv.toObjects(csv);
-
-
+    /*
+     * Labels for Attack Types & Sectors
+     * =================================
+     */
     var types = ['Phishing', 'Information leakage', 'Injection attacks', 'Malicious code',
         'Ransomware/Cryptoware', 'Denial of service', 'Botnets', 'Cyber espionage',
         'Data breaches', 'Hacking/Cracking', 'Spam', 'Illegal content', 'Other'];
-
     var sectors = ['Public', 'Private', 'International'];
 
 
@@ -148,6 +138,10 @@ var createDashboard = function() {
      * Advisories
      * ==========
      */
+    // TODO: Shift to database
+    var csv = getAdvisoriesData();
+    var advisoriesData = $.csv.toObjects(csv);
+
     var advisoriesLabels = [];
     var advisories = [];
     for (var obj of advisoriesData) {
@@ -184,18 +178,15 @@ $(document).ready(function () {
 
     $.ajax({
         type: "GET",
-        url: "data.csv",
+        url: "http://127.0.0.1:8080/raw.csv",
         dataType: "text",
         success: function (data) {
-            db = load(data);
-            createDashboard(db);
+            load(data);
+            createDashboard();
             $("#spinner").remove();
         },
         error: function (data) {
-            var db = TAFFY();
-            CSD.setDatabase(db);
-            createDashboard(db);
-            //showLoadingError();
+            showLoadingError();
         }
     });
 

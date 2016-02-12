@@ -4,7 +4,7 @@
 
 var CSD = (function ($, Chartist, _) {
     var csd = {};
-    var db, typeColumn, sectorColumn;
+    var attackDatabase, advisoriesDatabase, typeColumn, sectorColumn;
     var monthLabels = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
     // TODO: Implement http://www.taffydb.com/
@@ -171,21 +171,29 @@ var CSD = (function ($, Chartist, _) {
      */
 
     /**
-     * Store the database
-     * Database should be ordered by ID
+     * Store the attack database
+     * Database should be ordered (last attack last)
      * @param database
      */
-    csd.setDatabase = function (database) {
-        db = database;
+    csd.setAttackDatabase = function (database) {
+        attackDatabase = database;
 
         // Create easily searchable date fields
-        db().each(function (record) {
+        attackDatabase().each(function (record) {
             var dat = record.date.split('.');
             record.day = dat[0];
             record.month = dat[1];
             record.year = dat[2];
         });
 
+    };
+
+    /**
+     * Store the advisories database
+     * @param database
+     */
+    csd.setAdvisoriesDatabase = function (database) {
+        advisoriesDatabase = database;
     };
 
     /**
@@ -211,7 +219,7 @@ var CSD = (function ($, Chartist, _) {
      * @param map
      */
     csd.group = function (oldColumn, newColumn, map) {
-        db().each(function (record) {
+        attackDatabase().each(function (record) {
             var newValue = map[record[oldColumn].toLowerCase()];
             if (typeof newValue == "undefined") {
                 newValue = record[oldColumn];
@@ -226,8 +234,8 @@ var CSD = (function ($, Chartist, _) {
      * @returns {Array}
      */
     csd.getLabels = function (years) {
-        var latestMonth = db().last().month;
-        var latestYear = db().last().year;
+        var latestMonth = attackDatabase().last().month;
+        var latestYear = attackDatabase().last().year;
 
         var result = [];
 
@@ -240,7 +248,7 @@ var CSD = (function ($, Chartist, _) {
             }
             var label = monthLabels[month];
             if (typeof years != "undefined" && years == true) {
-                label = label + " " + year;
+                label = label + " " + String(year).substr(2, 4);;
             }
             result.push(label);
         }
@@ -253,8 +261,8 @@ var CSD = (function ($, Chartist, _) {
      * @param years
      */
     csd.getLegend = function (years) {
-        var latestMonth = db().last().month;
-        var latestYear = db().last().year;
+        var latestMonth = attackDatabase().last().month;
+        var latestYear = attackDatabase().last().year;
 
         var result = [];
 
@@ -456,9 +464,9 @@ var CSD = (function ($, Chartist, _) {
      */
     csd.Query.prototype.get = function () {
         if (this.filter != []) {
-            return db.apply(this, this.filter).get();
+            return attackDatabase.apply(this, this.filter).get();
         } else {
-            return db.get();
+            return attackDatabase.get();
         }
     };
     /**
@@ -466,9 +474,9 @@ var CSD = (function ($, Chartist, _) {
      */
     csd.Query.prototype.count = function () {
         if (this.filter != []) {
-            return db.apply(this, this.filter).count();
+            return attackDatabase.apply(this, this.filter).count();
         } else {
-            return db.count();
+            return attackDatabase.count();
         }
     };
     /**
@@ -562,8 +570,8 @@ var CSD = (function ($, Chartist, _) {
             years = 1;
         }
 
-        var latestMonth = db().last().month;
-        var latestYear = db().last().year;
+        var latestMonth = attackDatabase().last().month;
+        var latestYear = attackDatabase().last().year;
 
         var result = [];
 
@@ -588,8 +596,8 @@ var CSD = (function ($, Chartist, _) {
     };
 
     csd.DataQuery.prototype.yearly = function () {
-        var latestMonth = db().last().month;
-        var latestYear = db().last().year;
+        var latestMonth = attackDatabase().last().month;
+        var latestYear = attackDatabase().last().year;
 
         var startMonth, startYear;
         if (latestMonth == 12) {
@@ -620,9 +628,8 @@ var CSD = (function ($, Chartist, _) {
      * @param selector
      */
     csd.setLastUpdated = function (selector) {
-        var lastUpdate = db().last().date;
-        // TODO: Remove after screenshot
-        $(selector).html("Last Update: Apr 15");// + lastUpdate);
+        var lastUpdate = attackDatabase().last().date;
+        $(selector).html("Last Update: " + lastUpdate);
     };
 
     /**
