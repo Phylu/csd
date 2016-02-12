@@ -197,6 +197,7 @@ $(document).ready(function () {
         success: function (data) {
             db = load(data);
             createDashboard(db);
+            $("#spinner").remove();
         },
         error: function (data) {
             var db = TAFFY();

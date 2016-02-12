@@ -53,6 +53,15 @@ h2 {
 }
 
 /*
+ * Spinner
+ * =======
+ */
+#spinner {
+    margin-top: 200px;
+    margin-left: 50%;
+}
+
+/*
  * Trend Indicator Settings
  * ========================
  */
