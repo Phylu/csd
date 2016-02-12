@@ -1,6 +1,3 @@
-
-# Created by https://www.gitignore.io/api/intellij
-
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
 
@@ -50,3 +47,6 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
+# Ignore everything that might have references to raw data
+*raw*
