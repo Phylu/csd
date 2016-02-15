@@ -827,20 +827,13 @@ var CSD = (function ($, Chartist, _) {
         var heading = $('<h2>').html(name).addTooltip(description, 'bottom');
         $(selector).append(heading);
 
-        // Get Total Value for last 12 month
-        var total = 0;
-        for (var i = Math.min(series.length - 1, 11); i >= 0; i--) {
-            total += parseInt(series[i]);
-        }
+        // Get Maximum
+        var factor = 30 / Math.max(...series);
 
         // Iterate over last 12 months
         for (var i = Math.min(series.length - 1, 11); i >= 0; i--) {
 
-            // Get current percentage of this month
-            var percentage = parseInt(series[i]) / total;
-
-            // Scaling so that the biggest ones still fit the div
-            var size = percentage * 150;
+            var size = series[i] * factor;
 
             // Get selector
             var svgSelector = createUniqueSelector();
