@@ -1,11 +1,11 @@
-var load = function(csv) {
+var loadIncidents = function(csv) {
 
     // Create Database
     var data = $.csv.toObjects(csv);
     var db = TAFFY(JSON.stringify(data));
 
     // Give Database to CSD
-    CSD.setAttackDatabase(db);
+    CSD.setIncidentsDatabase(db);
 
     // Data cleaning for attack type
     var typeMap = {
@@ -42,26 +42,24 @@ var load = function(csv) {
     CSD.group('CustomField.{Sector}', 'sector', sectorMap);
     CSD.setSectorColumn('sector');
 
-    /*
-    // Get all
-    console.log(db().get());
+};
 
-    // Count
-    console.log(db().count());
+var loadAdvisories = function(csv) {
 
-    // All pulic
-    console.log(db().filter({sector: "Public"}).get())
+    // Create Database
+    var data = $.csv.toObjects(csv, {separator: ';'});
+    var db = TAFFY(JSON.stringify(data));
 
-    // Max value --> Create new column for sortable date?
-    console.log(db().max("date"));
+    // Give Database to CSD
+    CSD.setAdvisoriesDatabase(db);
 
-    */
+    CSD.setImpactColumn('impact');
+    CSD.setLikelihoodColumn('likelihood');
+
 };
 
 
 var createDashboard = function() {
-
-
     /*
      * Create Header
      * =============
@@ -85,7 +83,7 @@ var createDashboard = function() {
      */
     CSD.line('#incidents', 'Reported Incidents', 'Reported Incidents shows how many incidents were reported to the NCSC in total for the last months.',
         CSD.getLabels(),
-        new CSD.DataQuery().monthly(12, 2),
+        new CSD.DataQuery().incidents().monthly(12, 2),
         CSD.getLegend(2));
 
 
@@ -95,7 +93,7 @@ var createDashboard = function() {
      */
     var attackNumbers = {};
     for (var type of types) {
-        attackNumbers[type] = new CSD.DataQuery().attacks({type: type}).monthly(12)[0];
+        attackNumbers[type] = new CSD.DataQuery().incidents({type: type}).monthly(12)[0];
     }
     CSD.areaSeries('#incidents-type', 'Incidents per Type', 'Incidents per Type shows the number of incidents reported to the NCSC where a specific attack type was used.',
         CSD.getLabels(true),
@@ -107,7 +105,7 @@ var createDashboard = function() {
      */
     var attackNumbersSector = [];
     for (var sector of sectors) {
-        attackNumbersSector.push(new CSD.DataQuery().attacks({sector: sector}).yearly());
+        attackNumbersSector.push(new CSD.DataQuery().incidents({sector: sector}).yearly());
     }
     CSD.bar('#sector-incidents', 'Incidents by Sector', 'Incidents by Sector shows how many attacks were reported in each sector in the last year.',
         sectors,
@@ -124,7 +122,7 @@ var createDashboard = function() {
         var attackNumbersThisSector = {};
         // Get attack type + number of attacks in this sector
         for (var type of types) {
-            attackNumbersThisSector[type] = new CSD.DataQuery().attacks({type: type, sector: sector}).yearly();
+            attackNumbersThisSector[type] = new CSD.DataQuery().incidents({type: type, sector: sector}).yearly();
         }
         // Store the top 3 for this sector
         attackNumbersSectorType.push(CSD.getTopX(attackNumbersThisSector, 3));
@@ -138,18 +136,9 @@ var createDashboard = function() {
      * Advisories
      * ==========
      */
-    // TODO: Shift to database
-    var csv = getAdvisoriesData();
-    var advisoriesData = $.csv.toObjects(csv);
-
-    var advisoriesLabels = [];
-    var advisories = [];
-    for (var obj of advisoriesData) {
-        advisoriesLabels.push(obj['month']);
-        advisories.push(obj['advisories']);
-    }
-
-    CSD.circles('#advisories', 'Critical Security Advisories', 'Critical Security Advisories shows how many security advisories with high impact and high likelihood were published by the NCSC in the last months', advisoriesLabels, advisories);
+    CSD.circles('#advisories', 'Critical Security Advisories', 'Critical Security Advisories shows how many security advisories with high impact and high likelihood were published by the NCSC in the last months',
+        CSD.getLabels(true),
+        new CSD.DataQuery().advisories({impact: 'H', likelihood: 'H'}).monthly(12)[0]);
 
 
     /*
@@ -176,18 +165,32 @@ var showLoadingError = function() {
  */
 $(document).ready(function () {
 
-    $.ajax({
-        type: "GET",
-        url: "http://127.0.0.1:8080/raw.csv",
-        dataType: "text",
-        success: function (data) {
-            load(data);
-            createDashboard();
-            $("#spinner").remove();
-        },
-        error: function (data) {
-            showLoadingError();
-        }
+    $.when(
+        $.ajax({
+            type: "GET",
+            url: "http://127.0.0.1:8080/incidents.csv",
+            dataType: "text",
+            success: function (data) {
+                loadIncidents(data);
+            },
+            error: function (data) {
+                showLoadingError();
+            }
+        }),
+        $.ajax({
+            type: "GET",
+            url: "http://127.0.0.1:8080/advisories.csv",
+            dataType: "text",
+            success: function (data) {
+                loadAdvisories(data);
+            },
+            error: function (data) {
+                showLoadingError();
+            }
+        })
+    ).then(function() {
+        createDashboard();
+        $("#spinner").remove();
     });
 
 

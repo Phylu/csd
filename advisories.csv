@@ -1,0 +1,11 @@
+datetime;id;version;description;likelihood;impact
+1-1-2016 12:31; 1 ; 1.00 ; some unidentified vulnerability ; L ; M
+2-1-2016 12:20; 2 ; 1.10 ; some unidentified vulnerability ; H ; H
+2-1-2016 20:20; 3 ; 1.00 ; some unidentified vulnerability ; M ; H
+3-1-2016 18:19; 4 ; 1.00 ; some unidentified vulnerability ; L ; H
+3-2-2016 20:49; 5 ; 1.00 ; some unidentified vulnerability ; H ; M
+3-2-2016 20:49; 6 ; 1.00 ; some unidentified vulnerability ; M ; M
+4-2-2016 17:04; 7 ; 1.07 ; some unidentified vulnerability ; H ; H
+31-2-2016 18:29; 8 ; 1.00 ; some unidentified vulnerability ; M ; H
+31-2-2016 12:30; 9 ; 1.10 ; some unidentified vulnerability ; H ; H
+31-2-2016 10:31; 10 ; 1.19 ; some unidentified vulnerability ; H ; H
