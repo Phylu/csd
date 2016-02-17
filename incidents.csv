@@ -1,5 +1,3794 @@
-id,date,CustomField.{Classificatie},CustomField.{Hulpmiddel},CustomField.{Impact},CustomField.{Sector}
-1,01.01.2016,RD-meldung,Injection attacks,Niet van toepassing,Rijksoverheid
-2,02.01.2016,NDS-Meldung,phishing,Niet van toepassing,Publiek
-3,01.02.2016,NTD-verzoek,phishing,Niet van toepassing,Telecom
-4,01.02.2016,Overige,Denial of Service,Onbekend,Zorg
+id,date,CustomField.{Hulpmiddel},CustomField.{Sector}
+someId,01.3.2014,Ransomware/Cryptoware,International
+someId,01.3.2014,Other,Public
+someId,01.3.2014,Cyber espionage,International
+someId,01.3.2014,Malicious code,International
+someId,01.3.2014,Data breaches,International
+someId,01.3.2014,Ransomware/Cryptoware,Public
+someId,01.3.2014,Malicious code,Private
+someId,01.3.2014,Hacking/Cracking,International
+someId,01.3.2014,Malicious code,International
+someId,01.3.2014,Cyber espionage,Public
+someId,01.3.2014,Information leakage,International
+someId,01.3.2014,Denial of service,Private
+someId,01.3.2014,Denial of service,Public
+someId,01.3.2014,Injection attacks,International
+someId,01.3.2014,Other,Public
+someId,01.3.2014,Ransomware/Cryptoware,Private
+someId,01.3.2014,Hacking/Cracking,Private
+someId,01.3.2014,Malicious code,Private
+someId,01.3.2014,Other,Public
+someId,01.3.2014,Spam,Public
+someId,01.3.2014,Ransomware/Cryptoware,Private
+someId,01.3.2014,Ransomware/Cryptoware,Public
+someId,01.3.2014,Injection attacks,International
+someId,01.3.2014,Botnets,International
+someId,01.3.2014,Spam,Public
+someId,01.3.2014,Malicious code,Private
+someId,01.3.2014,Data breaches,Private
+someId,01.3.2014,Malicious code,International
+someId,01.3.2014,Information leakage,Private
+someId,01.3.2014,Hacking/Cracking,Private
+someId,01.3.2014,Injection attacks,Private
+someId,01.3.2014,Spam,Private
+someId,01.3.2014,Cyber espionage,Public
+someId,01.3.2014,Denial of service,Public
+someId,01.3.2014,Other,Private
+someId,01.3.2014,Injection attacks,Private
+someId,01.3.2014,Phishing,International
+someId,01.3.2014,Illegal content,Private
+someId,01.3.2014,Illegal content,International
+someId,01.3.2014,Cyber espionage,International
+someId,01.3.2014,Cyber espionage,International
+someId,01.3.2014,Other,Public
+someId,01.3.2014,Botnets,Public
+someId,01.3.2014,Other,Public
+someId,01.3.2014,Hacking/Cracking,International
+someId,01.3.2014,Denial of service,Public
+someId,01.3.2014,Information leakage,Private
+someId,01.3.2014,Illegal content,Private
+someId,01.3.2014,Other,Public
+someId,01.3.2014,Phishing,Private
+someId,01.3.2014,Phishing,International
+someId,01.3.2014,Spam,International
+someId,01.3.2014,Botnets,Public
+someId,01.3.2014,Information leakage,Private
+someId,01.3.2014,Data breaches,International
+someId,01.3.2014,Illegal content,Private
+someId,01.3.2014,Botnets,Private
+someId,01.3.2014,Ransomware/Cryptoware,Private
+someId,01.3.2014,Botnets,Public
+someId,01.3.2014,Hacking/Cracking,Public
+someId,01.3.2014,Malicious code,Private
+someId,01.3.2014,Malicious code,Public
+someId,01.3.2014,Spam,Public
+someId,01.3.2014,Cyber espionage,Private
+someId,01.3.2014,Spam,International
+someId,01.3.2014,Data breaches,Private
+someId,01.3.2014,Denial of service,Private
+someId,01.3.2014,Information leakage,Public
+someId,01.3.2014,Illegal content,Public
+someId,01.3.2014,Spam,Private
+someId,01.3.2014,Information leakage,International
+someId,01.3.2014,Cyber espionage,International
+someId,01.3.2014,Cyber espionage,International
+someId,01.3.2014,Botnets,Private
+someId,01.3.2014,Other,Private
+someId,01.3.2014,Injection attacks,Public
+someId,01.3.2014,Botnets,International
+someId,01.3.2014,Phishing,Private
+someId,01.3.2014,Ransomware/Cryptoware,Public
+someId,01.3.2014,Ransomware/Cryptoware,Private
+someId,01.3.2014,Illegal content,Public
+someId,01.3.2014,Hacking/Cracking,Private
+someId,01.3.2014,Other,Private
+someId,01.3.2014,Ransomware/Cryptoware,Public
+someId,01.3.2014,Other,Private
+someId,01.3.2014,Botnets,International
+someId,01.3.2014,Botnets,Public
+someId,01.3.2014,Data breaches,Private
+someId,01.3.2014,Data breaches,Private
+someId,01.3.2014,Data breaches,Private
+someId,01.3.2014,Injection attacks,Public
+someId,01.3.2014,Other,Private
+someId,01.3.2014,Illegal content,Private
+someId,01.3.2014,Hacking/Cracking,Private
+someId,01.3.2014,Ransomware/Cryptoware,Public
+someId,01.3.2014,Phishing,Private
+someId,01.3.2014,Denial of service,International
+someId,01.3.2014,Information leakage,Public
+someId,01.3.2014,Other,Private
+someId,01.3.2014,Spam,Public
+someId,01.3.2014,Botnets,Private
+someId,01.3.2014,Botnets,Public
+someId,01.3.2014,Ransomware/Cryptoware,Public
+someId,01.3.2014,Phishing,Private
+someId,01.3.2014,Denial of service,Private
+someId,01.3.2014,Hacking/Cracking,Private
+someId,01.3.2014,Other,International
+someId,01.3.2014,Injection attacks,Public
+someId,01.3.2014,Denial of service,Private
+someId,01.3.2014,Information leakage,International
+someId,01.3.2014,Phishing,Public
+someId,01.3.2014,Data breaches,Private
+someId,01.3.2014,Ransomware/Cryptoware,Public
+someId,01.3.2014,Information leakage,Private
+someId,01.3.2014,Illegal content,International
+someId,01.3.2014,Information leakage,International
+someId,01.3.2014,Cyber espionage,Public
+someId,01.3.2014,Illegal content,International
+someId,01.3.2014,Injection attacks,International
+someId,01.3.2014,Information leakage,Public
+someId,01.3.2014,Illegal content,Public
+someId,01.3.2014,Phishing,International
+someId,01.3.2014,Malicious code,Public
+someId,01.3.2014,Denial of service,Private
+someId,01.3.2014,Information leakage,International
+someId,01.3.2014,Illegal content,Private
+someId,01.3.2014,Illegal content,International
+someId,01.3.2014,Other,Private
+someId,01.3.2014,Malicious code,Public
+someId,01.3.2014,Denial of service,Public
+someId,01.3.2014,Information leakage,Private
+someId,01.3.2014,Botnets,Private
+someId,01.3.2014,Hacking/Cracking,International
+someId,01.3.2014,Spam,Private
+someId,01.3.2014,Spam,Public
+someId,01.3.2014,Data breaches,Public
+someId,01.3.2014,Denial of service,Public
+someId,01.3.2014,Hacking/Cracking,Public
+someId,01.3.2014,Information leakage,Public
+someId,01.3.2014,Hacking/Cracking,Private
+someId,01.3.2014,Ransomware/Cryptoware,Public
+someId,01.3.2014,Malicious code,International
+someId,01.3.2014,Malicious code,Private
+someId,01.3.2014,Cyber espionage,Private
+someId,01.3.2014,Hacking/Cracking,Public
+someId,01.3.2014,Hacking/Cracking,International
+someId,01.3.2014,Injection attacks,Public
+someId,01.3.2014,Illegal content,Private
+someId,01.3.2014,Spam,Private
+someId,01.3.2014,Hacking/Cracking,International
+someId,01.3.2014,Ransomware/Cryptoware,Public
+someId,01.3.2014,Hacking/Cracking,Private
+someId,01.3.2014,Denial of service,Public
+someId,01.3.2014,Cyber espionage,Public
+someId,01.3.2014,Phishing,Private
+someId,01.3.2014,Hacking/Cracking,Private
+someId,01.3.2014,Information leakage,Private
+someId,01.3.2014,Data breaches,Public
+someId,01.3.2014,Other,Private
+someId,01.3.2014,Malicious code,International
+someId,01.3.2014,Information leakage,Private
+someId,01.3.2014,Spam,International
+someId,01.3.2014,Botnets,Private
+someId,01.3.2014,Illegal content,Private
+someId,01.3.2014,Ransomware/Cryptoware,Private
+someId,01.3.2014,Data breaches,Public
+someId,01.3.2014,Information leakage,International
+someId,01.3.2014,Phishing,Public
+someId,01.3.2014,Denial of service,Private
+someId,01.3.2014,Spam,International
+someId,01.3.2014,Injection attacks,Public
+someId,01.3.2014,Other,International
+someId,01.3.2014,Denial of service,Public
+someId,01.3.2014,Botnets,Public
+someId,01.3.2014,Illegal content,Public
+someId,01.3.2014,Phishing,Private
+someId,01.3.2014,Botnets,Private
+someId,01.3.2014,Information leakage,Public
+someId,01.3.2014,Phishing,International
+someId,01.3.2014,Spam,Private
+someId,01.3.2014,Other,Private
+someId,01.3.2014,Injection attacks,Private
+someId,01.3.2014,Other,Public
+someId,01.3.2014,Injection attacks,Private
+someId,01.3.2014,Information leakage,Private
+someId,01.3.2014,Injection attacks,Public
+someId,01.3.2014,Spam,International
+someId,01.3.2014,Illegal content,International
+someId,01.3.2014,Ransomware/Cryptoware,Private
+someId,01.3.2014,Malicious code,International
+someId,01.3.2014,Spam,Private
+someId,01.3.2014,Illegal content,Public
+someId,01.3.2014,Hacking/Cracking,Public
+someId,01.3.2014,Illegal content,International
+someId,01.3.2014,Data breaches,Public
+someId,01.3.2014,Illegal content,Public
+someId,01.3.2014,Information leakage,Private
+someId,01.3.2014,Botnets,Private
+someId,01.3.2014,Spam,Public
+someId,01.3.2014,Data breaches,Private
+someId,01.3.2014,Other,Public
+someId,01.3.2014,Other,Public
+someId,01.3.2014,Botnets,Public
+someId,01.3.2014,Ransomware/Cryptoware,International
+someId,01.3.2014,Denial of service,Private
+someId,01.3.2014,Illegal content,International
+someId,01.3.2014,Cyber espionage,Public
+someId,01.3.2014,Spam,Private
+someId,01.3.2014,Malicious code,Public
+someId,01.3.2014,Information leakage,International
+someId,01.3.2014,Data breaches,Public
+someId,01.3.2014,Phishing,International
+someId,01.3.2014,Hacking/Cracking,Private
+someId,01.3.2014,Spam,Public
+someId,01.3.2014,Denial of service,Private
+someId,01.3.2014,Botnets,International
+someId,01.3.2014,Data breaches,International
+someId,01.3.2014,Illegal content,Private
+someId,01.3.2014,Hacking/Cracking,International
+someId,01.3.2014,Illegal content,Public
+someId,01.3.2014,Other,International
+someId,01.3.2014,Ransomware/Cryptoware,International
+someId,01.3.2014,Other,Public
+someId,01.3.2014,Injection attacks,Public
+someId,01.3.2014,Other,Private
+someId,01.3.2014,Cyber espionage,Private
+someId,01.3.2014,Botnets,Public
+someId,01.3.2014,Ransomware/Cryptoware,Private
+someId,01.3.2014,Botnets,International
+someId,01.3.2014,Denial of service,International
+someId,01.3.2014,Illegal content,Private
+someId,01.3.2014,Denial of service,Private
+someId,01.3.2014,Ransomware/Cryptoware,International
+someId,01.3.2014,Spam,Public
+someId,01.3.2014,Information leakage,Public
+someId,01.3.2014,Data breaches,Private
+someId,01.3.2014,Botnets,International
+someId,01.3.2014,Spam,International
+someId,01.4.2014,Denial of service,Private
+someId,01.4.2014,Injection attacks,Public
+someId,01.4.2014,Illegal content,International
+someId,01.4.2014,Cyber espionage,Private
+someId,01.4.2014,Spam,Public
+someId,01.4.2014,Hacking/Cracking,Public
+someId,01.4.2014,Phishing,International
+someId,01.4.2014,Hacking/Cracking,International
+someId,01.4.2014,Malicious code,Private
+someId,01.4.2014,Ransomware/Cryptoware,International
+someId,01.4.2014,Denial of service,Public
+someId,01.4.2014,Illegal content,Public
+someId,01.4.2014,Spam,Private
+someId,01.4.2014,Information leakage,Public
+someId,01.4.2014,Ransomware/Cryptoware,International
+someId,01.4.2014,Injection attacks,Public
+someId,01.4.2014,Injection attacks,International
+someId,01.4.2014,Data breaches,Public
+someId,01.4.2014,Other,International
+someId,01.4.2014,Information leakage,Private
+someId,01.4.2014,Cyber espionage,Public
+someId,01.4.2014,Ransomware/Cryptoware,Public
+someId,01.4.2014,Injection attacks,Private
+someId,01.4.2014,Other,International
+someId,01.4.2014,Information leakage,International
+someId,01.4.2014,Information leakage,Public
+someId,01.4.2014,Phishing,International
+someId,01.4.2014,Malicious code,International
+someId,01.4.2014,Data breaches,Private
+someId,01.4.2014,Illegal content,Public
+someId,01.4.2014,Data breaches,Private
+someId,01.4.2014,Information leakage,Public
+someId,01.4.2014,Malicious code,International
+someId,01.4.2014,Data breaches,Public
+someId,01.4.2014,Cyber espionage,International
+someId,01.4.2014,Hacking/Cracking,Private
+someId,01.4.2014,Malicious code,Public
+someId,01.4.2014,Injection attacks,Private
+someId,01.4.2014,Illegal content,International
+someId,01.4.2014,Hacking/Cracking,Private
+someId,01.4.2014,Botnets,International
+someId,01.4.2014,Data breaches,Public
+someId,01.4.2014,Phishing,Public
+someId,01.4.2014,Information leakage,International
+someId,01.4.2014,Hacking/Cracking,Private
+someId,01.4.2014,Illegal content,Private
+someId,01.4.2014,Denial of service,Private
+someId,01.4.2014,Spam,Public
+someId,01.4.2014,Ransomware/Cryptoware,Public
+someId,01.4.2014,Hacking/Cracking,Public
+someId,01.4.2014,Illegal content,Private
+someId,01.4.2014,Other,Public
+someId,01.4.2014,Information leakage,Public
+someId,01.4.2014,Denial of service,Private
+someId,01.4.2014,Spam,Private
+someId,01.4.2014,Illegal content,Private
+someId,01.4.2014,Information leakage,Public
+someId,01.4.2014,Other,International
+someId,01.4.2014,Injection attacks,International
+someId,01.4.2014,Hacking/Cracking,Public
+someId,01.4.2014,Malicious code,Public
+someId,01.4.2014,Illegal content,Public
+someId,01.4.2014,Data breaches,Public
+someId,01.4.2014,Data breaches,Public
+someId,01.4.2014,Cyber espionage,International
+someId,01.4.2014,Other,Public
+someId,01.4.2014,Hacking/Cracking,International
+someId,01.4.2014,Other,Private
+someId,01.4.2014,Cyber espionage,Public
+someId,01.4.2014,Denial of service,Public
+someId,01.4.2014,Illegal content,Private
+someId,01.4.2014,Malicious code,Public
+someId,01.4.2014,Injection attacks,Public
+someId,01.4.2014,Illegal content,International
+someId,01.4.2014,Illegal content,Public
+someId,01.4.2014,Data breaches,Private
+someId,01.4.2014,Information leakage,Public
+someId,01.4.2014,Cyber espionage,Private
+someId,01.4.2014,Malicious code,Public
+someId,01.4.2014,Denial of service,Private
+someId,01.4.2014,Information leakage,Public
+someId,01.4.2014,Spam,International
+someId,01.4.2014,Phishing,Private
+someId,01.4.2014,Other,Private
+someId,01.4.2014,Information leakage,Private
+someId,01.4.2014,Cyber espionage,Public
+someId,01.4.2014,Malicious code,International
+someId,01.4.2014,Injection attacks,Public
+someId,01.4.2014,Ransomware/Cryptoware,Public
+someId,01.4.2014,Injection attacks,International
+someId,01.4.2014,Ransomware/Cryptoware,Private
+someId,01.4.2014,Illegal content,Private
+someId,01.4.2014,Injection attacks,Public
+someId,01.4.2014,Hacking/Cracking,International
+someId,01.4.2014,Injection attacks,Private
+someId,01.4.2014,Malicious code,Public
+someId,01.4.2014,Information leakage,International
+someId,01.4.2014,Illegal content,Public
+someId,01.4.2014,Illegal content,Private
+someId,01.4.2014,Information leakage,Private
+someId,01.4.2014,Data breaches,Private
+someId,01.4.2014,Data breaches,Private
+someId,01.4.2014,Ransomware/Cryptoware,International
+someId,01.4.2014,Illegal content,Private
+someId,01.4.2014,Botnets,Public
+someId,01.4.2014,Denial of service,International
+someId,01.4.2014,Information leakage,Private
+someId,01.4.2014,Botnets,International
+someId,01.4.2014,Cyber espionage,Private
+someId,01.4.2014,Data breaches,Private
+someId,01.4.2014,Botnets,Public
+someId,01.4.2014,Hacking/Cracking,International
+someId,01.4.2014,Ransomware/Cryptoware,Private
+someId,01.4.2014,Phishing,Private
+someId,01.4.2014,Botnets,International
+someId,01.4.2014,Denial of service,Public
+someId,01.4.2014,Botnets,International
+someId,01.4.2014,Ransomware/Cryptoware,International
+someId,01.4.2014,Cyber espionage,Private
+someId,01.4.2014,Denial of service,International
+someId,01.4.2014,Cyber espionage,International
+someId,01.4.2014,Spam,Public
+someId,01.4.2014,Phishing,International
+someId,01.4.2014,Cyber espionage,International
+someId,01.4.2014,Information leakage,International
+someId,01.4.2014,Denial of service,Public
+someId,01.4.2014,Spam,International
+someId,01.4.2014,Botnets,Private
+someId,01.4.2014,Spam,Private
+someId,01.4.2014,Spam,International
+someId,01.4.2014,Illegal content,Public
+someId,01.4.2014,Spam,Private
+someId,01.4.2014,Cyber espionage,Public
+someId,01.4.2014,Malicious code,International
+someId,01.4.2014,Information leakage,Private
+someId,01.4.2014,Hacking/Cracking,Public
+someId,01.4.2014,Illegal content,Private
+someId,01.4.2014,Illegal content,Private
+someId,01.5.2014,Ransomware/Cryptoware,Public
+someId,01.5.2014,Malicious code,Public
+someId,01.5.2014,Illegal content,Public
+someId,01.5.2014,Cyber espionage,International
+someId,01.5.2014,Spam,Private
+someId,01.5.2014,Hacking/Cracking,International
+someId,01.5.2014,Injection attacks,International
+someId,01.5.2014,Phishing,Private
+someId,01.5.2014,Botnets,Public
+someId,01.5.2014,Illegal content,Private
+someId,01.5.2014,Information leakage,International
+someId,01.5.2014,Hacking/Cracking,Private
+someId,01.5.2014,Malicious code,Public
+someId,01.5.2014,Botnets,International
+someId,01.5.2014,Spam,International
+someId,01.5.2014,Data breaches,Private
+someId,01.5.2014,Injection attacks,Public
+someId,01.5.2014,Ransomware/Cryptoware,Private
+someId,01.5.2014,Cyber espionage,Private
+someId,01.5.2014,Injection attacks,International
+someId,01.5.2014,Illegal content,International
+someId,01.5.2014,Information leakage,International
+someId,01.5.2014,Data breaches,Private
+someId,01.5.2014,Cyber espionage,Private
+someId,01.5.2014,Information leakage,Public
+someId,01.5.2014,Data breaches,International
+someId,01.5.2014,Spam,Private
+someId,01.5.2014,Spam,Public
+someId,01.5.2014,Botnets,International
+someId,01.5.2014,Hacking/Cracking,Private
+someId,01.5.2014,Denial of service,International
+someId,01.5.2014,Cyber espionage,Private
+someId,01.5.2014,Cyber espionage,Public
+someId,01.5.2014,Botnets,Public
+someId,01.5.2014,Information leakage,Private
+someId,01.5.2014,Botnets,Public
+someId,01.5.2014,Hacking/Cracking,Public
+someId,01.5.2014,Malicious code,Private
+someId,01.5.2014,Hacking/Cracking,International
+someId,01.5.2014,Injection attacks,Public
+someId,01.5.2014,Phishing,International
+someId,01.5.2014,Botnets,Private
+someId,01.5.2014,Information leakage,Private
+someId,01.5.2014,Other,Public
+someId,01.5.2014,Botnets,Private
+someId,01.5.2014,Botnets,International
+someId,01.5.2014,Malicious code,Public
+someId,01.5.2014,Botnets,Private
+someId,01.5.2014,Denial of service,Public
+someId,01.5.2014,Information leakage,International
+someId,01.5.2014,Data breaches,Private
+someId,01.5.2014,Botnets,International
+someId,01.5.2014,Illegal content,Public
+someId,01.5.2014,Spam,Public
+someId,01.5.2014,Botnets,International
+someId,01.5.2014,Hacking/Cracking,Private
+someId,01.5.2014,Spam,Private
+someId,01.5.2014,Malicious code,Public
+someId,01.5.2014,Data breaches,Private
+someId,01.5.2014,Hacking/Cracking,Private
+someId,01.5.2014,Other,Public
+someId,01.5.2014,Phishing,Private
+someId,01.5.2014,Illegal content,Public
+someId,01.5.2014,Phishing,Private
+someId,01.5.2014,Malicious code,Private
+someId,01.5.2014,Information leakage,Private
+someId,01.5.2014,Malicious code,Private
+someId,01.5.2014,Ransomware/Cryptoware,International
+someId,01.5.2014,Botnets,International
+someId,01.5.2014,Cyber espionage,Private
+someId,01.5.2014,Information leakage,Private
+someId,01.5.2014,Hacking/Cracking,Private
+someId,01.5.2014,Spam,Public
+someId,01.5.2014,Hacking/Cracking,Private
+someId,01.5.2014,Spam,Private
+someId,01.5.2014,Information leakage,Private
+someId,01.5.2014,Other,Private
+someId,01.5.2014,Phishing,Public
+someId,01.5.2014,Injection attacks,International
+someId,01.5.2014,Information leakage,International
+someId,01.5.2014,Denial of service,Public
+someId,01.5.2014,Injection attacks,Private
+someId,01.5.2014,Illegal content,International
+someId,01.5.2014,Injection attacks,Private
+someId,01.5.2014,Data breaches,International
+someId,01.5.2014,Injection attacks,Private
+someId,01.5.2014,Hacking/Cracking,International
+someId,01.5.2014,Botnets,Public
+someId,01.5.2014,Denial of service,International
+someId,01.5.2014,Phishing,Private
+someId,01.5.2014,Injection attacks,Private
+someId,01.5.2014,Information leakage,International
+someId,01.5.2014,Ransomware/Cryptoware,International
+someId,01.5.2014,Phishing,International
+someId,01.5.2014,Phishing,International
+someId,01.5.2014,Cyber espionage,Public
+someId,01.5.2014,Botnets,Private
+someId,01.5.2014,Data breaches,International
+someId,01.5.2014,Hacking/Cracking,International
+someId,01.5.2014,Cyber espionage,Public
+someId,01.5.2014,Injection attacks,International
+someId,01.5.2014,Other,Public
+someId,01.5.2014,Malicious code,International
+someId,01.5.2014,Cyber espionage,International
+someId,01.5.2014,Hacking/Cracking,International
+someId,01.5.2014,Phishing,Private
+someId,01.5.2014,Phishing,International
+someId,01.5.2014,Illegal content,Public
+someId,01.5.2014,Malicious code,Public
+someId,01.5.2014,Injection attacks,Public
+someId,01.5.2014,Botnets,Private
+someId,01.5.2014,Botnets,Public
+someId,01.5.2014,Ransomware/Cryptoware,Private
+someId,01.5.2014,Illegal content,Public
+someId,01.5.2014,Other,International
+someId,01.5.2014,Denial of service,Private
+someId,01.5.2014,Information leakage,Public
+someId,01.5.2014,Botnets,Public
+someId,01.5.2014,Injection attacks,Public
+someId,01.5.2014,Ransomware/Cryptoware,Public
+someId,01.5.2014,Injection attacks,Public
+someId,01.5.2014,Malicious code,Private
+someId,01.5.2014,Hacking/Cracking,International
+someId,01.5.2014,Denial of service,Public
+someId,01.5.2014,Phishing,International
+someId,01.5.2014,Botnets,International
+someId,01.5.2014,Information leakage,Private
+someId,01.5.2014,Information leakage,Public
+someId,01.5.2014,Ransomware/Cryptoware,Public
+someId,01.5.2014,Botnets,Private
+someId,01.5.2014,Hacking/Cracking,Public
+someId,01.5.2014,Spam,International
+someId,01.5.2014,Phishing,International
+someId,01.5.2014,Phishing,International
+someId,01.5.2014,Injection attacks,Private
+someId,01.5.2014,Denial of service,Public
+someId,01.5.2014,Data breaches,International
+someId,01.5.2014,Hacking/Cracking,Public
+someId,01.5.2014,Hacking/Cracking,Private
+someId,01.5.2014,Phishing,Public
+someId,01.5.2014,Other,International
+someId,01.5.2014,Information leakage,Public
+someId,01.5.2014,Botnets,Public
+someId,01.5.2014,Cyber espionage,International
+someId,01.5.2014,Illegal content,Private
+someId,01.5.2014,Data breaches,Private
+someId,01.5.2014,Malicious code,Public
+someId,01.5.2014,Illegal content,Public
+someId,01.5.2014,Information leakage,Private
+someId,01.5.2014,Other,Private
+someId,01.5.2014,Botnets,Private
+someId,01.5.2014,Denial of service,Public
+someId,01.5.2014,Other,International
+someId,01.5.2014,Malicious code,Public
+someId,01.5.2014,Spam,Public
+someId,01.5.2014,Denial of service,Public
+someId,01.5.2014,Other,Public
+someId,01.5.2014,Injection attacks,Private
+someId,01.5.2014,Other,Private
+someId,01.5.2014,Denial of service,Public
+someId,01.5.2014,Botnets,Public
+someId,01.5.2014,Cyber espionage,Private
+someId,01.5.2014,Botnets,International
+someId,01.5.2014,Botnets,International
+someId,01.5.2014,Phishing,Private
+someId,01.5.2014,Phishing,Public
+someId,01.5.2014,Other,Private
+someId,01.5.2014,Ransomware/Cryptoware,Private
+someId,01.5.2014,Other,International
+someId,01.5.2014,Cyber espionage,International
+someId,01.5.2014,Ransomware/Cryptoware,Public
+someId,01.5.2014,Botnets,Private
+someId,01.5.2014,Illegal content,Private
+someId,01.5.2014,Cyber espionage,Public
+someId,01.5.2014,Other,Public
+someId,01.5.2014,Malicious code,International
+someId,01.5.2014,Phishing,Public
+someId,01.5.2014,Information leakage,Public
+someId,01.5.2014,Denial of service,International
+someId,01.5.2014,Illegal content,Private
+someId,01.5.2014,Injection attacks,Private
+someId,01.5.2014,Other,Private
+someId,01.5.2014,Spam,Private
+someId,01.5.2014,Botnets,Public
+someId,01.5.2014,Cyber espionage,Public
+someId,01.5.2014,Ransomware/Cryptoware,Public
+someId,01.5.2014,Data breaches,International
+someId,01.5.2014,Phishing,Public
+someId,01.5.2014,Other,Private
+someId,01.5.2014,Data breaches,Private
+someId,01.5.2014,Phishing,International
+someId,01.5.2014,Illegal content,Private
+someId,01.5.2014,Illegal content,Private
+someId,01.5.2014,Illegal content,Public
+someId,01.5.2014,Phishing,Public
+someId,01.5.2014,Phishing,Private
+someId,01.5.2014,Spam,International
+someId,01.5.2014,Data breaches,Private
+someId,01.5.2014,Phishing,International
+someId,01.5.2014,Malicious code,Public
+someId,01.5.2014,Botnets,International
+someId,01.5.2014,Other,Public
+someId,01.5.2014,Illegal content,Private
+someId,01.5.2014,Phishing,Private
+someId,01.5.2014,Malicious code,Public
+someId,01.5.2014,Spam,Private
+someId,01.5.2014,Phishing,Private
+someId,01.5.2014,Botnets,International
+someId,01.5.2014,Cyber espionage,Private
+someId,01.5.2014,Hacking/Cracking,Private
+someId,01.5.2014,Phishing,International
+someId,01.5.2014,Malicious code,International
+someId,01.5.2014,Data breaches,International
+someId,01.5.2014,Other,Private
+someId,01.5.2014,Data breaches,International
+someId,01.5.2014,Injection attacks,Private
+someId,01.5.2014,Phishing,Private
+someId,01.5.2014,Phishing,Public
+someId,01.5.2014,Hacking/Cracking,Private
+someId,01.5.2014,Denial of service,Private
+someId,01.5.2014,Illegal content,International
+someId,01.5.2014,Botnets,Public
+someId,01.5.2014,Phishing,Public
+someId,01.5.2014,Illegal content,Private
+someId,01.5.2014,Botnets,Public
+someId,01.5.2014,Other,International
+someId,01.5.2014,Ransomware/Cryptoware,International
+someId,01.5.2014,Botnets,Private
+someId,01.6.2014,Data breaches,Private
+someId,01.6.2014,Malicious code,Private
+someId,01.6.2014,Spam,International
+someId,01.6.2014,Spam,Public
+someId,01.6.2014,Data breaches,Public
+someId,01.6.2014,Ransomware/Cryptoware,Private
+someId,01.6.2014,Cyber espionage,Public
+someId,01.6.2014,Hacking/Cracking,International
+someId,01.6.2014,Hacking/Cracking,International
+someId,01.6.2014,Spam,International
+someId,01.6.2014,Data breaches,International
+someId,01.6.2014,Spam,Private
+someId,01.6.2014,Denial of service,Private
+someId,01.6.2014,Illegal content,Public
+someId,01.6.2014,Malicious code,Public
+someId,01.6.2014,Data breaches,Private
+someId,01.6.2014,Ransomware/Cryptoware,International
+someId,01.6.2014,Hacking/Cracking,Private
+someId,01.6.2014,Ransomware/Cryptoware,Public
+someId,01.6.2014,Data breaches,International
+someId,01.6.2014,Ransomware/Cryptoware,International
+someId,01.6.2014,Information leakage,Public
+someId,01.6.2014,Phishing,Public
+someId,01.6.2014,Spam,International
+someId,01.6.2014,Injection attacks,Private
+someId,01.6.2014,Illegal content,International
+someId,01.6.2014,Information leakage,Private
+someId,01.6.2014,Spam,Public
+someId,01.6.2014,Injection attacks,Public
+someId,01.6.2014,Data breaches,Private
+someId,01.6.2014,Other,International
+someId,01.6.2014,Botnets,Public
+someId,01.6.2014,Ransomware/Cryptoware,Public
+someId,01.6.2014,Ransomware/Cryptoware,Public
+someId,01.6.2014,Hacking/Cracking,International
+someId,01.6.2014,Illegal content,Public
+someId,01.6.2014,Ransomware/Cryptoware,International
+someId,01.6.2014,Hacking/Cracking,Public
+someId,01.6.2014,Cyber espionage,Public
+someId,01.6.2014,Injection attacks,Public
+someId,01.6.2014,Spam,Public
+someId,01.6.2014,Botnets,International
+someId,01.6.2014,Data breaches,Private
+someId,01.6.2014,Botnets,Private
+someId,01.6.2014,Information leakage,Public
+someId,01.6.2014,Spam,International
+someId,01.6.2014,Other,Private
+someId,01.6.2014,Cyber espionage,Private
+someId,01.6.2014,Ransomware/Cryptoware,International
+someId,01.6.2014,Illegal content,Private
+someId,01.6.2014,Illegal content,Private
+someId,01.6.2014,Illegal content,Private
+someId,01.6.2014,Information leakage,International
+someId,01.6.2014,Ransomware/Cryptoware,Public
+someId,01.6.2014,Injection attacks,Private
+someId,01.6.2014,Hacking/Cracking,International
+someId,01.6.2014,Data breaches,Private
+someId,01.6.2014,Botnets,Public
+someId,01.6.2014,Injection attacks,Public
+someId,01.6.2014,Botnets,Private
+someId,01.6.2014,Hacking/Cracking,Private
+someId,01.6.2014,Illegal content,Private
+someId,01.6.2014,Data breaches,International
+someId,01.6.2014,Injection attacks,International
+someId,01.6.2014,Illegal content,Private
+someId,01.6.2014,Cyber espionage,International
+someId,01.6.2014,Botnets,Public
+someId,01.6.2014,Malicious code,Private
+someId,01.6.2014,Illegal content,Private
+someId,01.6.2014,Phishing,Public
+someId,01.6.2014,Data breaches,International
+someId,01.6.2014,Cyber espionage,Private
+someId,01.6.2014,Denial of service,International
+someId,01.6.2014,Phishing,Private
+someId,01.6.2014,Data breaches,Public
+someId,01.6.2014,Botnets,Private
+someId,01.6.2014,Botnets,Public
+someId,01.6.2014,Malicious code,Public
+someId,01.6.2014,Ransomware/Cryptoware,Public
+someId,01.6.2014,Cyber espionage,Private
+someId,01.6.2014,Spam,International
+someId,01.6.2014,Data breaches,Private
+someId,01.6.2014,Information leakage,Private
+someId,01.6.2014,Data breaches,International
+someId,01.6.2014,Information leakage,International
+someId,01.6.2014,Data breaches,International
+someId,01.6.2014,Injection attacks,Public
+someId,01.6.2014,Other,Private
+someId,01.6.2014,Malicious code,Private
+someId,01.6.2014,Illegal content,Private
+someId,01.6.2014,Other,International
+someId,01.6.2014,Spam,Private
+someId,01.6.2014,Illegal content,Private
+someId,01.6.2014,Spam,Private
+someId,01.6.2014,Data breaches,Private
+someId,01.6.2014,Spam,International
+someId,01.6.2014,Data breaches,International
+someId,01.6.2014,Cyber espionage,Public
+someId,01.6.2014,Injection attacks,International
+someId,01.6.2014,Hacking/Cracking,Public
+someId,01.6.2014,Cyber espionage,International
+someId,01.6.2014,Illegal content,Public
+someId,01.6.2014,Ransomware/Cryptoware,Public
+someId,01.6.2014,Other,Private
+someId,01.6.2014,Other,Private
+someId,01.6.2014,Illegal content,Private
+someId,01.6.2014,Malicious code,International
+someId,01.6.2014,Ransomware/Cryptoware,International
+someId,01.6.2014,Hacking/Cracking,Public
+someId,01.6.2014,Illegal content,Private
+someId,01.6.2014,Cyber espionage,International
+someId,01.6.2014,Illegal content,Public
+someId,01.6.2014,Ransomware/Cryptoware,Private
+someId,01.6.2014,Ransomware/Cryptoware,Public
+someId,01.6.2014,Other,International
+someId,01.6.2014,Ransomware/Cryptoware,International
+someId,01.6.2014,Botnets,Public
+someId,01.6.2014,Cyber espionage,International
+someId,01.6.2014,Illegal content,International
+someId,01.6.2014,Data breaches,Private
+someId,01.6.2014,Hacking/Cracking,Private
+someId,01.6.2014,Injection attacks,International
+someId,01.6.2014,Ransomware/Cryptoware,Public
+someId,01.6.2014,Ransomware/Cryptoware,Public
+someId,01.6.2014,Injection attacks,International
+someId,01.6.2014,Malicious code,International
+someId,01.6.2014,Spam,Public
+someId,01.6.2014,Illegal content,Public
+someId,01.6.2014,Data breaches,Private
+someId,01.6.2014,Malicious code,Private
+someId,01.6.2014,Phishing,Public
+someId,01.6.2014,Denial of service,International
+someId,01.6.2014,Injection attacks,International
+someId,01.6.2014,Data breaches,Public
+someId,01.6.2014,Denial of service,International
+someId,01.6.2014,Other,Public
+someId,01.6.2014,Hacking/Cracking,Private
+someId,01.6.2014,Spam,Public
+someId,01.6.2014,Ransomware/Cryptoware,International
+someId,01.6.2014,Cyber espionage,Public
+someId,01.6.2014,Information leakage,International
+someId,01.6.2014,Cyber espionage,Private
+someId,01.6.2014,Phishing,International
+someId,01.6.2014,Denial of service,International
+someId,01.6.2014,Hacking/Cracking,Private
+someId,01.6.2014,Phishing,International
+someId,01.6.2014,Data breaches,Public
+someId,01.6.2014,Ransomware/Cryptoware,International
+someId,01.6.2014,Denial of service,Private
+someId,01.6.2014,Denial of service,Private
+someId,01.6.2014,Ransomware/Cryptoware,Private
+someId,01.6.2014,Malicious code,International
+someId,01.6.2014,Denial of service,International
+someId,01.6.2014,Ransomware/Cryptoware,Private
+someId,01.6.2014,Information leakage,Private
+someId,01.6.2014,Other,International
+someId,01.6.2014,Cyber espionage,Private
+someId,01.6.2014,Ransomware/Cryptoware,Private
+someId,01.6.2014,Illegal content,Public
+someId,01.6.2014,Ransomware/Cryptoware,International
+someId,01.6.2014,Botnets,Private
+someId,01.6.2014,Spam,Public
+someId,01.6.2014,Ransomware/Cryptoware,Private
+someId,01.6.2014,Botnets,Private
+someId,01.7.2014,Data breaches,Private
+someId,01.7.2014,Data breaches,Public
+someId,01.7.2014,Other,Public
+someId,01.7.2014,Botnets,International
+someId,01.7.2014,Illegal content,International
+someId,01.7.2014,Spam,International
+someId,01.7.2014,Spam,Public
+someId,01.7.2014,Spam,Private
+someId,01.7.2014,Hacking/Cracking,Public
+someId,01.7.2014,Malicious code,Public
+someId,01.7.2014,Injection attacks,Private
+someId,01.7.2014,Information leakage,International
+someId,01.7.2014,Data breaches,Private
+someId,01.7.2014,Cyber espionage,Private
+someId,01.7.2014,Other,Public
+someId,01.7.2014,Injection attacks,Public
+someId,01.7.2014,Ransomware/Cryptoware,Private
+someId,01.7.2014,Information leakage,Public
+someId,01.7.2014,Hacking/Cracking,International
+someId,01.7.2014,Ransomware/Cryptoware,Public
+someId,01.7.2014,Other,International
+someId,01.7.2014,Data breaches,Public
+someId,01.7.2014,Ransomware/Cryptoware,International
+someId,01.7.2014,Botnets,International
+someId,01.7.2014,Illegal content,Private
+someId,01.7.2014,Injection attacks,International
+someId,01.7.2014,Botnets,Public
+someId,01.7.2014,Other,Private
+someId,01.7.2014,Hacking/Cracking,Public
+someId,01.7.2014,Spam,Public
+someId,01.7.2014,Malicious code,Private
+someId,01.7.2014,Malicious code,Private
+someId,01.7.2014,Information leakage,International
+someId,01.7.2014,Data breaches,Private
+someId,01.7.2014,Phishing,Private
+someId,01.7.2014,Denial of service,Public
+someId,01.7.2014,Denial of service,International
+someId,01.7.2014,Other,Private
+someId,01.7.2014,Illegal content,Public
+someId,01.7.2014,Ransomware/Cryptoware,Public
+someId,01.7.2014,Other,International
+someId,01.7.2014,Other,Public
+someId,01.7.2014,Malicious code,Private
+someId,01.7.2014,Data breaches,International
+someId,01.7.2014,Data breaches,International
+someId,01.7.2014,Malicious code,Private
+someId,01.7.2014,Other,Public
+someId,01.7.2014,Botnets,International
+someId,01.7.2014,Information leakage,Public
+someId,01.7.2014,Malicious code,International
+someId,01.7.2014,Injection attacks,Private
+someId,01.7.2014,Denial of service,Public
+someId,01.7.2014,Cyber espionage,Private
+someId,01.7.2014,Phishing,Public
+someId,01.7.2014,Denial of service,International
+someId,01.7.2014,Phishing,Private
+someId,01.7.2014,Data breaches,Public
+someId,01.7.2014,Data breaches,Private
+someId,01.7.2014,Ransomware/Cryptoware,Private
+someId,01.7.2014,Other,Public
+someId,01.7.2014,Illegal content,Public
+someId,01.7.2014,Other,International
+someId,01.7.2014,Other,Public
+someId,01.7.2014,Information leakage,Public
+someId,01.7.2014,Other,International
+someId,01.7.2014,Data breaches,Private
+someId,01.7.2014,Hacking/Cracking,Public
+someId,01.7.2014,Ransomware/Cryptoware,Private
+someId,01.7.2014,Hacking/Cracking,Public
+someId,01.7.2014,Denial of service,Public
+someId,01.7.2014,Data breaches,Private
+someId,01.7.2014,Spam,Public
+someId,01.7.2014,Information leakage,Public
+someId,01.7.2014,Cyber espionage,Private
+someId,01.7.2014,Denial of service,Public
+someId,01.7.2014,Data breaches,Private
+someId,01.7.2014,Cyber espionage,Private
+someId,01.7.2014,Cyber espionage,Private
+someId,01.7.2014,Ransomware/Cryptoware,Public
+someId,01.7.2014,Data breaches,International
+someId,01.7.2014,Injection attacks,Public
+someId,01.7.2014,Other,International
+someId,01.7.2014,Spam,International
+someId,01.7.2014,Phishing,International
+someId,01.7.2014,Ransomware/Cryptoware,International
+someId,01.7.2014,Ransomware/Cryptoware,Public
+someId,01.7.2014,Data breaches,Public
+someId,01.7.2014,Cyber espionage,International
+someId,01.7.2014,Hacking/Cracking,International
+someId,01.7.2014,Ransomware/Cryptoware,Private
+someId,01.7.2014,Illegal content,International
+someId,01.7.2014,Denial of service,International
+someId,01.7.2014,Malicious code,Public
+someId,01.7.2014,Cyber espionage,Public
+someId,01.7.2014,Information leakage,International
+someId,01.7.2014,Ransomware/Cryptoware,International
+someId,01.7.2014,Hacking/Cracking,Public
+someId,01.7.2014,Botnets,Public
+someId,01.7.2014,Information leakage,Private
+someId,01.7.2014,Information leakage,International
+someId,01.7.2014,Information leakage,International
+someId,01.7.2014,Spam,Private
+someId,01.7.2014,Botnets,Public
+someId,01.7.2014,Ransomware/Cryptoware,International
+someId,01.7.2014,Information leakage,International
+someId,01.7.2014,Phishing,Private
+someId,01.7.2014,Hacking/Cracking,Private
+someId,01.7.2014,Denial of service,Private
+someId,01.7.2014,Malicious code,Private
+someId,01.7.2014,Denial of service,Private
+someId,01.7.2014,Cyber espionage,Public
+someId,01.7.2014,Botnets,Public
+someId,01.7.2014,Cyber espionage,Public
+someId,01.7.2014,Botnets,Private
+someId,01.7.2014,Ransomware/Cryptoware,International
+someId,01.7.2014,Illegal content,International
+someId,01.7.2014,Information leakage,Public
+someId,01.7.2014,Denial of service,Public
+someId,01.7.2014,Ransomware/Cryptoware,Private
+someId,01.7.2014,Malicious code,Public
+someId,01.7.2014,Phishing,Public
+someId,01.7.2014,Other,International
+someId,01.7.2014,Cyber espionage,Public
+someId,01.7.2014,Spam,International
+someId,01.7.2014,Malicious code,Public
+someId,01.7.2014,Denial of service,Public
+someId,01.7.2014,Data breaches,International
+someId,01.7.2014,Hacking/Cracking,International
+someId,01.7.2014,Malicious code,International
+someId,01.7.2014,Data breaches,Public
+someId,01.7.2014,Hacking/Cracking,Private
+someId,01.7.2014,Information leakage,Private
+someId,01.7.2014,Botnets,Private
+someId,01.7.2014,Spam,Private
+someId,01.7.2014,Injection attacks,Public
+someId,01.7.2014,Information leakage,International
+someId,01.7.2014,Hacking/Cracking,International
+someId,01.7.2014,Cyber espionage,Private
+someId,01.7.2014,Other,Public
+someId,01.7.2014,Spam,Private
+someId,01.7.2014,Data breaches,Public
+someId,01.7.2014,Other,International
+someId,01.7.2014,Cyber espionage,International
+someId,01.7.2014,Illegal content,International
+someId,01.7.2014,Botnets,Public
+someId,01.7.2014,Botnets,Private
+someId,01.7.2014,Denial of service,International
+someId,01.7.2014,Injection attacks,International
+someId,01.7.2014,Other,Public
+someId,01.7.2014,Cyber espionage,Public
+someId,01.7.2014,Hacking/Cracking,International
+someId,01.7.2014,Phishing,Private
+someId,01.7.2014,Cyber espionage,Private
+someId,01.7.2014,Data breaches,International
+someId,01.7.2014,Other,Private
+someId,01.7.2014,Spam,Private
+someId,01.7.2014,Data breaches,Public
+someId,01.7.2014,Botnets,International
+someId,01.7.2014,Information leakage,International
+someId,01.7.2014,Illegal content,Private
+someId,01.7.2014,Denial of service,International
+someId,01.7.2014,Denial of service,International
+someId,01.7.2014,Illegal content,Private
+someId,01.7.2014,Data breaches,International
+someId,01.7.2014,Data breaches,Private
+someId,01.7.2014,Denial of service,Private
+someId,01.7.2014,Illegal content,Public
+someId,01.7.2014,Phishing,Private
+someId,01.7.2014,Denial of service,International
+someId,01.7.2014,Other,Public
+someId,01.7.2014,Illegal content,Public
+someId,01.7.2014,Phishing,International
+someId,01.7.2014,Spam,International
+someId,01.7.2014,Malicious code,Private
+someId,01.7.2014,Malicious code,Public
+someId,01.7.2014,Denial of service,Public
+someId,01.7.2014,Information leakage,Public
+someId,01.7.2014,Other,International
+someId,01.7.2014,Malicious code,International
+someId,01.7.2014,Injection attacks,Public
+someId,01.7.2014,Phishing,Public
+someId,01.7.2014,Information leakage,Private
+someId,01.7.2014,Illegal content,International
+someId,01.7.2014,Illegal content,Public
+someId,01.7.2014,Information leakage,Public
+someId,01.7.2014,Phishing,Private
+someId,01.7.2014,Hacking/Cracking,International
+someId,01.7.2014,Ransomware/Cryptoware,Private
+someId,01.7.2014,Phishing,Private
+someId,01.7.2014,Hacking/Cracking,Public
+someId,01.7.2014,Cyber espionage,Private
+someId,01.7.2014,Cyber espionage,Private
+someId,01.7.2014,Spam,Private
+someId,01.7.2014,Malicious code,International
+someId,01.7.2014,Malicious code,Private
+someId,01.7.2014,Cyber espionage,Public
+someId,01.7.2014,Injection attacks,International
+someId,01.7.2014,Malicious code,International
+someId,01.7.2014,Spam,International
+someId,01.7.2014,Information leakage,Private
+someId,01.7.2014,Malicious code,Private
+someId,01.7.2014,Other,Private
+someId,01.7.2014,Ransomware/Cryptoware,Private
+someId,01.7.2014,Cyber espionage,Public
+someId,01.7.2014,Ransomware/Cryptoware,International
+someId,01.7.2014,Spam,Public
+someId,01.7.2014,Illegal content,Private
+someId,01.7.2014,Data breaches,International
+someId,01.7.2014,Phishing,International
+someId,01.7.2014,Illegal content,Public
+someId,01.7.2014,Malicious code,International
+someId,01.7.2014,Denial of service,Private
+someId,01.7.2014,Information leakage,Private
+someId,01.7.2014,Other,Private
+someId,01.7.2014,Injection attacks,Private
+someId,01.7.2014,Denial of service,Public
+someId,01.7.2014,Other,International
+someId,01.7.2014,Illegal content,Public
+someId,01.7.2014,Denial of service,Private
+someId,01.7.2014,Hacking/Cracking,International
+someId,01.7.2014,Other,Private
+someId,01.7.2014,Ransomware/Cryptoware,International
+someId,01.7.2014,Injection attacks,Public
+someId,01.7.2014,Cyber espionage,International
+someId,01.7.2014,Hacking/Cracking,Private
+someId,01.7.2014,Illegal content,International
+someId,01.7.2014,Injection attacks,Private
+someId,01.7.2014,Phishing,Public
+someId,01.7.2014,Botnets,International
+someId,01.7.2014,Spam,Public
+someId,01.7.2014,Denial of service,Private
+someId,01.7.2014,Other,International
+someId,01.7.2014,Other,International
+someId,01.7.2014,Malicious code,Private
+someId,01.7.2014,Cyber espionage,Private
+someId,01.7.2014,Botnets,International
+someId,01.7.2014,Injection attacks,International
+someId,01.7.2014,Injection attacks,Private
+someId,01.7.2014,Data breaches,Public
+someId,01.7.2014,Spam,Private
+someId,01.7.2014,Phishing,Private
+someId,01.7.2014,Cyber espionage,Private
+someId,01.7.2014,Phishing,Public
+someId,01.7.2014,Denial of service,Public
+someId,01.7.2014,Phishing,International
+someId,01.7.2014,Other,Public
+someId,01.7.2014,Hacking/Cracking,Private
+someId,01.7.2014,Malicious code,Public
+someId,01.7.2014,Hacking/Cracking,International
+someId,01.7.2014,Cyber espionage,International
+someId,01.7.2014,Injection attacks,International
+someId,01.7.2014,Ransomware/Cryptoware,Public
+someId,01.8.2014,Hacking/Cracking,International
+someId,01.8.2014,Spam,Private
+someId,01.8.2014,Phishing,International
+someId,01.8.2014,Information leakage,International
+someId,01.8.2014,Phishing,International
+someId,01.8.2014,Botnets,Private
+someId,01.8.2014,Cyber espionage,International
+someId,01.8.2014,Spam,Private
+someId,01.8.2014,Denial of service,Private
+someId,01.8.2014,Hacking/Cracking,Private
+someId,01.8.2014,Malicious code,Private
+someId,01.8.2014,Ransomware/Cryptoware,Private
+someId,01.8.2014,Botnets,Private
+someId,01.8.2014,Data breaches,Private
+someId,01.8.2014,Botnets,Private
+someId,01.8.2014,Cyber espionage,Public
+someId,01.8.2014,Illegal content,International
+someId,01.8.2014,Other,International
+someId,01.8.2014,Illegal content,Private
+someId,01.8.2014,Information leakage,International
+someId,01.8.2014,Ransomware/Cryptoware,Public
+someId,01.8.2014,Cyber espionage,Private
+someId,01.8.2014,Hacking/Cracking,Private
+someId,01.8.2014,Botnets,Public
+someId,01.8.2014,Botnets,Private
+someId,01.8.2014,Phishing,Public
+someId,01.8.2014,Illegal content,Public
+someId,01.8.2014,Denial of service,Public
+someId,01.8.2014,Cyber espionage,International
+someId,01.8.2014,Hacking/Cracking,Public
+someId,01.8.2014,Phishing,Public
+someId,01.8.2014,Information leakage,Private
+someId,01.8.2014,Ransomware/Cryptoware,International
+someId,01.8.2014,Other,Private
+someId,01.8.2014,Injection attacks,International
+someId,01.8.2014,Phishing,International
+someId,01.8.2014,Hacking/Cracking,Public
+someId,01.8.2014,Other,Public
+someId,01.8.2014,Cyber espionage,International
+someId,01.8.2014,Denial of service,Public
+someId,01.8.2014,Data breaches,Public
+someId,01.8.2014,Illegal content,Public
+someId,01.8.2014,Other,Private
+someId,01.8.2014,Phishing,Public
+someId,01.8.2014,Malicious code,International
+someId,01.8.2014,Ransomware/Cryptoware,Public
+someId,01.8.2014,Hacking/Cracking,Public
+someId,01.8.2014,Illegal content,Private
+someId,01.8.2014,Denial of service,Private
+someId,01.8.2014,Other,International
+someId,01.8.2014,Denial of service,Public
+someId,01.8.2014,Spam,International
+someId,01.8.2014,Illegal content,Private
+someId,01.8.2014,Injection attacks,Public
+someId,01.8.2014,Injection attacks,Private
+someId,01.8.2014,Injection attacks,Public
+someId,01.8.2014,Illegal content,International
+someId,01.8.2014,Ransomware/Cryptoware,Public
+someId,01.8.2014,Spam,Public
+someId,01.8.2014,Injection attacks,Private
+someId,01.8.2014,Data breaches,International
+someId,01.8.2014,Denial of service,International
+someId,01.8.2014,Other,Private
+someId,01.8.2014,Botnets,Public
+someId,01.8.2014,Spam,Public
+someId,01.8.2014,Illegal content,Public
+someId,01.8.2014,Denial of service,International
+someId,01.8.2014,Malicious code,International
+someId,01.8.2014,Hacking/Cracking,Public
+someId,01.8.2014,Denial of service,Public
+someId,01.8.2014,Illegal content,Public
+someId,01.8.2014,Cyber espionage,Public
+someId,01.8.2014,Other,International
+someId,01.8.2014,Hacking/Cracking,International
+someId,01.8.2014,Spam,Public
+someId,01.8.2014,Illegal content,Private
+someId,01.8.2014,Information leakage,Public
+someId,01.8.2014,Hacking/Cracking,Public
+someId,01.8.2014,Data breaches,Public
+someId,01.8.2014,Data breaches,Public
+someId,01.8.2014,Information leakage,Public
+someId,01.8.2014,Cyber espionage,Public
+someId,01.8.2014,Injection attacks,International
+someId,01.8.2014,Injection attacks,Public
+someId,01.8.2014,Hacking/Cracking,Private
+someId,01.8.2014,Denial of service,Private
+someId,01.8.2014,Information leakage,Public
+someId,01.8.2014,Botnets,Private
+someId,01.8.2014,Hacking/Cracking,Public
+someId,01.8.2014,Data breaches,Public
+someId,01.8.2014,Injection attacks,International
+someId,01.8.2014,Information leakage,Public
+someId,01.8.2014,Spam,Private
+someId,01.8.2014,Other,Public
+someId,01.8.2014,Information leakage,Public
+someId,01.8.2014,Other,Public
+someId,01.8.2014,Illegal content,Private
+someId,01.8.2014,Injection attacks,Public
+someId,01.8.2014,Ransomware/Cryptoware,Private
+someId,01.8.2014,Phishing,Public
+someId,01.8.2014,Ransomware/Cryptoware,Public
+someId,01.8.2014,Phishing,Private
+someId,01.8.2014,Hacking/Cracking,Private
+someId,01.8.2014,Injection attacks,International
+someId,01.8.2014,Spam,International
+someId,01.8.2014,Data breaches,Public
+someId,01.8.2014,Malicious code,Private
+someId,01.8.2014,Ransomware/Cryptoware,International
+someId,01.8.2014,Denial of service,Private
+someId,01.8.2014,Ransomware/Cryptoware,Public
+someId,01.8.2014,Data breaches,International
+someId,01.8.2014,Information leakage,International
+someId,01.8.2014,Hacking/Cracking,Public
+someId,01.8.2014,Illegal content,Private
+someId,01.8.2014,Phishing,Public
+someId,01.8.2014,Other,Public
+someId,01.8.2014,Ransomware/Cryptoware,Public
+someId,01.8.2014,Illegal content,Public
+someId,01.8.2014,Cyber espionage,Public
+someId,01.8.2014,Ransomware/Cryptoware,International
+someId,01.8.2014,Cyber espionage,International
+someId,01.8.2014,Injection attacks,International
+someId,01.8.2014,Ransomware/Cryptoware,Private
+someId,01.8.2014,Data breaches,International
+someId,01.8.2014,Phishing,Private
+someId,01.8.2014,Denial of service,Private
+someId,01.8.2014,Injection attacks,Public
+someId,01.8.2014,Injection attacks,International
+someId,01.8.2014,Spam,Public
+someId,01.8.2014,Data breaches,International
+someId,01.8.2014,Data breaches,Private
+someId,01.8.2014,Malicious code,Public
+someId,01.8.2014,Hacking/Cracking,Private
+someId,01.8.2014,Spam,International
+someId,01.8.2014,Denial of service,Public
+someId,01.8.2014,Phishing,International
+someId,01.8.2014,Malicious code,Public
+someId,01.8.2014,Other,Public
+someId,01.8.2014,Ransomware/Cryptoware,Private
+someId,01.8.2014,Phishing,Private
+someId,01.8.2014,Malicious code,International
+someId,01.8.2014,Spam,Private
+someId,01.8.2014,Illegal content,International
+someId,01.8.2014,Cyber espionage,International
+someId,01.8.2014,Hacking/Cracking,Public
+someId,01.8.2014,Cyber espionage,Private
+someId,01.8.2014,Cyber espionage,Public
+someId,01.8.2014,Data breaches,International
+someId,01.8.2014,Denial of service,Public
+someId,01.8.2014,Spam,International
+someId,01.8.2014,Injection attacks,Private
+someId,01.8.2014,Information leakage,International
+someId,01.8.2014,Spam,Public
+someId,01.8.2014,Denial of service,International
+someId,01.9.2014,Denial of service,International
+someId,01.9.2014,Illegal content,Public
+someId,01.9.2014,Denial of service,International
+someId,01.9.2014,Cyber espionage,Private
+someId,01.9.2014,Spam,Private
+someId,01.9.2014,Data breaches,International
+someId,01.9.2014,Hacking/Cracking,Private
+someId,01.9.2014,Ransomware/Cryptoware,Public
+someId,01.9.2014,Ransomware/Cryptoware,Public
+someId,01.9.2014,Ransomware/Cryptoware,International
+someId,01.9.2014,Phishing,International
+someId,01.9.2014,Data breaches,Public
+someId,01.9.2014,Denial of service,Public
+someId,01.9.2014,Illegal content,International
+someId,01.9.2014,Ransomware/Cryptoware,Public
+someId,01.9.2014,Ransomware/Cryptoware,Private
+someId,01.9.2014,Ransomware/Cryptoware,Public
+someId,01.9.2014,Phishing,Public
+someId,01.9.2014,Injection attacks,International
+someId,01.9.2014,Illegal content,International
+someId,01.9.2014,Hacking/Cracking,Public
+someId,01.9.2014,Other,International
+someId,01.9.2014,Illegal content,International
+someId,01.9.2014,Injection attacks,Private
+someId,01.9.2014,Other,Public
+someId,01.9.2014,Ransomware/Cryptoware,Private
+someId,01.9.2014,Hacking/Cracking,Public
+someId,01.9.2014,Phishing,Public
+someId,01.9.2014,Injection attacks,Public
+someId,01.9.2014,Spam,Private
+someId,01.9.2014,Ransomware/Cryptoware,Public
+someId,01.9.2014,Botnets,International
+someId,01.9.2014,Spam,Public
+someId,01.9.2014,Phishing,Private
+someId,01.9.2014,Malicious code,International
+someId,01.9.2014,Spam,Private
+someId,01.9.2014,Denial of service,Public
+someId,01.9.2014,Hacking/Cracking,Public
+someId,01.9.2014,Data breaches,Public
+someId,01.9.2014,Phishing,Public
+someId,01.9.2014,Illegal content,Private
+someId,01.9.2014,Botnets,Public
+someId,01.9.2014,Spam,Private
+someId,01.9.2014,Data breaches,Public
+someId,01.9.2014,Cyber espionage,International
+someId,01.9.2014,Cyber espionage,Public
+someId,01.9.2014,Other,Private
+someId,01.9.2014,Information leakage,International
+someId,01.9.2014,Malicious code,International
+someId,01.9.2014,Illegal content,International
+someId,01.9.2014,Illegal content,Private
+someId,01.9.2014,Hacking/Cracking,Private
+someId,01.9.2014,Denial of service,Private
+someId,01.9.2014,Denial of service,International
+someId,01.9.2014,Illegal content,Private
+someId,01.9.2014,Information leakage,Public
+someId,01.9.2014,Malicious code,Private
+someId,01.9.2014,Information leakage,Public
+someId,01.9.2014,Ransomware/Cryptoware,Public
+someId,01.9.2014,Denial of service,Public
+someId,01.9.2014,Botnets,Public
+someId,01.9.2014,Phishing,International
+someId,01.9.2014,Phishing,International
+someId,01.9.2014,Data breaches,Public
+someId,01.9.2014,Denial of service,Public
+someId,01.9.2014,Data breaches,International
+someId,01.9.2014,Illegal content,International
+someId,01.9.2014,Spam,Private
+someId,01.9.2014,Hacking/Cracking,International
+someId,01.9.2014,Illegal content,International
+someId,01.9.2014,Botnets,International
+someId,01.9.2014,Injection attacks,Public
+someId,01.9.2014,Malicious code,International
+someId,01.9.2014,Injection attacks,International
+someId,01.9.2014,Data breaches,Private
+someId,01.9.2014,Other,International
+someId,01.9.2014,Illegal content,Public
+someId,01.9.2014,Illegal content,Public
+someId,01.9.2014,Spam,Private
+someId,01.9.2014,Malicious code,International
+someId,01.9.2014,Phishing,Private
+someId,01.9.2014,Ransomware/Cryptoware,Public
+someId,01.9.2014,Other,International
+someId,01.9.2014,Data breaches,Public
+someId,01.9.2014,Illegal content,International
+someId,01.9.2014,Hacking/Cracking,Private
+someId,01.9.2014,Botnets,International
+someId,01.9.2014,Information leakage,Public
+someId,01.9.2014,Phishing,International
+someId,01.9.2014,Information leakage,Public
+someId,01.9.2014,Illegal content,International
+someId,01.9.2014,Hacking/Cracking,Private
+someId,01.9.2014,Hacking/Cracking,Public
+someId,01.9.2014,Malicious code,International
+someId,01.9.2014,Malicious code,Public
+someId,01.9.2014,Information leakage,Private
+someId,01.9.2014,Botnets,Private
+someId,01.9.2014,Hacking/Cracking,Public
+someId,01.9.2014,Spam,Private
+someId,01.9.2014,Cyber espionage,Private
+someId,01.9.2014,Ransomware/Cryptoware,International
+someId,01.9.2014,Injection attacks,Private
+someId,01.9.2014,Cyber espionage,International
+someId,01.9.2014,Information leakage,Public
+someId,01.9.2014,Ransomware/Cryptoware,International
+someId,01.9.2014,Injection attacks,Public
+someId,01.9.2014,Other,International
+someId,01.9.2014,Denial of service,Private
+someId,01.9.2014,Injection attacks,International
+someId,01.9.2014,Malicious code,Public
+someId,01.9.2014,Information leakage,Public
+someId,01.9.2014,Ransomware/Cryptoware,International
+someId,01.9.2014,Illegal content,Public
+someId,01.9.2014,Cyber espionage,Private
+someId,01.9.2014,Spam,International
+someId,01.9.2014,Cyber espionage,Public
+someId,01.9.2014,Ransomware/Cryptoware,Private
+someId,01.9.2014,Injection attacks,Public
+someId,01.9.2014,Hacking/Cracking,International
+someId,01.9.2014,Injection attacks,Public
+someId,01.9.2014,Information leakage,Private
+someId,01.9.2014,Illegal content,International
+someId,01.9.2014,Other,International
+someId,01.9.2014,Spam,International
+someId,01.9.2014,Data breaches,International
+someId,01.9.2014,Injection attacks,Public
+someId,01.9.2014,Illegal content,International
+someId,01.9.2014,Malicious code,Public
+someId,01.9.2014,Injection attacks,International
+someId,01.9.2014,Hacking/Cracking,International
+someId,01.9.2014,Data breaches,Private
+someId,01.9.2014,Ransomware/Cryptoware,Public
+someId,01.9.2014,Other,Private
+someId,01.9.2014,Hacking/Cracking,Private
+someId,01.9.2014,Cyber espionage,Public
+someId,01.9.2014,Spam,Private
+someId,01.9.2014,Illegal content,International
+someId,01.9.2014,Injection attacks,International
+someId,01.9.2014,Phishing,Public
+someId,01.9.2014,Spam,Public
+someId,01.9.2014,Other,Public
+someId,01.9.2014,Information leakage,International
+someId,01.9.2014,Ransomware/Cryptoware,International
+someId,01.9.2014,Phishing,Public
+someId,01.9.2014,Malicious code,Public
+someId,01.9.2014,Hacking/Cracking,Public
+someId,01.9.2014,Phishing,International
+someId,01.9.2014,Information leakage,Public
+someId,01.9.2014,Illegal content,Public
+someId,01.9.2014,Injection attacks,Public
+someId,01.9.2014,Malicious code,Private
+someId,01.9.2014,Other,Public
+someId,01.9.2014,Data breaches,International
+someId,01.9.2014,Illegal content,Private
+someId,01.9.2014,Hacking/Cracking,Public
+someId,01.9.2014,Cyber espionage,Public
+someId,01.9.2014,Ransomware/Cryptoware,Public
+someId,01.9.2014,Cyber espionage,International
+someId,01.9.2014,Denial of service,Private
+someId,01.9.2014,Other,Private
+someId,01.9.2014,Malicious code,Public
+someId,01.9.2014,Cyber espionage,International
+someId,01.9.2014,Other,Public
+someId,01.9.2014,Phishing,International
+someId,01.9.2014,Ransomware/Cryptoware,International
+someId,01.9.2014,Data breaches,Public
+someId,01.9.2014,Hacking/Cracking,Private
+someId,01.9.2014,Ransomware/Cryptoware,Public
+someId,01.9.2014,Spam,Private
+someId,01.9.2014,Cyber espionage,International
+someId,01.9.2014,Spam,International
+someId,01.9.2014,Illegal content,Public
+someId,01.9.2014,Hacking/Cracking,Public
+someId,01.9.2014,Information leakage,Public
+someId,01.9.2014,Hacking/Cracking,International
+someId,01.9.2014,Data breaches,Private
+someId,01.9.2014,Injection attacks,Public
+someId,01.9.2014,Illegal content,Public
+someId,01.9.2014,Ransomware/Cryptoware,Private
+someId,01.9.2014,Denial of service,International
+someId,01.9.2014,Botnets,International
+someId,01.9.2014,Ransomware/Cryptoware,International
+someId,01.9.2014,Cyber espionage,Public
+someId,01.9.2014,Hacking/Cracking,International
+someId,01.9.2014,Injection attacks,Private
+someId,01.9.2014,Malicious code,International
+someId,01.9.2014,Ransomware/Cryptoware,Private
+someId,01.9.2014,Other,International
+someId,01.9.2014,Information leakage,International
+someId,01.9.2014,Botnets,Public
+someId,01.9.2014,Injection attacks,Public
+someId,01.9.2014,Data breaches,Private
+someId,01.9.2014,Spam,Private
+someId,01.9.2014,Other,Private
+someId,01.9.2014,Cyber espionage,Public
+someId,01.9.2014,Denial of service,Private
+someId,01.9.2014,Other,Private
+someId,01.9.2014,Injection attacks,International
+someId,01.9.2014,Botnets,Private
+someId,01.9.2014,Hacking/Cracking,Private
+someId,01.9.2014,Hacking/Cracking,Private
+someId,01.9.2014,Injection attacks,International
+someId,01.9.2014,Injection attacks,Public
+someId,01.9.2014,Malicious code,Private
+someId,01.9.2014,Hacking/Cracking,Public
+someId,01.9.2014,Information leakage,Private
+someId,01.9.2014,Ransomware/Cryptoware,International
+someId,01.9.2014,Spam,Private
+someId,01.9.2014,Malicious code,Private
+someId,01.9.2014,Injection attacks,International
+someId,01.9.2014,Other,International
+someId,01.9.2014,Data breaches,Private
+someId,01.9.2014,Phishing,Private
+someId,01.9.2014,Phishing,Private
+someId,01.9.2014,Other,Public
+someId,01.9.2014,Cyber espionage,International
+someId,01.9.2014,Other,Private
+someId,01.9.2014,Injection attacks,Private
+someId,01.9.2014,Data breaches,Private
+someId,01.9.2014,Data breaches,Private
+someId,01.9.2014,Illegal content,Public
+someId,01.9.2014,Malicious code,International
+someId,01.9.2014,Denial of service,Private
+someId,01.9.2014,Denial of service,Private
+someId,01.9.2014,Malicious code,Public
+someId,01.9.2014,Ransomware/Cryptoware,International
+someId,01.9.2014,Botnets,International
+someId,01.9.2014,Spam,International
+someId,01.9.2014,Injection attacks,Public
+someId,01.9.2014,Information leakage,Public
+someId,01.9.2014,Injection attacks,International
+someId,01.9.2014,Illegal content,Private
+someId,01.9.2014,Phishing,Private
+someId,01.9.2014,Cyber espionage,Public
+someId,01.9.2014,Ransomware/Cryptoware,Public
+someId,01.9.2014,Other,Public
+someId,01.9.2014,Information leakage,Private
+someId,01.9.2014,Other,International
+someId,01.9.2014,Phishing,Public
+someId,01.9.2014,Injection attacks,Public
+someId,01.9.2014,Data breaches,International
+someId,01.9.2014,Information leakage,Public
+someId,01.9.2014,Phishing,International
+someId,01.9.2014,Illegal content,Public
+someId,01.9.2014,Data breaches,International
+someId,01.9.2014,Botnets,International
+someId,01.9.2014,Botnets,Private
+someId,01.9.2014,Illegal content,Public
+someId,01.9.2014,Information leakage,International
+someId,01.9.2014,Phishing,Private
+someId,01.9.2014,Illegal content,International
+someId,01.9.2014,Denial of service,International
+someId,01.9.2014,Hacking/Cracking,Public
+someId,01.9.2014,Information leakage,International
+someId,01.9.2014,Other,Public
+someId,01.9.2014,Other,International
+someId,01.9.2014,Injection attacks,International
+someId,01.9.2014,Illegal content,Public
+someId,01.9.2014,Ransomware/Cryptoware,Public
+someId,01.9.2014,Denial of service,Private
+someId,01.9.2014,Data breaches,Public
+someId,01.9.2014,Cyber espionage,Public
+someId,01.9.2014,Ransomware/Cryptoware,International
+someId,01.9.2014,Phishing,Public
+someId,01.9.2014,Spam,Private
+someId,01.9.2014,Phishing,International
+someId,01.9.2014,Botnets,International
+someId,01.9.2014,Denial of service,International
+someId,01.9.2014,Information leakage,Private
+someId,01.9.2014,Illegal content,Public
+someId,01.9.2014,Denial of service,Public
+someId,01.9.2014,Spam,International
+someId,01.9.2014,Illegal content,International
+someId,01.9.2014,Malicious code,Private
+someId,01.9.2014,Hacking/Cracking,Private
+someId,01.9.2014,Spam,Private
+someId,01.9.2014,Information leakage,Private
+someId,01.9.2014,Information leakage,Public
+someId,01.9.2014,Ransomware/Cryptoware,Private
+someId,01.9.2014,Injection attacks,Public
+someId,01.9.2014,Injection attacks,Private
+someId,01.9.2014,Malicious code,Private
+someId,01.9.2014,Information leakage,Private
+someId,01.9.2014,Ransomware/Cryptoware,International
+someId,01.9.2014,Hacking/Cracking,Public
+someId,01.9.2014,Phishing,International
+someId,01.9.2014,Injection attacks,International
+someId,01.9.2014,Denial of service,Public
+someId,01.9.2014,Injection attacks,Private
+someId,01.9.2014,Spam,Private
+someId,01.9.2014,Other,Public
+someId,01.9.2014,Injection attacks,Private
+someId,01.9.2014,Illegal content,Public
+someId,01.9.2014,Illegal content,Public
+someId,01.10.2014,Cyber espionage,Public
+someId,01.10.2014,Hacking/Cracking,Public
+someId,01.10.2014,Cyber espionage,Private
+someId,01.10.2014,Phishing,Private
+someId,01.10.2014,Spam,International
+someId,01.10.2014,Data breaches,Private
+someId,01.10.2014,Ransomware/Cryptoware,International
+someId,01.10.2014,Data breaches,Private
+someId,01.10.2014,Cyber espionage,International
+someId,01.10.2014,Malicious code,Private
+someId,01.10.2014,Denial of service,International
+someId,01.10.2014,Phishing,Public
+someId,01.10.2014,Ransomware/Cryptoware,International
+someId,01.10.2014,Malicious code,Private
+someId,01.10.2014,Hacking/Cracking,Public
+someId,01.10.2014,Phishing,Public
+someId,01.10.2014,Information leakage,Private
+someId,01.10.2014,Botnets,Private
+someId,01.10.2014,Information leakage,Public
+someId,01.10.2014,Botnets,Public
+someId,01.10.2014,Botnets,International
+someId,01.10.2014,Ransomware/Cryptoware,International
+someId,01.10.2014,Injection attacks,Public
+someId,01.10.2014,Spam,Public
+someId,01.10.2014,Malicious code,Public
+someId,01.10.2014,Spam,Private
+someId,01.10.2014,Injection attacks,Public
+someId,01.10.2014,Botnets,Private
+someId,01.10.2014,Malicious code,Public
+someId,01.10.2014,Cyber espionage,Private
+someId,01.10.2014,Malicious code,International
+someId,01.10.2014,Data breaches,International
+someId,01.10.2014,Ransomware/Cryptoware,Public
+someId,01.10.2014,Hacking/Cracking,International
+someId,01.10.2014,Other,Public
+someId,01.10.2014,Cyber espionage,International
+someId,01.10.2014,Botnets,Public
+someId,01.10.2014,Other,International
+someId,01.10.2014,Ransomware/Cryptoware,Private
+someId,01.10.2014,Other,Private
+someId,01.10.2014,Cyber espionage,International
+someId,01.10.2014,Information leakage,Public
+someId,01.10.2014,Cyber espionage,Public
+someId,01.11.2014,Denial of service,International
+someId,01.11.2014,Botnets,Public
+someId,01.11.2014,Malicious code,Private
+someId,01.11.2014,Illegal content,Private
+someId,01.11.2014,Injection attacks,Private
+someId,01.11.2014,Malicious code,Public
+someId,01.11.2014,Data breaches,Public
+someId,01.11.2014,Information leakage,Public
+someId,01.11.2014,Hacking/Cracking,International
+someId,01.11.2014,Other,Private
+someId,01.11.2014,Hacking/Cracking,Public
+someId,01.11.2014,Botnets,Private
+someId,01.11.2014,Malicious code,International
+someId,01.11.2014,Malicious code,Private
+someId,01.11.2014,Data breaches,International
+someId,01.11.2014,Denial of service,International
+someId,01.11.2014,Other,Public
+someId,01.11.2014,Hacking/Cracking,Public
+someId,01.11.2014,Information leakage,Public
+someId,01.11.2014,Information leakage,Public
+someId,01.11.2014,Information leakage,Public
+someId,01.11.2014,Denial of service,Private
+someId,01.11.2014,Hacking/Cracking,Private
+someId,01.11.2014,Data breaches,Public
+someId,01.11.2014,Phishing,International
+someId,01.11.2014,Malicious code,Public
+someId,01.11.2014,Illegal content,Private
+someId,01.11.2014,Phishing,Private
+someId,01.11.2014,Data breaches,International
+someId,01.11.2014,Malicious code,Private
+someId,01.11.2014,Ransomware/Cryptoware,Public
+someId,01.11.2014,Information leakage,Public
+someId,01.11.2014,Hacking/Cracking,Private
+someId,01.11.2014,Data breaches,Public
+someId,01.11.2014,Malicious code,Public
+someId,01.11.2014,Injection attacks,International
+someId,01.11.2014,Injection attacks,Public
+someId,01.11.2014,Other,Public
+someId,01.11.2014,Other,Public
+someId,01.11.2014,Cyber espionage,International
+someId,01.11.2014,Botnets,Public
+someId,01.11.2014,Cyber espionage,International
+someId,01.11.2014,Information leakage,Private
+someId,01.11.2014,Information leakage,Public
+someId,01.11.2014,Data breaches,Private
+someId,01.11.2014,Illegal content,International
+someId,01.11.2014,Injection attacks,Public
+someId,01.11.2014,Data breaches,Private
+someId,01.11.2014,Ransomware/Cryptoware,Private
+someId,01.11.2014,Information leakage,Private
+someId,01.11.2014,Hacking/Cracking,Public
+someId,01.11.2014,Malicious code,International
+someId,01.11.2014,Information leakage,International
+someId,01.11.2014,Malicious code,Private
+someId,01.11.2014,Hacking/Cracking,Private
+someId,01.11.2014,Data breaches,Public
+someId,01.11.2014,Botnets,Private
+someId,01.11.2014,Other,Private
+someId,01.12.2014,Botnets,Private
+someId,01.12.2014,Other,Public
+someId,01.12.2014,Ransomware/Cryptoware,Private
+someId,01.12.2014,Injection attacks,International
+someId,01.12.2014,Botnets,Public
+someId,01.12.2014,Malicious code,Public
+someId,01.12.2014,Ransomware/Cryptoware,Public
+someId,01.12.2014,Ransomware/Cryptoware,Private
+someId,01.12.2014,Illegal content,Private
+someId,01.12.2014,Botnets,Public
+someId,01.12.2014,Hacking/Cracking,International
+someId,01.12.2014,Injection attacks,Private
+someId,01.12.2014,Injection attacks,Public
+someId,01.12.2014,Ransomware/Cryptoware,International
+someId,01.1.2015,Data breaches,Private
+someId,01.1.2015,Other,International
+someId,01.1.2015,Other,Private
+someId,01.1.2015,Hacking/Cracking,Private
+someId,01.1.2015,Hacking/Cracking,Public
+someId,01.1.2015,Cyber espionage,Public
+someId,01.1.2015,Ransomware/Cryptoware,International
+someId,01.1.2015,Injection attacks,Public
+someId,01.1.2015,Cyber espionage,International
+someId,01.1.2015,Data breaches,Public
+someId,01.1.2015,Ransomware/Cryptoware,Private
+someId,01.1.2015,Other,International
+someId,01.1.2015,Other,International
+someId,01.1.2015,Information leakage,Public
+someId,01.1.2015,Illegal content,Public
+someId,01.1.2015,Hacking/Cracking,International
+someId,01.1.2015,Cyber espionage,International
+someId,01.1.2015,Hacking/Cracking,Private
+someId,01.1.2015,Ransomware/Cryptoware,International
+someId,01.1.2015,Denial of service,Private
+someId,01.1.2015,Botnets,Private
+someId,01.1.2015,Information leakage,Private
+someId,01.1.2015,Spam,Private
+someId,01.1.2015,Injection attacks,Public
+someId,01.1.2015,Phishing,International
+someId,01.1.2015,Phishing,Private
+someId,01.1.2015,Data breaches,Private
+someId,01.1.2015,Illegal content,International
+someId,01.1.2015,Malicious code,Private
+someId,01.1.2015,Hacking/Cracking,Private
+someId,01.1.2015,Hacking/Cracking,International
+someId,01.1.2015,Information leakage,Public
+someId,01.1.2015,Phishing,Private
+someId,01.1.2015,Denial of service,International
+someId,01.1.2015,Illegal content,Private
+someId,01.1.2015,Hacking/Cracking,International
+someId,01.1.2015,Injection attacks,International
+someId,01.1.2015,Spam,Public
+someId,01.1.2015,Ransomware/Cryptoware,Private
+someId,01.1.2015,Hacking/Cracking,Public
+someId,01.1.2015,Phishing,Public
+someId,01.1.2015,Illegal content,International
+someId,01.1.2015,Other,Private
+someId,01.1.2015,Malicious code,Private
+someId,01.1.2015,Other,Public
+someId,01.1.2015,Ransomware/Cryptoware,Public
+someId,01.1.2015,Denial of service,Private
+someId,01.1.2015,Phishing,International
+someId,01.1.2015,Hacking/Cracking,Public
+someId,01.1.2015,Botnets,Private
+someId,01.1.2015,Hacking/Cracking,Private
+someId,01.1.2015,Malicious code,Public
+someId,01.1.2015,Ransomware/Cryptoware,Public
+someId,01.1.2015,Hacking/Cracking,Public
+someId,01.1.2015,Cyber espionage,Private
+someId,01.1.2015,Phishing,Private
+someId,01.1.2015,Other,Public
+someId,01.1.2015,Other,Private
+someId,01.1.2015,Information leakage,Private
+someId,01.1.2015,Phishing,Private
+someId,01.1.2015,Injection attacks,Public
+someId,01.1.2015,Malicious code,International
+someId,01.1.2015,Denial of service,Public
+someId,01.1.2015,Botnets,Public
+someId,01.1.2015,Ransomware/Cryptoware,Public
+someId,01.1.2015,Cyber espionage,Public
+someId,01.1.2015,Hacking/Cracking,Private
+someId,01.1.2015,Illegal content,Private
+someId,01.1.2015,Cyber espionage,Public
+someId,01.1.2015,Information leakage,International
+someId,01.1.2015,Botnets,Private
+someId,01.1.2015,Illegal content,Private
+someId,01.1.2015,Ransomware/Cryptoware,Public
+someId,01.1.2015,Cyber espionage,Private
+someId,01.1.2015,Spam,Public
+someId,01.1.2015,Phishing,Public
+someId,01.1.2015,Phishing,Private
+someId,01.1.2015,Data breaches,Private
+someId,01.1.2015,Cyber espionage,Private
+someId,01.1.2015,Other,Public
+someId,01.1.2015,Information leakage,Private
+someId,01.1.2015,Malicious code,Public
+someId,01.1.2015,Cyber espionage,Private
+someId,01.1.2015,Hacking/Cracking,Private
+someId,01.1.2015,Hacking/Cracking,International
+someId,01.1.2015,Other,International
+someId,01.1.2015,Hacking/Cracking,International
+someId,01.1.2015,Ransomware/Cryptoware,Public
+someId,01.1.2015,Information leakage,Public
+someId,01.1.2015,Malicious code,Public
+someId,01.1.2015,Injection attacks,Public
+someId,01.1.2015,Botnets,Public
+someId,01.1.2015,Information leakage,International
+someId,01.1.2015,Spam,Public
+someId,01.1.2015,Other,Private
+someId,01.1.2015,Malicious code,Private
+someId,01.1.2015,Denial of service,International
+someId,01.1.2015,Cyber espionage,International
+someId,01.1.2015,Other,Public
+someId,01.1.2015,Data breaches,Public
+someId,01.1.2015,Botnets,Public
+someId,01.1.2015,Ransomware/Cryptoware,Public
+someId,01.1.2015,Ransomware/Cryptoware,Private
+someId,01.1.2015,Other,International
+someId,01.1.2015,Hacking/Cracking,Private
+someId,01.1.2015,Botnets,Public
+someId,01.1.2015,Illegal content,International
+someId,01.1.2015,Cyber espionage,Public
+someId,01.1.2015,Illegal content,Public
+someId,01.1.2015,Hacking/Cracking,International
+someId,01.1.2015,Cyber espionage,Public
+someId,01.1.2015,Phishing,International
+someId,01.1.2015,Hacking/Cracking,Private
+someId,01.1.2015,Illegal content,International
+someId,01.1.2015,Denial of service,Private
+someId,01.1.2015,Malicious code,International
+someId,01.1.2015,Malicious code,Private
+someId,01.1.2015,Spam,Private
+someId,01.1.2015,Illegal content,International
+someId,01.1.2015,Botnets,Private
+someId,01.1.2015,Hacking/Cracking,Public
+someId,01.1.2015,Information leakage,Public
+someId,01.1.2015,Phishing,Private
+someId,01.1.2015,Hacking/Cracking,Private
+someId,01.1.2015,Injection attacks,International
+someId,01.1.2015,Illegal content,Private
+someId,01.1.2015,Ransomware/Cryptoware,International
+someId,01.1.2015,Information leakage,International
+someId,01.1.2015,Phishing,Public
+someId,01.1.2015,Denial of service,Public
+someId,01.1.2015,Hacking/Cracking,International
+someId,01.1.2015,Injection attacks,Private
+someId,01.1.2015,Phishing,Private
+someId,01.1.2015,Injection attacks,Private
+someId,01.1.2015,Hacking/Cracking,International
+someId,01.1.2015,Phishing,International
+someId,01.1.2015,Data breaches,Public
+someId,01.1.2015,Cyber espionage,International
+someId,01.1.2015,Botnets,Public
+someId,01.1.2015,Information leakage,International
+someId,01.1.2015,Other,International
+someId,01.1.2015,Ransomware/Cryptoware,Private
+someId,01.1.2015,Other,Private
+someId,01.1.2015,Denial of service,Private
+someId,01.1.2015,Spam,International
+someId,01.1.2015,Hacking/Cracking,Public
+someId,01.1.2015,Information leakage,Public
+someId,01.1.2015,Denial of service,Private
+someId,01.1.2015,Illegal content,International
+someId,01.1.2015,Cyber espionage,International
+someId,01.1.2015,Data breaches,Public
+someId,01.1.2015,Hacking/Cracking,International
+someId,01.1.2015,Hacking/Cracking,International
+someId,01.1.2015,Ransomware/Cryptoware,Public
+someId,01.1.2015,Hacking/Cracking,International
+someId,01.1.2015,Hacking/Cracking,International
+someId,01.1.2015,Illegal content,Public
+someId,01.1.2015,Injection attacks,Private
+someId,01.1.2015,Information leakage,Private
+someId,01.1.2015,Information leakage,International
+someId,01.1.2015,Hacking/Cracking,International
+someId,01.1.2015,Spam,Public
+someId,01.1.2015,Botnets,International
+someId,01.1.2015,Hacking/Cracking,Public
+someId,01.1.2015,Hacking/Cracking,International
+someId,01.1.2015,Information leakage,Public
+someId,01.1.2015,Botnets,Public
+someId,01.1.2015,Other,Private
+someId,01.1.2015,Cyber espionage,Private
+someId,01.1.2015,Information leakage,Private
+someId,01.1.2015,Information leakage,Public
+someId,01.1.2015,Cyber espionage,Public
+someId,01.1.2015,Hacking/Cracking,Private
+someId,01.1.2015,Denial of service,Public
+someId,01.1.2015,Information leakage,Private
+someId,01.1.2015,Phishing,International
+someId,01.1.2015,Phishing,Public
+someId,01.1.2015,Information leakage,Public
+someId,01.1.2015,Ransomware/Cryptoware,International
+someId,01.1.2015,Cyber espionage,Private
+someId,01.1.2015,Data breaches,Public
+someId,01.1.2015,Data breaches,International
+someId,01.1.2015,Cyber espionage,Private
+someId,01.1.2015,Phishing,Public
+someId,01.1.2015,Data breaches,Private
+someId,01.1.2015,Data breaches,Private
+someId,01.1.2015,Illegal content,International
+someId,01.1.2015,Data breaches,Public
+someId,01.1.2015,Ransomware/Cryptoware,Public
+someId,01.1.2015,Denial of service,Public
+someId,01.1.2015,Cyber espionage,Public
+someId,01.1.2015,Cyber espionage,International
+someId,01.1.2015,Cyber espionage,International
+someId,01.1.2015,Injection attacks,Private
+someId,01.1.2015,Phishing,Private
+someId,01.1.2015,Illegal content,Public
+someId,01.1.2015,Denial of service,International
+someId,01.1.2015,Botnets,Public
+someId,01.1.2015,Information leakage,Public
+someId,01.1.2015,Denial of service,Private
+someId,01.1.2015,Ransomware/Cryptoware,International
+someId,01.1.2015,Malicious code,Private
+someId,01.1.2015,Hacking/Cracking,Public
+someId,01.1.2015,Hacking/Cracking,Private
+someId,01.1.2015,Ransomware/Cryptoware,Public
+someId,01.1.2015,Spam,Private
+someId,01.1.2015,Hacking/Cracking,International
+someId,01.1.2015,Ransomware/Cryptoware,International
+someId,01.1.2015,Denial of service,Public
+someId,01.1.2015,Malicious code,International
+someId,01.1.2015,Ransomware/Cryptoware,Public
+someId,01.1.2015,Information leakage,Public
+someId,01.1.2015,Botnets,Public
+someId,01.1.2015,Information leakage,Public
+someId,01.1.2015,Botnets,Public
+someId,01.1.2015,Injection attacks,International
+someId,01.1.2015,Cyber espionage,Private
+someId,01.1.2015,Cyber espionage,Private
+someId,01.1.2015,Ransomware/Cryptoware,Public
+someId,01.1.2015,Illegal content,Private
+someId,01.1.2015,Hacking/Cracking,International
+someId,01.1.2015,Information leakage,International
+someId,01.1.2015,Information leakage,International
+someId,01.1.2015,Other,Public
+someId,01.2.2015,Malicious code,Public
+someId,01.2.2015,Phishing,International
+someId,01.2.2015,Illegal content,Public
+someId,01.2.2015,Malicious code,International
+someId,01.2.2015,Botnets,International
+someId,01.2.2015,Other,International
+someId,01.2.2015,Data breaches,Private
+someId,01.2.2015,Phishing,Public
+someId,01.2.2015,Ransomware/Cryptoware,Private
+someId,01.2.2015,Injection attacks,International
+someId,01.2.2015,Illegal content,International
+someId,01.2.2015,Injection attacks,Public
+someId,01.2.2015,Information leakage,Public
+someId,01.2.2015,Illegal content,Private
+someId,01.2.2015,Botnets,International
+someId,01.2.2015,Data breaches,International
+someId,01.2.2015,Spam,Public
+someId,01.2.2015,Other,Public
+someId,01.2.2015,Spam,Private
+someId,01.2.2015,Hacking/Cracking,Public
+someId,01.2.2015,Phishing,Public
+someId,01.2.2015,Data breaches,International
+someId,01.2.2015,Information leakage,International
+someId,01.2.2015,Injection attacks,Public
+someId,01.2.2015,Botnets,International
+someId,01.2.2015,Phishing,Private
+someId,01.2.2015,Information leakage,Public
+someId,01.2.2015,Illegal content,International
+someId,01.2.2015,Illegal content,Private
+someId,01.2.2015,Denial of service,Private
+someId,01.2.2015,Ransomware/Cryptoware,Public
+someId,01.2.2015,Denial of service,International
+someId,01.2.2015,Other,Private
+someId,01.2.2015,Ransomware/Cryptoware,Private
+someId,01.2.2015,Spam,International
+someId,01.2.2015,Data breaches,Public
+someId,01.2.2015,Phishing,International
+someId,01.2.2015,Cyber espionage,International
+someId,01.2.2015,Data breaches,Public
+someId,01.2.2015,Malicious code,Private
+someId,01.2.2015,Botnets,Private
+someId,01.2.2015,Malicious code,International
+someId,01.2.2015,Hacking/Cracking,Private
+someId,01.2.2015,Data breaches,Public
+someId,01.2.2015,Injection attacks,International
+someId,01.2.2015,Botnets,International
+someId,01.2.2015,Ransomware/Cryptoware,Private
+someId,01.2.2015,Illegal content,Public
+someId,01.2.2015,Data breaches,Private
+someId,01.2.2015,Phishing,Public
+someId,01.2.2015,Information leakage,Public
+someId,01.2.2015,Illegal content,International
+someId,01.2.2015,Other,Public
+someId,01.2.2015,Cyber espionage,Private
+someId,01.2.2015,Injection attacks,International
+someId,01.2.2015,Phishing,Public
+someId,01.2.2015,Other,Public
+someId,01.2.2015,Cyber espionage,International
+someId,01.2.2015,Spam,Public
+someId,01.2.2015,Denial of service,Private
+someId,01.2.2015,Hacking/Cracking,International
+someId,01.2.2015,Illegal content,International
+someId,01.2.2015,Information leakage,Public
+someId,01.2.2015,Spam,Private
+someId,01.2.2015,Phishing,Private
+someId,01.2.2015,Denial of service,International
+someId,01.2.2015,Illegal content,International
+someId,01.2.2015,Injection attacks,Public
+someId,01.2.2015,Cyber espionage,Private
+someId,01.2.2015,Spam,Public
+someId,01.2.2015,Other,Private
+someId,01.2.2015,Spam,Private
+someId,01.2.2015,Spam,Private
+someId,01.2.2015,Cyber espionage,Public
+someId,01.2.2015,Cyber espionage,International
+someId,01.2.2015,Other,International
+someId,01.2.2015,Botnets,Public
+someId,01.2.2015,Cyber espionage,Private
+someId,01.2.2015,Malicious code,International
+someId,01.2.2015,Injection attacks,Public
+someId,01.2.2015,Data breaches,Public
+someId,01.2.2015,Hacking/Cracking,Private
+someId,01.2.2015,Malicious code,International
+someId,01.2.2015,Spam,Public
+someId,01.2.2015,Information leakage,Private
+someId,01.2.2015,Other,Public
+someId,01.2.2015,Injection attacks,International
+someId,01.2.2015,Ransomware/Cryptoware,Private
+someId,01.2.2015,Cyber espionage,International
+someId,01.2.2015,Illegal content,International
+someId,01.2.2015,Hacking/Cracking,Public
+someId,01.2.2015,Phishing,International
+someId,01.2.2015,Denial of service,Public
+someId,01.2.2015,Spam,International
+someId,01.2.2015,Ransomware/Cryptoware,Private
+someId,01.2.2015,Botnets,Public
+someId,01.2.2015,Injection attacks,Public
+someId,01.2.2015,Data breaches,Public
+someId,01.2.2015,Injection attacks,International
+someId,01.2.2015,Hacking/Cracking,Private
+someId,01.2.2015,Phishing,International
+someId,01.2.2015,Data breaches,Public
+someId,01.2.2015,Cyber espionage,Private
+someId,01.2.2015,Ransomware/Cryptoware,Private
+someId,01.2.2015,Injection attacks,Public
+someId,01.2.2015,Cyber espionage,Private
+someId,01.2.2015,Injection attacks,International
+someId,01.2.2015,Data breaches,International
+someId,01.2.2015,Botnets,International
+someId,01.2.2015,Spam,Private
+someId,01.2.2015,Other,International
+someId,01.2.2015,Phishing,Private
+someId,01.2.2015,Illegal content,International
+someId,01.2.2015,Cyber espionage,Public
+someId,01.2.2015,Denial of service,International
+someId,01.2.2015,Denial of service,Private
+someId,01.2.2015,Ransomware/Cryptoware,Private
+someId,01.2.2015,Cyber espionage,International
+someId,01.2.2015,Information leakage,Private
+someId,01.2.2015,Cyber espionage,Private
+someId,01.2.2015,Spam,Private
+someId,01.2.2015,Denial of service,Public
+someId,01.2.2015,Cyber espionage,Public
+someId,01.2.2015,Spam,International
+someId,01.2.2015,Illegal content,International
+someId,01.2.2015,Cyber espionage,Public
+someId,01.2.2015,Ransomware/Cryptoware,Private
+someId,01.2.2015,Illegal content,Public
+someId,01.2.2015,Botnets,Public
+someId,01.2.2015,Hacking/Cracking,International
+someId,01.2.2015,Denial of service,Public
+someId,01.2.2015,Hacking/Cracking,Public
+someId,01.2.2015,Other,International
+someId,01.2.2015,Data breaches,Private
+someId,01.2.2015,Hacking/Cracking,International
+someId,01.2.2015,Other,Public
+someId,01.2.2015,Botnets,Public
+someId,01.2.2015,Illegal content,Public
+someId,01.2.2015,Denial of service,International
+someId,01.2.2015,Malicious code,Public
+someId,01.2.2015,Malicious code,Private
+someId,01.2.2015,Phishing,International
+someId,01.2.2015,Ransomware/Cryptoware,International
+someId,01.2.2015,Illegal content,Private
+someId,01.2.2015,Illegal content,International
+someId,01.2.2015,Botnets,International
+someId,01.2.2015,Cyber espionage,Private
+someId,01.2.2015,Phishing,International
+someId,01.2.2015,Other,International
+someId,01.2.2015,Phishing,International
+someId,01.2.2015,Hacking/Cracking,Private
+someId,01.2.2015,Data breaches,Private
+someId,01.2.2015,Phishing,Public
+someId,01.2.2015,Data breaches,Private
+someId,01.2.2015,Malicious code,Private
+someId,01.2.2015,Denial of service,Private
+someId,01.2.2015,Hacking/Cracking,Private
+someId,01.2.2015,Denial of service,International
+someId,01.2.2015,Phishing,International
+someId,01.2.2015,Phishing,Public
+someId,01.2.2015,Malicious code,Public
+someId,01.2.2015,Botnets,International
+someId,01.2.2015,Illegal content,Public
+someId,01.2.2015,Data breaches,Private
+someId,01.2.2015,Malicious code,Private
+someId,01.2.2015,Hacking/Cracking,Public
+someId,01.2.2015,Ransomware/Cryptoware,Private
+someId,01.2.2015,Ransomware/Cryptoware,International
+someId,01.2.2015,Spam,Private
+someId,01.2.2015,Illegal content,Public
+someId,01.2.2015,Ransomware/Cryptoware,Public
+someId,01.2.2015,Information leakage,Private
+someId,01.2.2015,Ransomware/Cryptoware,Public
+someId,01.2.2015,Other,Public
+someId,01.2.2015,Other,Private
+someId,01.2.2015,Other,Public
+someId,01.2.2015,Denial of service,Private
+someId,01.2.2015,Botnets,International
+someId,01.2.2015,Spam,Public
+someId,01.2.2015,Illegal content,Private
+someId,01.2.2015,Ransomware/Cryptoware,Private
+someId,01.2.2015,Data breaches,Public
+someId,01.2.2015,Information leakage,International
+someId,01.2.2015,Injection attacks,International
+someId,01.2.2015,Other,Public
+someId,01.2.2015,Other,Public
+someId,01.2.2015,Other,Public
+someId,01.2.2015,Cyber espionage,Public
+someId,01.2.2015,Information leakage,International
+someId,01.2.2015,Other,Public
+someId,01.2.2015,Illegal content,Public
+someId,01.2.2015,Malicious code,International
+someId,01.2.2015,Data breaches,International
+someId,01.2.2015,Spam,International
+someId,01.3.2015,Denial of service,International
+someId,01.3.2015,Illegal content,Public
+someId,01.3.2015,Injection attacks,Private
+someId,01.3.2015,Ransomware/Cryptoware,International
+someId,01.3.2015,Botnets,Public
+someId,01.3.2015,Data breaches,Private
+someId,01.3.2015,Malicious code,Public
+someId,01.3.2015,Phishing,Public
+someId,01.3.2015,Information leakage,Public
+someId,01.3.2015,Denial of service,International
+someId,01.3.2015,Other,Private
+someId,01.3.2015,Cyber espionage,Private
+someId,01.3.2015,Malicious code,Private
+someId,01.3.2015,Ransomware/Cryptoware,International
+someId,01.3.2015,Information leakage,International
+someId,01.3.2015,Injection attacks,International
+someId,01.3.2015,Cyber espionage,Private
+someId,01.3.2015,Cyber espionage,Private
+someId,01.4.2015,Information leakage,Public
+someId,01.4.2015,Cyber espionage,International
+someId,01.4.2015,Botnets,Public
+someId,01.4.2015,Spam,International
+someId,01.4.2015,Data breaches,Public
+someId,01.4.2015,Data breaches,Private
+someId,01.4.2015,Other,International
+someId,01.4.2015,Botnets,International
+someId,01.4.2015,Injection attacks,Public
+someId,01.4.2015,Injection attacks,Private
+someId,01.4.2015,Botnets,International
+someId,01.4.2015,Data breaches,Private
+someId,01.4.2015,Malicious code,Public
+someId,01.4.2015,Information leakage,Public
+someId,01.4.2015,Malicious code,Private
+someId,01.4.2015,Cyber espionage,International
+someId,01.4.2015,Ransomware/Cryptoware,International
+someId,01.4.2015,Malicious code,Public
+someId,01.4.2015,Cyber espionage,International
+someId,01.4.2015,Ransomware/Cryptoware,Private
+someId,01.4.2015,Ransomware/Cryptoware,International
+someId,01.4.2015,Injection attacks,Public
+someId,01.4.2015,Information leakage,Public
+someId,01.4.2015,Botnets,Private
+someId,01.4.2015,Hacking/Cracking,Public
+someId,01.4.2015,Spam,Public
+someId,01.4.2015,Cyber espionage,Private
+someId,01.4.2015,Injection attacks,International
+someId,01.4.2015,Ransomware/Cryptoware,Private
+someId,01.4.2015,Other,Private
+someId,01.4.2015,Cyber espionage,Public
+someId,01.4.2015,Information leakage,Private
+someId,01.4.2015,Hacking/Cracking,Private
+someId,01.4.2015,Data breaches,International
+someId,01.4.2015,Illegal content,Private
+someId,01.4.2015,Illegal content,International
+someId,01.4.2015,Botnets,Public
+someId,01.4.2015,Denial of service,Public
+someId,01.4.2015,Illegal content,International
+someId,01.4.2015,Ransomware/Cryptoware,International
+someId,01.4.2015,Ransomware/Cryptoware,Public
+someId,01.4.2015,Hacking/Cracking,Private
+someId,01.4.2015,Data breaches,Private
+someId,01.4.2015,Illegal content,Public
+someId,01.4.2015,Malicious code,Public
+someId,01.4.2015,Other,International
+someId,01.4.2015,Phishing,International
+someId,01.4.2015,Denial of service,Public
+someId,01.4.2015,Malicious code,Private
+someId,01.4.2015,Hacking/Cracking,Public
+someId,01.4.2015,Other,International
+someId,01.4.2015,Cyber espionage,International
+someId,01.4.2015,Phishing,International
+someId,01.4.2015,Ransomware/Cryptoware,Private
+someId,01.4.2015,Denial of service,Public
+someId,01.4.2015,Data breaches,Private
+someId,01.4.2015,Denial of service,Private
+someId,01.4.2015,Data breaches,Public
+someId,01.4.2015,Illegal content,International
+someId,01.4.2015,Phishing,International
+someId,01.4.2015,Injection attacks,International
+someId,01.4.2015,Ransomware/Cryptoware,Private
+someId,01.4.2015,Denial of service,Public
+someId,01.4.2015,Ransomware/Cryptoware,Private
+someId,01.4.2015,Ransomware/Cryptoware,Private
+someId,01.4.2015,Data breaches,Public
+someId,01.4.2015,Denial of service,Private
+someId,01.4.2015,Illegal content,Public
+someId,01.4.2015,Information leakage,Public
+someId,01.4.2015,Cyber espionage,International
+someId,01.4.2015,Phishing,Public
+someId,01.4.2015,Information leakage,Public
+someId,01.4.2015,Spam,International
+someId,01.4.2015,Phishing,Private
+someId,01.4.2015,Information leakage,International
+someId,01.4.2015,Other,Private
+someId,01.4.2015,Hacking/Cracking,Private
+someId,01.4.2015,Spam,Private
+someId,01.4.2015,Cyber espionage,Public
+someId,01.4.2015,Malicious code,International
+someId,01.4.2015,Denial of service,Public
+someId,01.4.2015,Injection attacks,Public
+someId,01.4.2015,Other,Public
+someId,01.4.2015,Hacking/Cracking,International
+someId,01.4.2015,Malicious code,Private
+someId,01.4.2015,Spam,Private
+someId,01.4.2015,Malicious code,Public
+someId,01.4.2015,Denial of service,International
+someId,01.4.2015,Botnets,International
+someId,01.4.2015,Cyber espionage,Public
+someId,01.4.2015,Malicious code,Private
+someId,01.4.2015,Data breaches,Public
+someId,01.4.2015,Data breaches,Public
+someId,01.4.2015,Denial of service,International
+someId,01.4.2015,Other,International
+someId,01.4.2015,Ransomware/Cryptoware,Public
+someId,01.4.2015,Information leakage,Public
+someId,01.4.2015,Data breaches,Public
+someId,01.4.2015,Ransomware/Cryptoware,Public
+someId,01.4.2015,Spam,Private
+someId,01.4.2015,Injection attacks,Public
+someId,01.4.2015,Phishing,Private
+someId,01.4.2015,Malicious code,Public
+someId,01.4.2015,Spam,Private
+someId,01.4.2015,Ransomware/Cryptoware,International
+someId,01.4.2015,Phishing,Private
+someId,01.4.2015,Botnets,Public
+someId,01.4.2015,Illegal content,Public
+someId,01.4.2015,Phishing,International
+someId,01.4.2015,Data breaches,Private
+someId,01.4.2015,Spam,Public
+someId,01.4.2015,Ransomware/Cryptoware,Private
+someId,01.4.2015,Illegal content,Public
+someId,01.4.2015,Hacking/Cracking,Public
+someId,01.4.2015,Malicious code,International
+someId,01.4.2015,Cyber espionage,International
+someId,01.4.2015,Cyber espionage,Public
+someId,01.4.2015,Ransomware/Cryptoware,Private
+someId,01.4.2015,Hacking/Cracking,International
+someId,01.4.2015,Hacking/Cracking,Private
+someId,01.4.2015,Information leakage,International
+someId,01.4.2015,Botnets,Private
+someId,01.4.2015,Phishing,Private
+someId,01.4.2015,Ransomware/Cryptoware,International
+someId,01.4.2015,Information leakage,Private
+someId,01.4.2015,Botnets,International
+someId,01.4.2015,Information leakage,Public
+someId,01.4.2015,Malicious code,Public
+someId,01.4.2015,Malicious code,International
+someId,01.4.2015,Hacking/Cracking,International
+someId,01.4.2015,Malicious code,International
+someId,01.4.2015,Information leakage,Public
+someId,01.4.2015,Information leakage,Public
+someId,01.4.2015,Data breaches,Private
+someId,01.4.2015,Denial of service,Public
+someId,01.4.2015,Spam,Public
+someId,01.4.2015,Other,International
+someId,01.4.2015,Other,Public
+someId,01.4.2015,Spam,Private
+someId,01.4.2015,Information leakage,Public
+someId,01.4.2015,Information leakage,International
+someId,01.4.2015,Hacking/Cracking,Private
+someId,01.4.2015,Illegal content,International
+someId,01.4.2015,Ransomware/Cryptoware,Private
+someId,01.4.2015,Spam,International
+someId,01.4.2015,Botnets,International
+someId,01.4.2015,Information leakage,Public
+someId,01.4.2015,Illegal content,Public
+someId,01.4.2015,Spam,Public
+someId,01.4.2015,Cyber espionage,International
+someId,01.4.2015,Denial of service,Public
+someId,01.4.2015,Ransomware/Cryptoware,Private
+someId,01.4.2015,Spam,Private
+someId,01.4.2015,Cyber espionage,Public
+someId,01.4.2015,Botnets,Private
+someId,01.4.2015,Malicious code,Public
+someId,01.4.2015,Other,International
+someId,01.4.2015,Information leakage,Public
+someId,01.4.2015,Ransomware/Cryptoware,Public
+someId,01.4.2015,Cyber espionage,Private
+someId,01.4.2015,Ransomware/Cryptoware,Private
+someId,01.4.2015,Information leakage,Private
+someId,01.4.2015,Information leakage,International
+someId,01.5.2015,Ransomware/Cryptoware,Private
+someId,01.5.2015,Denial of service,Public
+someId,01.5.2015,Hacking/Cracking,International
+someId,01.5.2015,Hacking/Cracking,Public
+someId,01.5.2015,Denial of service,Private
+someId,01.5.2015,Injection attacks,Private
+someId,01.5.2015,Spam,Public
+someId,01.5.2015,Ransomware/Cryptoware,Private
+someId,01.5.2015,Information leakage,Private
+someId,01.5.2015,Denial of service,International
+someId,01.5.2015,Botnets,Public
+someId,01.5.2015,Information leakage,International
+someId,01.5.2015,Injection attacks,Private
+someId,01.5.2015,Information leakage,Private
+someId,01.5.2015,Spam,Public
+someId,01.5.2015,Phishing,Private
+someId,01.5.2015,Illegal content,International
+someId,01.5.2015,Malicious code,Public
+someId,01.5.2015,Illegal content,Private
+someId,01.5.2015,Malicious code,Private
+someId,01.5.2015,Illegal content,Private
+someId,01.5.2015,Information leakage,International
+someId,01.5.2015,Ransomware/Cryptoware,Private
+someId,01.5.2015,Illegal content,International
+someId,01.5.2015,Botnets,Public
+someId,01.5.2015,Information leakage,Private
+someId,01.5.2015,Malicious code,International
+someId,01.5.2015,Illegal content,Private
+someId,01.5.2015,Denial of service,International
+someId,01.5.2015,Other,Public
+someId,01.5.2015,Hacking/Cracking,Public
+someId,01.5.2015,Ransomware/Cryptoware,Private
+someId,01.5.2015,Hacking/Cracking,Private
+someId,01.5.2015,Botnets,Public
+someId,01.5.2015,Illegal content,Private
+someId,01.5.2015,Cyber espionage,Private
+someId,01.5.2015,Ransomware/Cryptoware,Public
+someId,01.5.2015,Data breaches,Public
+someId,01.5.2015,Information leakage,Public
+someId,01.5.2015,Ransomware/Cryptoware,Public
+someId,01.5.2015,Other,International
+someId,01.5.2015,Cyber espionage,Public
+someId,01.5.2015,Botnets,International
+someId,01.5.2015,Phishing,International
+someId,01.5.2015,Injection attacks,Private
+someId,01.5.2015,Information leakage,Public
+someId,01.5.2015,Hacking/Cracking,International
+someId,01.6.2015,Other,Private
+someId,01.6.2015,Malicious code,Public
+someId,01.6.2015,Data breaches,International
+someId,01.6.2015,Information leakage,Private
+someId,01.6.2015,Other,International
+someId,01.6.2015,Botnets,Private
+someId,01.6.2015,Ransomware/Cryptoware,International
+someId,01.6.2015,Botnets,Private
+someId,01.6.2015,Ransomware/Cryptoware,Public
+someId,01.6.2015,Ransomware/Cryptoware,Public
+someId,01.6.2015,Other,Private
+someId,01.6.2015,Illegal content,International
+someId,01.6.2015,Malicious code,Private
+someId,01.6.2015,Information leakage,Public
+someId,01.6.2015,Spam,Public
+someId,01.6.2015,Denial of service,Private
+someId,01.6.2015,Hacking/Cracking,Public
+someId,01.6.2015,Spam,International
+someId,01.6.2015,Illegal content,Private
+someId,01.6.2015,Malicious code,International
+someId,01.6.2015,Injection attacks,International
+someId,01.6.2015,Ransomware/Cryptoware,Public
+someId,01.6.2015,Cyber espionage,Public
+someId,01.6.2015,Ransomware/Cryptoware,Private
+someId,01.6.2015,Hacking/Cracking,Private
+someId,01.6.2015,Data breaches,Public
+someId,01.6.2015,Phishing,International
+someId,01.6.2015,Phishing,Public
+someId,01.6.2015,Spam,International
+someId,01.6.2015,Injection attacks,Private
+someId,01.6.2015,Cyber espionage,Public
+someId,01.6.2015,Spam,Public
+someId,01.6.2015,Ransomware/Cryptoware,Public
+someId,01.6.2015,Malicious code,Public
+someId,01.6.2015,Phishing,Public
+someId,01.6.2015,Phishing,Public
+someId,01.6.2015,Denial of service,International
+someId,01.6.2015,Spam,International
+someId,01.6.2015,Ransomware/Cryptoware,Public
+someId,01.6.2015,Cyber espionage,International
+someId,01.6.2015,Malicious code,Private
+someId,01.6.2015,Denial of service,Private
+someId,01.6.2015,Other,International
+someId,01.6.2015,Injection attacks,Private
+someId,01.6.2015,Information leakage,Private
+someId,01.6.2015,Data breaches,Public
+someId,01.6.2015,Ransomware/Cryptoware,International
+someId,01.6.2015,Ransomware/Cryptoware,Public
+someId,01.6.2015,Injection attacks,International
+someId,01.6.2015,Other,Public
+someId,01.6.2015,Ransomware/Cryptoware,Private
+someId,01.6.2015,Other,International
+someId,01.6.2015,Phishing,Private
+someId,01.6.2015,Phishing,International
+someId,01.6.2015,Malicious code,Private
+someId,01.6.2015,Injection attacks,Private
+someId,01.6.2015,Information leakage,International
+someId,01.6.2015,Malicious code,Private
+someId,01.6.2015,Spam,Private
+someId,01.6.2015,Information leakage,Private
+someId,01.6.2015,Ransomware/Cryptoware,International
+someId,01.6.2015,Denial of service,Public
+someId,01.6.2015,Malicious code,International
+someId,01.6.2015,Cyber espionage,International
+someId,01.6.2015,Ransomware/Cryptoware,Private
+someId,01.6.2015,Malicious code,Private
+someId,01.6.2015,Ransomware/Cryptoware,Public
+someId,01.6.2015,Information leakage,Private
+someId,01.6.2015,Phishing,Public
+someId,01.6.2015,Ransomware/Cryptoware,Private
+someId,01.6.2015,Cyber espionage,Public
+someId,01.6.2015,Hacking/Cracking,Public
+someId,01.6.2015,Illegal content,International
+someId,01.6.2015,Illegal content,Private
+someId,01.6.2015,Ransomware/Cryptoware,Private
+someId,01.6.2015,Malicious code,Private
+someId,01.6.2015,Cyber espionage,International
+someId,01.6.2015,Data breaches,International
+someId,01.6.2015,Phishing,Private
+someId,01.6.2015,Spam,Public
+someId,01.6.2015,Cyber espionage,Public
+someId,01.6.2015,Injection attacks,International
+someId,01.6.2015,Phishing,International
+someId,01.6.2015,Ransomware/Cryptoware,Private
+someId,01.6.2015,Ransomware/Cryptoware,International
+someId,01.6.2015,Denial of service,Public
+someId,01.6.2015,Malicious code,Private
+someId,01.6.2015,Injection attacks,Private
+someId,01.6.2015,Phishing,Public
+someId,01.6.2015,Illegal content,Public
+someId,01.6.2015,Data breaches,International
+someId,01.6.2015,Spam,International
+someId,01.6.2015,Botnets,Private
+someId,01.6.2015,Botnets,International
+someId,01.6.2015,Illegal content,Public
+someId,01.6.2015,Data breaches,International
+someId,01.6.2015,Malicious code,International
+someId,01.6.2015,Cyber espionage,Private
+someId,01.6.2015,Cyber espionage,International
+someId,01.6.2015,Denial of service,Public
+someId,01.6.2015,Spam,International
+someId,01.6.2015,Ransomware/Cryptoware,International
+someId,01.6.2015,Hacking/Cracking,Private
+someId,01.6.2015,Information leakage,Public
+someId,01.6.2015,Phishing,Private
+someId,01.6.2015,Ransomware/Cryptoware,International
+someId,01.6.2015,Malicious code,International
+someId,01.6.2015,Data breaches,International
+someId,01.6.2015,Information leakage,International
+someId,01.6.2015,Ransomware/Cryptoware,Public
+someId,01.6.2015,Data breaches,Public
+someId,01.6.2015,Botnets,Public
+someId,01.6.2015,Malicious code,Private
+someId,01.6.2015,Spam,International
+someId,01.6.2015,Ransomware/Cryptoware,International
+someId,01.6.2015,Illegal content,International
+someId,01.6.2015,Other,Public
+someId,01.6.2015,Data breaches,Public
+someId,01.6.2015,Data breaches,Public
+someId,01.6.2015,Cyber espionage,International
+someId,01.6.2015,Spam,Private
+someId,01.6.2015,Injection attacks,International
+someId,01.6.2015,Data breaches,Private
+someId,01.6.2015,Denial of service,Private
+someId,01.6.2015,Injection attacks,Public
+someId,01.6.2015,Spam,Public
+someId,01.6.2015,Botnets,Private
+someId,01.6.2015,Hacking/Cracking,Private
+someId,01.6.2015,Denial of service,International
+someId,01.6.2015,Denial of service,International
+someId,01.6.2015,Data breaches,Public
+someId,01.6.2015,Illegal content,International
+someId,01.6.2015,Other,Public
+someId,01.6.2015,Malicious code,Public
+someId,01.6.2015,Data breaches,Private
+someId,01.7.2015,Information leakage,Public
+someId,01.7.2015,Illegal content,Public
+someId,01.7.2015,Injection attacks,Public
+someId,01.7.2015,Spam,International
+someId,01.7.2015,Data breaches,Private
+someId,01.7.2015,Botnets,Private
+someId,01.7.2015,Phishing,International
+someId,01.7.2015,Ransomware/Cryptoware,Private
+someId,01.7.2015,Phishing,Public
+someId,01.7.2015,Data breaches,Private
+someId,01.7.2015,Injection attacks,Public
+someId,01.7.2015,Data breaches,International
+someId,01.7.2015,Hacking/Cracking,Public
+someId,01.7.2015,Denial of service,International
+someId,01.7.2015,Data breaches,Public
+someId,01.7.2015,Cyber espionage,Public
+someId,01.7.2015,Phishing,Public
+someId,01.7.2015,Phishing,Public
+someId,01.7.2015,Injection attacks,Public
+someId,01.7.2015,Ransomware/Cryptoware,International
+someId,01.7.2015,Information leakage,International
+someId,01.7.2015,Phishing,Private
+someId,01.7.2015,Other,Public
+someId,01.7.2015,Cyber espionage,Public
+someId,01.7.2015,Botnets,Private
+someId,01.7.2015,Denial of service,Private
+someId,01.7.2015,Injection attacks,Private
+someId,01.7.2015,Malicious code,Private
+someId,01.7.2015,Illegal content,Private
+someId,01.7.2015,Hacking/Cracking,Private
+someId,01.7.2015,Cyber espionage,Private
+someId,01.7.2015,Illegal content,Public
+someId,01.7.2015,Spam,Private
+someId,01.7.2015,Injection attacks,International
+someId,01.7.2015,Ransomware/Cryptoware,Public
+someId,01.7.2015,Malicious code,International
+someId,01.7.2015,Denial of service,Public
+someId,01.7.2015,Spam,International
+someId,01.7.2015,Denial of service,Public
+someId,01.7.2015,Injection attacks,Public
+someId,01.7.2015,Ransomware/Cryptoware,Public
+someId,01.7.2015,Phishing,International
+someId,01.7.2015,Illegal content,International
+someId,01.7.2015,Information leakage,Public
+someId,01.7.2015,Other,Private
+someId,01.7.2015,Denial of service,Private
+someId,01.7.2015,Malicious code,Private
+someId,01.7.2015,Spam,International
+someId,01.7.2015,Cyber espionage,International
+someId,01.7.2015,Phishing,Private
+someId,01.7.2015,Information leakage,Private
+someId,01.7.2015,Botnets,Public
+someId,01.7.2015,Denial of service,International
+someId,01.7.2015,Ransomware/Cryptoware,Private
+someId,01.7.2015,Botnets,Private
+someId,01.7.2015,Botnets,Public
+someId,01.7.2015,Malicious code,Public
+someId,01.7.2015,Injection attacks,Private
+someId,01.7.2015,Phishing,Public
+someId,01.7.2015,Denial of service,Public
+someId,01.7.2015,Cyber espionage,Public
+someId,01.7.2015,Malicious code,Public
+someId,01.7.2015,Other,Private
+someId,01.7.2015,Botnets,Public
+someId,01.7.2015,Denial of service,Public
+someId,01.7.2015,Information leakage,International
+someId,01.7.2015,Phishing,Private
+someId,01.7.2015,Ransomware/Cryptoware,Public
+someId,01.7.2015,Malicious code,Public
+someId,01.7.2015,Ransomware/Cryptoware,Private
+someId,01.7.2015,Data breaches,Public
+someId,01.7.2015,Data breaches,Private
+someId,01.7.2015,Malicious code,Public
+someId,01.7.2015,Phishing,Public
+someId,01.7.2015,Malicious code,Public
+someId,01.7.2015,Other,Public
+someId,01.7.2015,Information leakage,International
+someId,01.7.2015,Denial of service,International
+someId,01.7.2015,Ransomware/Cryptoware,International
+someId,01.7.2015,Phishing,International
+someId,01.7.2015,Phishing,Public
+someId,01.7.2015,Information leakage,Public
+someId,01.7.2015,Denial of service,International
+someId,01.7.2015,Information leakage,Public
+someId,01.7.2015,Illegal content,Public
+someId,01.7.2015,Cyber espionage,Private
+someId,01.7.2015,Injection attacks,Private
+someId,01.7.2015,Other,Public
+someId,01.7.2015,Malicious code,Public
+someId,01.7.2015,Malicious code,Private
+someId,01.7.2015,Phishing,Public
+someId,01.7.2015,Spam,Private
+someId,01.7.2015,Illegal content,Public
+someId,01.7.2015,Hacking/Cracking,Private
+someId,01.7.2015,Malicious code,Private
+someId,01.7.2015,Phishing,International
+someId,01.7.2015,Ransomware/Cryptoware,Public
+someId,01.7.2015,Injection attacks,Private
+someId,01.7.2015,Illegal content,Public
+someId,01.7.2015,Data breaches,Private
+someId,01.7.2015,Ransomware/Cryptoware,Private
+someId,01.7.2015,Malicious code,Public
+someId,01.7.2015,Information leakage,Public
+someId,01.7.2015,Data breaches,Private
+someId,01.7.2015,Ransomware/Cryptoware,International
+someId,01.7.2015,Cyber espionage,International
+someId,01.7.2015,Spam,International
+someId,01.7.2015,Cyber espionage,International
+someId,01.7.2015,Cyber espionage,Public
+someId,01.7.2015,Cyber espionage,Public
+someId,01.7.2015,Malicious code,Public
+someId,01.7.2015,Other,Public
+someId,01.7.2015,Botnets,International
+someId,01.7.2015,Cyber espionage,International
+someId,01.7.2015,Malicious code,Public
+someId,01.7.2015,Illegal content,Private
+someId,01.7.2015,Spam,Public
+someId,01.7.2015,Information leakage,Private
+someId,01.7.2015,Injection attacks,International
+someId,01.7.2015,Data breaches,International
+someId,01.7.2015,Data breaches,International
+someId,01.7.2015,Other,Private
+someId,01.7.2015,Phishing,International
+someId,01.7.2015,Ransomware/Cryptoware,Public
+someId,01.7.2015,Malicious code,International
+someId,01.7.2015,Cyber espionage,Private
+someId,01.7.2015,Denial of service,Public
+someId,01.7.2015,Malicious code,Private
+someId,01.7.2015,Other,Private
+someId,01.7.2015,Hacking/Cracking,International
+someId,01.7.2015,Spam,Public
+someId,01.7.2015,Injection attacks,Private
+someId,01.7.2015,Other,Public
+someId,01.7.2015,Ransomware/Cryptoware,Private
+someId,01.7.2015,Illegal content,International
+someId,01.8.2015,Botnets,International
+someId,01.8.2015,Malicious code,Public
+someId,01.8.2015,Botnets,Private
+someId,01.8.2015,Phishing,Private
+someId,01.8.2015,Botnets,Public
+someId,01.8.2015,Illegal content,Private
+someId,01.8.2015,Ransomware/Cryptoware,Public
+someId,01.8.2015,Malicious code,International
+someId,01.8.2015,Botnets,Public
+someId,01.8.2015,Denial of service,Private
+someId,01.8.2015,Ransomware/Cryptoware,International
+someId,01.8.2015,Botnets,International
+someId,01.8.2015,Cyber espionage,Public
+someId,01.8.2015,Hacking/Cracking,Public
+someId,01.8.2015,Malicious code,Private
+someId,01.8.2015,Data breaches,International
+someId,01.8.2015,Information leakage,Private
+someId,01.8.2015,Hacking/Cracking,Private
+someId,01.8.2015,Botnets,Private
+someId,01.8.2015,Data breaches,Public
+someId,01.8.2015,Other,Private
+someId,01.8.2015,Botnets,Private
+someId,01.8.2015,Hacking/Cracking,Public
+someId,01.8.2015,Illegal content,Private
+someId,01.8.2015,Spam,Public
+someId,01.8.2015,Malicious code,Private
+someId,01.8.2015,Illegal content,Public
+someId,01.8.2015,Phishing,Public
+someId,01.8.2015,Injection attacks,Public
+someId,01.8.2015,Information leakage,Public
+someId,01.8.2015,Ransomware/Cryptoware,Private
+someId,01.8.2015,Other,International
+someId,01.8.2015,Hacking/Cracking,International
+someId,01.8.2015,Malicious code,International
+someId,01.8.2015,Botnets,International
+someId,01.8.2015,Hacking/Cracking,International
+someId,01.8.2015,Other,Public
+someId,01.8.2015,Botnets,International
+someId,01.8.2015,Illegal content,Public
+someId,01.8.2015,Denial of service,Public
+someId,01.8.2015,Phishing,Public
+someId,01.8.2015,Injection attacks,Private
+someId,01.8.2015,Phishing,International
+someId,01.8.2015,Malicious code,Private
+someId,01.8.2015,Malicious code,International
+someId,01.8.2015,Injection attacks,Private
+someId,01.8.2015,Spam,International
+someId,01.8.2015,Hacking/Cracking,Public
+someId,01.8.2015,Denial of service,Private
+someId,01.8.2015,Hacking/Cracking,International
+someId,01.8.2015,Injection attacks,International
+someId,01.8.2015,Phishing,International
+someId,01.8.2015,Injection attacks,International
+someId,01.8.2015,Other,Private
+someId,01.8.2015,Phishing,Public
+someId,01.8.2015,Phishing,Public
+someId,01.8.2015,Information leakage,Public
+someId,01.8.2015,Data breaches,Private
+someId,01.8.2015,Botnets,Private
+someId,01.8.2015,Malicious code,International
+someId,01.8.2015,Illegal content,Private
+someId,01.8.2015,Data breaches,Public
+someId,01.8.2015,Spam,Private
+someId,01.8.2015,Phishing,Public
+someId,01.8.2015,Spam,Public
+someId,01.8.2015,Hacking/Cracking,Public
+someId,01.8.2015,Illegal content,Public
+someId,01.8.2015,Injection attacks,Private
+someId,01.8.2015,Information leakage,International
+someId,01.8.2015,Injection attacks,Public
+someId,01.8.2015,Other,Public
+someId,01.8.2015,Information leakage,International
+someId,01.8.2015,Botnets,Private
+someId,01.8.2015,Hacking/Cracking,International
+someId,01.8.2015,Illegal content,Public
+someId,01.8.2015,Cyber espionage,Private
+someId,01.8.2015,Spam,International
+someId,01.8.2015,Hacking/Cracking,Public
+someId,01.8.2015,Cyber espionage,Private
+someId,01.8.2015,Data breaches,Private
+someId,01.8.2015,Data breaches,International
+someId,01.8.2015,Ransomware/Cryptoware,International
+someId,01.8.2015,Hacking/Cracking,Private
+someId,01.8.2015,Other,International
+someId,01.8.2015,Information leakage,International
+someId,01.8.2015,Malicious code,International
+someId,01.8.2015,Injection attacks,International
+someId,01.8.2015,Denial of service,Private
+someId,01.8.2015,Other,Private
+someId,01.8.2015,Malicious code,Private
+someId,01.8.2015,Denial of service,Public
+someId,01.8.2015,Injection attacks,International
+someId,01.8.2015,Injection attacks,Public
+someId,01.8.2015,Information leakage,Public
+someId,01.8.2015,Malicious code,Private
+someId,01.8.2015,Injection attacks,Public
+someId,01.8.2015,Malicious code,Public
+someId,01.8.2015,Ransomware/Cryptoware,Public
+someId,01.8.2015,Phishing,Private
+someId,01.8.2015,Illegal content,International
+someId,01.8.2015,Information leakage,Private
+someId,01.8.2015,Cyber espionage,International
+someId,01.8.2015,Denial of service,Public
+someId,01.8.2015,Denial of service,Public
+someId,01.8.2015,Data breaches,Public
+someId,01.8.2015,Hacking/Cracking,Public
+someId,01.8.2015,Spam,Private
+someId,01.8.2015,Illegal content,International
+someId,01.8.2015,Information leakage,Private
+someId,01.8.2015,Other,International
+someId,01.8.2015,Phishing,International
+someId,01.8.2015,Spam,International
+someId,01.8.2015,Denial of service,International
+someId,01.8.2015,Malicious code,Public
+someId,01.8.2015,Phishing,Private
+someId,01.8.2015,Illegal content,Private
+someId,01.8.2015,Other,International
+someId,01.8.2015,Phishing,International
+someId,01.8.2015,Spam,Public
+someId,01.8.2015,Hacking/Cracking,Private
+someId,01.8.2015,Ransomware/Cryptoware,Private
+someId,01.8.2015,Spam,International
+someId,01.8.2015,Phishing,Private
+someId,01.8.2015,Information leakage,International
+someId,01.8.2015,Spam,International
+someId,01.8.2015,Denial of service,Private
+someId,01.8.2015,Injection attacks,Private
+someId,01.8.2015,Denial of service,Public
+someId,01.8.2015,Phishing,International
+someId,01.8.2015,Ransomware/Cryptoware,Private
+someId,01.8.2015,Cyber espionage,Private
+someId,01.8.2015,Illegal content,International
+someId,01.8.2015,Malicious code,Private
+someId,01.8.2015,Botnets,Private
+someId,01.8.2015,Phishing,Public
+someId,01.8.2015,Other,Private
+someId,01.8.2015,Hacking/Cracking,Public
+someId,01.8.2015,Hacking/Cracking,International
+someId,01.8.2015,Denial of service,Private
+someId,01.8.2015,Information leakage,International
+someId,01.8.2015,Data breaches,International
+someId,01.8.2015,Spam,International
+someId,01.8.2015,Malicious code,International
+someId,01.8.2015,Phishing,International
+someId,01.8.2015,Data breaches,Private
+someId,01.8.2015,Illegal content,International
+someId,01.8.2015,Malicious code,Public
+someId,01.8.2015,Injection attacks,Public
+someId,01.8.2015,Cyber espionage,Public
+someId,01.8.2015,Ransomware/Cryptoware,Private
+someId,01.8.2015,Ransomware/Cryptoware,International
+someId,01.8.2015,Ransomware/Cryptoware,Public
+someId,01.8.2015,Botnets,International
+someId,01.8.2015,Cyber espionage,Public
+someId,01.8.2015,Ransomware/Cryptoware,International
+someId,01.8.2015,Hacking/Cracking,Private
+someId,01.8.2015,Data breaches,International
+someId,01.8.2015,Malicious code,Private
+someId,01.8.2015,Injection attacks,International
+someId,01.8.2015,Information leakage,International
+someId,01.8.2015,Cyber espionage,International
+someId,01.8.2015,Cyber espionage,Public
+someId,01.8.2015,Data breaches,International
+someId,01.8.2015,Other,International
+someId,01.8.2015,Illegal content,Public
+someId,01.8.2015,Injection attacks,International
+someId,01.8.2015,Malicious code,Public
+someId,01.8.2015,Cyber espionage,Private
+someId,01.8.2015,Illegal content,Public
+someId,01.8.2015,Data breaches,Private
+someId,01.8.2015,Hacking/Cracking,Public
+someId,01.8.2015,Phishing,Private
+someId,01.8.2015,Denial of service,International
+someId,01.8.2015,Botnets,Private
+someId,01.8.2015,Phishing,Private
+someId,01.8.2015,Denial of service,Public
+someId,01.8.2015,Phishing,Private
+someId,01.8.2015,Data breaches,Private
+someId,01.8.2015,Denial of service,Public
+someId,01.8.2015,Injection attacks,Private
+someId,01.8.2015,Spam,Private
+someId,01.8.2015,Botnets,International
+someId,01.8.2015,Malicious code,International
+someId,01.8.2015,Information leakage,International
+someId,01.8.2015,Malicious code,International
+someId,01.8.2015,Injection attacks,Public
+someId,01.8.2015,Phishing,Private
+someId,01.8.2015,Information leakage,International
+someId,01.8.2015,Botnets,Private
+someId,01.8.2015,Hacking/Cracking,Public
+someId,01.8.2015,Data breaches,International
+someId,01.8.2015,Spam,International
+someId,01.8.2015,Spam,Public
+someId,01.8.2015,Botnets,International
+someId,01.8.2015,Illegal content,International
+someId,01.8.2015,Malicious code,International
+someId,01.8.2015,Other,Private
+someId,01.8.2015,Ransomware/Cryptoware,Private
+someId,01.8.2015,Denial of service,Public
+someId,01.8.2015,Spam,Private
+someId,01.8.2015,Data breaches,Private
+someId,01.8.2015,Injection attacks,International
+someId,01.8.2015,Ransomware/Cryptoware,Private
+someId,01.8.2015,Cyber espionage,International
+someId,01.8.2015,Illegal content,Private
+someId,01.8.2015,Other,Public
+someId,01.8.2015,Data breaches,Public
+someId,01.8.2015,Malicious code,Private
+someId,01.8.2015,Malicious code,International
+someId,01.8.2015,Injection attacks,Public
+someId,01.8.2015,Hacking/Cracking,Public
+someId,01.8.2015,Cyber espionage,Public
+someId,01.8.2015,Hacking/Cracking,Public
+someId,01.8.2015,Malicious code,Public
+someId,01.8.2015,Botnets,Private
+someId,01.8.2015,Malicious code,Public
+someId,01.8.2015,Botnets,International
+someId,01.8.2015,Hacking/Cracking,International
+someId,01.8.2015,Botnets,Private
+someId,01.8.2015,Denial of service,Public
+someId,01.8.2015,Phishing,Public
+someId,01.8.2015,Information leakage,Private
+someId,01.8.2015,Botnets,Private
+someId,01.8.2015,Hacking/Cracking,International
+someId,01.8.2015,Injection attacks,Private
+someId,01.8.2015,Phishing,Public
+someId,01.8.2015,Phishing,Public
+someId,01.9.2015,Injection attacks,Private
+someId,01.9.2015,Information leakage,Public
+someId,01.9.2015,Denial of service,Public
+someId,01.9.2015,Malicious code,International
+someId,01.9.2015,Malicious code,Private
+someId,01.9.2015,Denial of service,Private
+someId,01.9.2015,Information leakage,Public
+someId,01.9.2015,Spam,International
+someId,01.9.2015,Injection attacks,Private
+someId,01.9.2015,Phishing,Public
+someId,01.9.2015,Phishing,Public
+someId,01.9.2015,Spam,Private
+someId,01.9.2015,Botnets,Public
+someId,01.9.2015,Cyber espionage,International
+someId,01.9.2015,Phishing,Public
+someId,01.9.2015,Information leakage,Public
+someId,01.9.2015,Illegal content,Private
+someId,01.9.2015,Hacking/Cracking,International
+someId,01.9.2015,Malicious code,Private
+someId,01.9.2015,Phishing,Private
+someId,01.9.2015,Spam,International
+someId,01.9.2015,Ransomware/Cryptoware,International
+someId,01.9.2015,Other,Private
+someId,01.9.2015,Malicious code,International
+someId,01.9.2015,Injection attacks,International
+someId,01.9.2015,Information leakage,Private
+someId,01.9.2015,Data breaches,Public
+someId,01.9.2015,Hacking/Cracking,Private
+someId,01.9.2015,Malicious code,Public
+someId,01.9.2015,Hacking/Cracking,Public
+someId,01.9.2015,Cyber espionage,Public
+someId,01.9.2015,Data breaches,International
+someId,01.9.2015,Spam,Public
+someId,01.9.2015,Data breaches,Public
+someId,01.9.2015,Spam,International
+someId,01.9.2015,Botnets,International
+someId,01.9.2015,Information leakage,Private
+someId,01.9.2015,Spam,Private
+someId,01.9.2015,Other,Private
+someId,01.9.2015,Other,Public
+someId,01.9.2015,Phishing,Public
+someId,01.9.2015,Hacking/Cracking,Private
+someId,01.9.2015,Cyber espionage,Public
+someId,01.9.2015,Ransomware/Cryptoware,Public
+someId,01.9.2015,Spam,International
+someId,01.9.2015,Other,International
+someId,01.9.2015,Other,Private
+someId,01.9.2015,Illegal content,International
+someId,01.9.2015,Malicious code,International
+someId,01.9.2015,Ransomware/Cryptoware,International
+someId,01.9.2015,Cyber espionage,Private
+someId,01.9.2015,Denial of service,International
+someId,01.9.2015,Data breaches,Private
+someId,01.9.2015,Denial of service,Private
+someId,01.9.2015,Hacking/Cracking,Public
+someId,01.9.2015,Hacking/Cracking,Private
+someId,01.9.2015,Malicious code,Public
+someId,01.9.2015,Malicious code,Public
+someId,01.9.2015,Denial of service,Private
+someId,01.9.2015,Botnets,Private
+someId,01.9.2015,Phishing,Public
+someId,01.9.2015,Ransomware/Cryptoware,Public
+someId,01.9.2015,Phishing,Public
+someId,01.9.2015,Illegal content,International
+someId,01.9.2015,Phishing,Private
+someId,01.9.2015,Other,Public
+someId,01.9.2015,Data breaches,Private
+someId,01.9.2015,Injection attacks,International
+someId,01.9.2015,Spam,International
+someId,01.9.2015,Injection attacks,Private
+someId,01.9.2015,Data breaches,Private
+someId,01.9.2015,Denial of service,International
+someId,01.9.2015,Hacking/Cracking,International
+someId,01.9.2015,Phishing,Private
+someId,01.9.2015,Ransomware/Cryptoware,Private
+someId,01.9.2015,Cyber espionage,Public
+someId,01.9.2015,Spam,International
+someId,01.9.2015,Denial of service,Private
+someId,01.9.2015,Phishing,Public
+someId,01.9.2015,Phishing,Public
+someId,01.9.2015,Cyber espionage,International
+someId,01.9.2015,Other,International
+someId,01.9.2015,Information leakage,Public
+someId,01.9.2015,Malicious code,Public
+someId,01.9.2015,Ransomware/Cryptoware,International
+someId,01.9.2015,Cyber espionage,Private
+someId,01.9.2015,Ransomware/Cryptoware,Public
+someId,01.9.2015,Cyber espionage,International
+someId,01.9.2015,Botnets,International
+someId,01.9.2015,Cyber espionage,Private
+someId,01.9.2015,Information leakage,Private
+someId,01.9.2015,Cyber espionage,Private
+someId,01.9.2015,Data breaches,Public
+someId,01.9.2015,Hacking/Cracking,Public
+someId,01.9.2015,Spam,International
+someId,01.9.2015,Other,International
+someId,01.9.2015,Other,Private
+someId,01.9.2015,Information leakage,International
+someId,01.9.2015,Phishing,International
+someId,01.9.2015,Botnets,Public
+someId,01.9.2015,Denial of service,Private
+someId,01.10.2015,Malicious code,International
+someId,01.10.2015,Illegal content,Public
+someId,01.10.2015,Illegal content,International
+someId,01.10.2015,Malicious code,Public
+someId,01.10.2015,Other,Private
+someId,01.10.2015,Hacking/Cracking,Public
+someId,01.10.2015,Spam,Public
+someId,01.10.2015,Phishing,Public
+someId,01.10.2015,Botnets,Private
+someId,01.10.2015,Other,Private
+someId,01.10.2015,Ransomware/Cryptoware,Public
+someId,01.10.2015,Phishing,Private
+someId,01.10.2015,Data breaches,Public
+someId,01.10.2015,Phishing,Public
+someId,01.10.2015,Injection attacks,Public
+someId,01.10.2015,Data breaches,Private
+someId,01.10.2015,Hacking/Cracking,Private
+someId,01.10.2015,Injection attacks,International
+someId,01.10.2015,Cyber espionage,Public
+someId,01.10.2015,Hacking/Cracking,Public
+someId,01.10.2015,Spam,Private
+someId,01.10.2015,Malicious code,Public
+someId,01.10.2015,Denial of service,Private
+someId,01.10.2015,Malicious code,Public
+someId,01.10.2015,Ransomware/Cryptoware,Private
+someId,01.10.2015,Botnets,Public
+someId,01.10.2015,Illegal content,Public
+someId,01.10.2015,Data breaches,International
+someId,01.10.2015,Cyber espionage,Private
+someId,01.10.2015,Cyber espionage,International
+someId,01.10.2015,Ransomware/Cryptoware,Public
+someId,01.10.2015,Spam,Private
+someId,01.10.2015,Spam,Private
+someId,01.10.2015,Denial of service,Public
+someId,01.10.2015,Malicious code,International
+someId,01.10.2015,Malicious code,Public
+someId,01.10.2015,Malicious code,International
+someId,01.10.2015,Hacking/Cracking,Public
+someId,01.10.2015,Botnets,Private
+someId,01.10.2015,Information leakage,Private
+someId,01.10.2015,Cyber espionage,International
+someId,01.10.2015,Ransomware/Cryptoware,Public
+someId,01.10.2015,Spam,Public
+someId,01.10.2015,Denial of service,Private
+someId,01.10.2015,Hacking/Cracking,International
+someId,01.10.2015,Information leakage,Public
+someId,01.10.2015,Other,International
+someId,01.10.2015,Spam,Public
+someId,01.10.2015,Information leakage,Public
+someId,01.10.2015,Spam,Public
+someId,01.10.2015,Data breaches,International
+someId,01.10.2015,Phishing,Public
+someId,01.10.2015,Data breaches,Private
+someId,01.10.2015,Denial of service,International
+someId,01.10.2015,Data breaches,International
+someId,01.10.2015,Spam,Public
+someId,01.10.2015,Denial of service,International
+someId,01.10.2015,Hacking/Cracking,International
+someId,01.10.2015,Botnets,Private
+someId,01.10.2015,Information leakage,Public
+someId,01.10.2015,Malicious code,International
+someId,01.10.2015,Data breaches,International
+someId,01.10.2015,Denial of service,International
+someId,01.10.2015,Injection attacks,International
+someId,01.10.2015,Data breaches,Public
+someId,01.10.2015,Hacking/Cracking,Private
+someId,01.10.2015,Denial of service,International
+someId,01.10.2015,Information leakage,Private
+someId,01.10.2015,Cyber espionage,Public
+someId,01.10.2015,Botnets,Private
+someId,01.10.2015,Cyber espionage,Private
+someId,01.10.2015,Other,International
+someId,01.10.2015,Other,Private
+someId,01.10.2015,Botnets,International
+someId,01.10.2015,Ransomware/Cryptoware,Private
+someId,01.10.2015,Cyber espionage,Public
+someId,01.10.2015,Botnets,Public
+someId,01.10.2015,Botnets,Private
+someId,01.10.2015,Hacking/Cracking,International
+someId,01.10.2015,Illegal content,Public
+someId,01.10.2015,Botnets,Private
+someId,01.10.2015,Data breaches,Public
+someId,01.10.2015,Phishing,Private
+someId,01.10.2015,Spam,Public
+someId,01.10.2015,Ransomware/Cryptoware,Private
+someId,01.11.2015,Injection attacks,Private
+someId,01.11.2015,Data breaches,Public
+someId,01.11.2015,Hacking/Cracking,Public
+someId,01.11.2015,Spam,Private
+someId,01.11.2015,Malicious code,Public
+someId,01.11.2015,Spam,Private
+someId,01.11.2015,Data breaches,Public
+someId,01.11.2015,Denial of service,International
+someId,01.11.2015,Injection attacks,Private
+someId,01.11.2015,Data breaches,International
+someId,01.11.2015,Phishing,Private
+someId,01.11.2015,Cyber espionage,International
+someId,01.11.2015,Denial of service,Private
+someId,01.11.2015,Data breaches,Private
+someId,01.11.2015,Data breaches,Private
+someId,01.11.2015,Other,International
+someId,01.11.2015,Malicious code,Public
+someId,01.11.2015,Malicious code,Public
+someId,01.11.2015,Hacking/Cracking,Private
+someId,01.11.2015,Injection attacks,International
+someId,01.11.2015,Botnets,Private
+someId,01.11.2015,Injection attacks,International
+someId,01.11.2015,Denial of service,Public
+someId,01.11.2015,Phishing,Public
+someId,01.11.2015,Malicious code,Private
+someId,01.11.2015,Cyber espionage,Private
+someId,01.11.2015,Malicious code,Public
+someId,01.11.2015,Phishing,International
+someId,01.11.2015,Malicious code,International
+someId,01.11.2015,Injection attacks,Public
+someId,01.11.2015,Malicious code,Public
+someId,01.11.2015,Injection attacks,Public
+someId,01.11.2015,Denial of service,Public
+someId,01.11.2015,Malicious code,Private
+someId,01.11.2015,Illegal content,International
+someId,01.11.2015,Hacking/Cracking,Public
+someId,01.11.2015,Data breaches,International
+someId,01.11.2015,Ransomware/Cryptoware,Public
+someId,01.11.2015,Illegal content,International
+someId,01.11.2015,Ransomware/Cryptoware,Private
+someId,01.11.2015,Phishing,Public
+someId,01.11.2015,Other,International
+someId,01.11.2015,Cyber espionage,Public
+someId,01.11.2015,Data breaches,International
+someId,01.11.2015,Ransomware/Cryptoware,Public
+someId,01.11.2015,Spam,Private
+someId,01.11.2015,Denial of service,Public
+someId,01.11.2015,Hacking/Cracking,Public
+someId,01.11.2015,Hacking/Cracking,Private
+someId,01.11.2015,Other,International
+someId,01.11.2015,Illegal content,Public
+someId,01.11.2015,Other,International
+someId,01.11.2015,Cyber espionage,Public
+someId,01.11.2015,Denial of service,Public
+someId,01.11.2015,Botnets,Private
+someId,01.11.2015,Spam,Private
+someId,01.11.2015,Ransomware/Cryptoware,Private
+someId,01.11.2015,Hacking/Cracking,International
+someId,01.11.2015,Injection attacks,International
+someId,01.11.2015,Denial of service,Private
+someId,01.11.2015,Cyber espionage,International
+someId,01.11.2015,Hacking/Cracking,Private
+someId,01.11.2015,Information leakage,International
+someId,01.11.2015,Injection attacks,Private
+someId,01.11.2015,Phishing,Private
+someId,01.11.2015,Ransomware/Cryptoware,Private
+someId,01.11.2015,Injection attacks,Private
+someId,01.11.2015,Ransomware/Cryptoware,Private
+someId,01.11.2015,Spam,International
+someId,01.11.2015,Spam,Public
+someId,01.11.2015,Other,Public
+someId,01.11.2015,Phishing,International
+someId,01.11.2015,Malicious code,International
+someId,01.11.2015,Illegal content,International
+someId,01.11.2015,Cyber espionage,Private
+someId,01.11.2015,Botnets,Public
+someId,01.11.2015,Information leakage,Private
+someId,01.11.2015,Denial of service,Public
+someId,01.11.2015,Botnets,International
+someId,01.11.2015,Data breaches,Private
+someId,01.11.2015,Other,Public
+someId,01.11.2015,Cyber espionage,Public
+someId,01.11.2015,Spam,Public
+someId,01.11.2015,Illegal content,Public
+someId,01.11.2015,Cyber espionage,Public
+someId,01.11.2015,Illegal content,Public
+someId,01.11.2015,Data breaches,Public
+someId,01.11.2015,Botnets,International
+someId,01.11.2015,Information leakage,Private
+someId,01.11.2015,Phishing,International
+someId,01.11.2015,Denial of service,Private
+someId,01.11.2015,Injection attacks,International
+someId,01.11.2015,Other,Public
+someId,01.11.2015,Injection attacks,Public
+someId,01.11.2015,Phishing,International
+someId,01.11.2015,Ransomware/Cryptoware,Public
+someId,01.11.2015,Malicious code,Private
+someId,01.11.2015,Cyber espionage,Public
+someId,01.11.2015,Hacking/Cracking,Private
+someId,01.11.2015,Hacking/Cracking,Private
+someId,01.11.2015,Cyber espionage,Private
+someId,01.11.2015,Spam,Public
+someId,01.11.2015,Phishing,International
+someId,01.11.2015,Ransomware/Cryptoware,Private
+someId,01.11.2015,Ransomware/Cryptoware,Public
+someId,01.11.2015,Spam,International
+someId,01.11.2015,Denial of service,International
+someId,01.11.2015,Information leakage,International
+someId,01.11.2015,Hacking/Cracking,International
+someId,01.11.2015,Cyber espionage,Private
+someId,01.11.2015,Information leakage,International
+someId,01.11.2015,Spam,International
+someId,01.11.2015,Cyber espionage,Private
+someId,01.11.2015,Hacking/Cracking,Public
+someId,01.11.2015,Spam,Public
+someId,01.11.2015,Information leakage,Public
+someId,01.11.2015,Botnets,International
+someId,01.11.2015,Other,International
+someId,01.11.2015,Illegal content,Private
+someId,01.11.2015,Illegal content,Public
+someId,01.11.2015,Illegal content,Private
+someId,01.11.2015,Hacking/Cracking,Public
+someId,01.11.2015,Information leakage,International
+someId,01.11.2015,Malicious code,Private
+someId,01.11.2015,Illegal content,International
+someId,01.11.2015,Malicious code,International
+someId,01.11.2015,Malicious code,Public
+someId,01.11.2015,Malicious code,Public
+someId,01.11.2015,Phishing,Public
+someId,01.11.2015,Botnets,Private
+someId,01.11.2015,Cyber espionage,Private
+someId,01.11.2015,Spam,Private
+someId,01.11.2015,Other,Private
+someId,01.11.2015,Spam,International
+someId,01.11.2015,Injection attacks,Public
+someId,01.11.2015,Botnets,Public
+someId,01.11.2015,Other,Private
+someId,01.11.2015,Phishing,Private
+someId,01.11.2015,Denial of service,Public
+someId,01.11.2015,Injection attacks,International
+someId,01.11.2015,Spam,Public
+someId,01.11.2015,Phishing,Private
+someId,01.11.2015,Spam,Private
+someId,01.11.2015,Malicious code,Public
+someId,01.11.2015,Other,International
+someId,01.11.2015,Malicious code,International
+someId,01.11.2015,Injection attacks,International
+someId,01.11.2015,Phishing,Private
+someId,01.11.2015,Ransomware/Cryptoware,Public
+someId,01.11.2015,Information leakage,Public
+someId,01.11.2015,Illegal content,Private
+someId,01.11.2015,Hacking/Cracking,Private
+someId,01.11.2015,Spam,International
+someId,01.11.2015,Cyber espionage,International
+someId,01.11.2015,Other,Public
+someId,01.11.2015,Cyber espionage,Public
+someId,01.11.2015,Malicious code,Public
+someId,01.11.2015,Hacking/Cracking,Private
+someId,01.11.2015,Spam,International
+someId,01.11.2015,Botnets,International
+someId,01.11.2015,Injection attacks,Public
+someId,01.11.2015,Denial of service,Public
+someId,01.11.2015,Information leakage,Private
+someId,01.11.2015,Other,Private
+someId,01.11.2015,Ransomware/Cryptoware,Public
+someId,01.11.2015,Illegal content,Private
+someId,01.11.2015,Malicious code,Private
+someId,01.11.2015,Information leakage,Public
+someId,01.11.2015,Ransomware/Cryptoware,Private
+someId,01.11.2015,Cyber espionage,Private
+someId,01.11.2015,Denial of service,Private
+someId,01.11.2015,Injection attacks,Private
+someId,01.11.2015,Phishing,International
+someId,01.11.2015,Malicious code,Public
+someId,01.11.2015,Cyber espionage,Private
+someId,01.11.2015,Ransomware/Cryptoware,Private
+someId,01.11.2015,Illegal content,Public
+someId,01.11.2015,Malicious code,Public
+someId,01.11.2015,Injection attacks,Public
+someId,01.11.2015,Other,International
+someId,01.11.2015,Ransomware/Cryptoware,International
+someId,01.11.2015,Denial of service,International
+someId,01.12.2015,Other,International
+someId,01.12.2015,Hacking/Cracking,Public
+someId,01.12.2015,Cyber espionage,Private
+someId,01.12.2015,Other,International
+someId,01.12.2015,Denial of service,Private
+someId,01.12.2015,Cyber espionage,International
+someId,01.12.2015,Data breaches,Private
+someId,01.12.2015,Ransomware/Cryptoware,Public
+someId,01.12.2015,Denial of service,International
+someId,01.12.2015,Spam,International
+someId,01.12.2015,Hacking/Cracking,Public
+someId,01.12.2015,Botnets,International
+someId,01.12.2015,Information leakage,Private
+someId,01.12.2015,Hacking/Cracking,International
+someId,01.12.2015,Spam,Private
+someId,01.12.2015,Hacking/Cracking,International
+someId,01.12.2015,Denial of service,Public
+someId,01.12.2015,Cyber espionage,Public
+someId,01.12.2015,Injection attacks,Public
+someId,01.12.2015,Injection attacks,Private
+someId,01.12.2015,Other,Private
+someId,01.12.2015,Injection attacks,Public
+someId,01.12.2015,Denial of service,International
+someId,01.12.2015,Information leakage,Public
+someId,01.12.2015,Denial of service,Private
+someId,01.12.2015,Injection attacks,Private
+someId,01.12.2015,Phishing,Private
+someId,01.12.2015,Illegal content,Public
+someId,01.12.2015,Cyber espionage,International
+someId,01.12.2015,Illegal content,Private
+someId,01.12.2015,Malicious code,Public
+someId,01.12.2015,Malicious code,International
+someId,01.12.2015,Cyber espionage,International
+someId,01.12.2015,Information leakage,International
+someId,01.12.2015,Spam,International
+someId,01.12.2015,Illegal content,Private
+someId,01.12.2015,Spam,Public
+someId,01.12.2015,Illegal content,International
+someId,01.12.2015,Spam,Public
+someId,01.12.2015,Cyber espionage,International
+someId,01.12.2015,Injection attacks,Private
+someId,01.12.2015,Botnets,Private
+someId,01.12.2015,Illegal content,International
+someId,01.12.2015,Spam,Public
+someId,01.12.2015,Denial of service,Private
+someId,01.12.2015,Illegal content,Public
+someId,01.12.2015,Botnets,Public
+someId,01.12.2015,Information leakage,International
+someId,01.12.2015,Ransomware/Cryptoware,Private
+someId,01.12.2015,Data breaches,Private
+someId,01.12.2015,Information leakage,Private
+someId,01.12.2015,Data breaches,Private
+someId,01.12.2015,Information leakage,Public
+someId,01.12.2015,Spam,Private
+someId,01.12.2015,Injection attacks,Private
+someId,01.12.2015,Spam,Private
+someId,01.12.2015,Other,International
+someId,01.12.2015,Data breaches,Public
+someId,01.12.2015,Phishing,International
+someId,01.12.2015,Information leakage,International
+someId,01.12.2015,Illegal content,Public
+someId,01.12.2015,Denial of service,Public
+someId,01.12.2015,Phishing,Private
+someId,01.12.2015,Injection attacks,Private
+someId,01.12.2015,Ransomware/Cryptoware,Private
+someId,01.12.2015,Phishing,Public
+someId,01.12.2015,Denial of service,International
+someId,01.12.2015,Ransomware/Cryptoware,International
+someId,01.12.2015,Spam,International
+someId,01.12.2015,Malicious code,Private
+someId,01.12.2015,Hacking/Cracking,International
+someId,01.12.2015,Ransomware/Cryptoware,International
+someId,01.12.2015,Cyber espionage,Public
+someId,01.12.2015,Malicious code,International
+someId,01.12.2015,Cyber espionage,Private
+someId,01.12.2015,Cyber espionage,Public
+someId,01.12.2015,Ransomware/Cryptoware,Private
+someId,01.12.2015,Denial of service,Private
+someId,01.12.2015,Hacking/Cracking,International
+someId,01.12.2015,Spam,International
+someId,01.12.2015,Botnets,Public
+someId,01.12.2015,Information leakage,Private
+someId,01.12.2015,Botnets,Public
+someId,01.12.2015,Information leakage,Private
+someId,01.12.2015,Denial of service,Public
+someId,01.12.2015,Ransomware/Cryptoware,Public
+someId,01.12.2015,Data breaches,Public
+someId,01.12.2015,Data breaches,Private
+someId,01.12.2015,Malicious code,Public
+someId,01.12.2015,Phishing,Private
+someId,01.12.2015,Cyber espionage,Public
+someId,01.12.2015,Phishing,Private
+someId,01.12.2015,Phishing,Public
+someId,01.12.2015,Other,International
+someId,01.12.2015,Malicious code,Public
+someId,01.12.2015,Phishing,Private
+someId,01.12.2015,Phishing,Public
+someId,01.12.2015,Phishing,Public
+someId,01.12.2015,Botnets,Public
+someId,01.12.2015,Other,Public
+someId,01.12.2015,Ransomware/Cryptoware,Private
+someId,01.12.2015,Spam,International
+someId,01.12.2015,Other,International
+someId,01.12.2015,Hacking/Cracking,Private
+someId,01.12.2015,Malicious code,Private
+someId,01.12.2015,Denial of service,Public
+someId,01.12.2015,Spam,International
+someId,01.12.2015,Illegal content,Private
+someId,01.12.2015,Hacking/Cracking,International
+someId,01.12.2015,Information leakage,International
+someId,01.12.2015,Information leakage,International
+someId,01.12.2015,Malicious code,Public
+someId,01.12.2015,Data breaches,Public
+someId,01.12.2015,Cyber espionage,Private
+someId,01.12.2015,Injection attacks,Private
+someId,01.12.2015,Spam,International
+someId,01.12.2015,Phishing,Public
+someId,01.12.2015,Illegal content,Public
+someId,01.12.2015,Botnets,Private
+someId,01.12.2015,Denial of service,International
+someId,01.12.2015,Spam,Public
+someId,01.12.2015,Botnets,International
+someId,01.12.2015,Data breaches,International
+someId,01.12.2015,Information leakage,Public
+someId,01.12.2015,Information leakage,International
+someId,01.12.2015,Ransomware/Cryptoware,Private
+someId,01.12.2015,Other,Public
+someId,01.12.2015,Botnets,Private
+someId,01.12.2015,Malicious code,Public
+someId,01.12.2015,Information leakage,International
+someId,01.12.2015,Ransomware/Cryptoware,International
+someId,01.12.2015,Information leakage,International
+someId,01.12.2015,Injection attacks,Public
+someId,01.12.2015,Denial of service,International
+someId,01.12.2015,Ransomware/Cryptoware,Private
+someId,01.12.2015,Malicious code,Public
+someId,01.12.2015,Phishing,Private
+someId,01.12.2015,Botnets,International
+someId,01.12.2015,Injection attacks,Private
+someId,01.12.2015,Cyber espionage,Private
+someId,01.12.2015,Denial of service,Private
+someId,01.12.2015,Hacking/Cracking,Private
+someId,01.12.2015,Botnets,Private
+someId,01.12.2015,Ransomware/Cryptoware,Public
+someId,01.12.2015,Phishing,International
+someId,01.12.2015,Ransomware/Cryptoware,Public
+someId,01.12.2015,Phishing,International
+someId,01.12.2015,Phishing,Private
+someId,01.12.2015,Cyber espionage,Public
+someId,01.12.2015,Hacking/Cracking,Private
+someId,01.12.2015,Injection attacks,Private
+someId,01.12.2015,Illegal content,Public
+someId,01.12.2015,Other,International
+someId,01.12.2015,Denial of service,Public
+someId,01.12.2015,Other,International
+someId,01.12.2015,Other,Private
+someId,01.12.2015,Injection attacks,International
+someId,01.12.2015,Hacking/Cracking,International
+someId,01.12.2015,Botnets,Public
+someId,01.12.2015,Hacking/Cracking,International
+someId,01.12.2015,Injection attacks,Public
+someId,01.12.2015,Denial of service,Public
+someId,01.12.2015,Botnets,Private
+someId,01.12.2015,Phishing,International
+someId,01.12.2015,Illegal content,Public
+someId,01.12.2015,Spam,Private
+someId,01.12.2015,Botnets,Private
+someId,01.12.2015,Injection attacks,Public
+someId,01.12.2015,Cyber espionage,International
+someId,01.12.2015,Phishing,International
+someId,01.12.2015,Information leakage,Private
+someId,01.12.2015,Cyber espionage,International
+someId,01.12.2015,Botnets,International
+someId,01.12.2015,Malicious code,International
+someId,01.12.2015,Data breaches,International
+someId,01.12.2015,Phishing,Public
+someId,01.12.2015,Ransomware/Cryptoware,International
+someId,01.12.2015,Injection attacks,Public
+someId,01.12.2015,Illegal content,International
+someId,01.12.2015,Denial of service,Private
+someId,01.12.2015,Phishing,International
+someId,01.12.2015,Other,Public
+someId,01.12.2015,Spam,Public
+someId,01.12.2015,Denial of service,Private
+someId,01.12.2015,Denial of service,Private
+someId,01.12.2015,Injection attacks,Public
+someId,01.12.2015,Botnets,International
+someId,01.12.2015,Data breaches,Private
+someId,01.12.2015,Botnets,International
+someId,01.1.2016,Data breaches,Public
+someId,01.1.2016,Information leakage,Public
+someId,01.1.2016,Botnets,Public
+someId,01.1.2016,Data breaches,Public
+someId,01.1.2016,Spam,International
+someId,01.1.2016,Data breaches,Public
+someId,01.1.2016,Hacking/Cracking,Public
+someId,01.1.2016,Phishing,International
+someId,01.1.2016,Injection attacks,International
+someId,01.1.2016,Illegal content,Public
+someId,01.1.2016,Botnets,Private
+someId,01.1.2016,Information leakage,International
+someId,01.1.2016,Malicious code,Private
+someId,01.1.2016,Information leakage,Private
+someId,01.1.2016,Data breaches,Private
+someId,01.1.2016,Denial of service,Public
+someId,01.1.2016,Malicious code,Private
+someId,01.1.2016,Ransomware/Cryptoware,International
+someId,01.1.2016,Ransomware/Cryptoware,Public
+someId,01.1.2016,Cyber espionage,Private
+someId,01.1.2016,Hacking/Cracking,International
+someId,01.1.2016,Malicious code,Private
+someId,01.1.2016,Hacking/Cracking,Public
+someId,01.1.2016,Data breaches,International
+someId,01.1.2016,Spam,Private
+someId,01.1.2016,Other,International
+someId,01.1.2016,Phishing,International
+someId,01.1.2016,Spam,Public
+someId,01.1.2016,Cyber espionage,Public
+someId,01.1.2016,Other,Public
+someId,01.1.2016,Cyber espionage,International
+someId,01.1.2016,Phishing,Private
+someId,01.1.2016,Hacking/Cracking,Private
+someId,01.1.2016,Illegal content,Private
+someId,01.1.2016,Malicious code,Public
+someId,01.1.2016,Phishing,International
+someId,01.1.2016,Cyber espionage,Public
+someId,01.1.2016,Botnets,Private
+someId,01.1.2016,Illegal content,International
+someId,01.1.2016,Phishing,Private
+someId,01.1.2016,Information leakage,International
+someId,01.1.2016,Data breaches,Public
+someId,01.1.2016,Phishing,International
+someId,01.1.2016,Ransomware/Cryptoware,International
+someId,01.1.2016,Illegal content,Private
+someId,01.1.2016,Information leakage,International
+someId,01.1.2016,Malicious code,Private
+someId,01.1.2016,Ransomware/Cryptoware,International
+someId,01.1.2016,Botnets,International
+someId,01.1.2016,Hacking/Cracking,Private
+someId,01.1.2016,Cyber espionage,International
+someId,01.1.2016,Spam,Private
+someId,01.1.2016,Spam,Public
+someId,01.1.2016,Illegal content,International
+someId,01.1.2016,Malicious code,Private
+someId,01.1.2016,Hacking/Cracking,Public
+someId,01.1.2016,Other,International
+someId,01.1.2016,Cyber espionage,Public
+someId,01.1.2016,Hacking/Cracking,Public
+someId,01.1.2016,Botnets,International
+someId,01.1.2016,Injection attacks,International
+someId,01.1.2016,Other,Public
+someId,01.1.2016,Botnets,Private
+someId,01.1.2016,Botnets,Public
+someId,01.1.2016,Other,International
+someId,01.1.2016,Data breaches,International
+someId,01.1.2016,Information leakage,International
+someId,01.1.2016,Malicious code,Private
+someId,01.1.2016,Hacking/Cracking,International
+someId,01.1.2016,Ransomware/Cryptoware,Public
+someId,01.1.2016,Cyber espionage,Public
+someId,01.1.2016,Ransomware/Cryptoware,Private
+someId,01.1.2016,Botnets,Private
+someId,01.1.2016,Hacking/Cracking,Public
+someId,01.1.2016,Illegal content,International
+someId,01.1.2016,Botnets,Public
+someId,01.1.2016,Malicious code,International
+someId,01.1.2016,Data breaches,Private
+someId,01.1.2016,Hacking/Cracking,Private
+someId,01.1.2016,Data breaches,Private
+someId,01.1.2016,Spam,Private
+someId,01.1.2016,Cyber espionage,International
+someId,01.1.2016,Ransomware/Cryptoware,Public
+someId,01.1.2016,Data breaches,Public
+someId,01.1.2016,Other,Private
+someId,01.1.2016,Cyber espionage,Private
+someId,01.1.2016,Malicious code,Private
+someId,01.1.2016,Injection attacks,International
+someId,01.1.2016,Denial of service,International
+someId,01.1.2016,Botnets,Private
+someId,01.1.2016,Denial of service,International
+someId,01.1.2016,Malicious code,International
+someId,01.1.2016,Data breaches,Private
+someId,01.1.2016,Botnets,International
+someId,01.1.2016,Illegal content,Private
+someId,01.1.2016,Spam,Private
+someId,01.1.2016,Data breaches,Public
+someId,01.1.2016,Ransomware/Cryptoware,Private
+someId,01.1.2016,Information leakage,International
+someId,01.1.2016,Cyber espionage,Private
+someId,01.1.2016,Illegal content,Public
+someId,01.1.2016,Denial of service,International
+someId,01.1.2016,Hacking/Cracking,Public
+someId,01.1.2016,Illegal content,Public
+someId,01.1.2016,Spam,Private
+someId,01.1.2016,Injection attacks,Public
+someId,01.1.2016,Other,Private
+someId,01.1.2016,Cyber espionage,Private
+someId,01.1.2016,Malicious code,International
+someId,01.1.2016,Malicious code,Private
+someId,01.1.2016,Illegal content,Public
+someId,01.1.2016,Malicious code,Public
+someId,01.1.2016,Data breaches,Public
+someId,01.1.2016,Spam,Private
+someId,01.1.2016,Malicious code,Public
+someId,01.1.2016,Data breaches,International
+someId,01.1.2016,Cyber espionage,Private
+someId,01.1.2016,Injection attacks,Private
+someId,01.1.2016,Malicious code,Public
+someId,01.1.2016,Cyber espionage,Public
+someId,01.1.2016,Information leakage,Private
+someId,01.1.2016,Botnets,Public
+someId,01.1.2016,Injection attacks,Private
+someId,01.1.2016,Data breaches,Private
+someId,01.1.2016,Other,Public
+someId,01.1.2016,Other,Private
+someId,01.1.2016,Cyber espionage,Private
+someId,01.1.2016,Information leakage,Private
+someId,01.1.2016,Information leakage,Private
+someId,01.1.2016,Malicious code,Public
+someId,01.1.2016,Data breaches,Private
+someId,01.1.2016,Botnets,International
+someId,01.1.2016,Malicious code,International
+someId,01.1.2016,Phishing,International
+someId,01.1.2016,Malicious code,International
+someId,01.1.2016,Other,International
+someId,01.1.2016,Malicious code,Public
+someId,01.1.2016,Cyber espionage,Public
+someId,01.1.2016,Ransomware/Cryptoware,International
+someId,01.1.2016,Other,International
+someId,01.1.2016,Other,Public
+someId,01.1.2016,Botnets,Private
+someId,01.1.2016,Spam,Public
+someId,01.1.2016,Data breaches,Private
+someId,01.1.2016,Injection attacks,Private
+someId,01.1.2016,Phishing,Public
+someId,01.1.2016,Injection attacks,Private
+someId,01.1.2016,Data breaches,Private
+someId,01.1.2016,Malicious code,Public
+someId,01.1.2016,Botnets,Private
+someId,01.1.2016,Illegal content,Public
+someId,01.1.2016,Spam,Public
+someId,01.1.2016,Malicious code,International
+someId,01.1.2016,Illegal content,International
+someId,01.1.2016,Spam,Private
+someId,01.1.2016,Malicious code,Public
+someId,01.1.2016,Ransomware/Cryptoware,International
+someId,01.1.2016,Malicious code,Private
+someId,01.1.2016,Denial of service,Public
+someId,01.1.2016,Illegal content,Private
+someId,01.1.2016,Phishing,Private
+someId,01.1.2016,Botnets,Private
+someId,01.1.2016,Other,Private
+someId,01.1.2016,Botnets,International
+someId,01.1.2016,Ransomware/Cryptoware,Public
+someId,01.1.2016,Denial of service,International
+someId,01.1.2016,Hacking/Cracking,International
+someId,01.1.2016,Other,Private
+someId,01.1.2016,Other,Public
+someId,01.1.2016,Phishing,Public
+someId,01.1.2016,Malicious code,Private
+someId,01.1.2016,Injection attacks,International
+someId,01.1.2016,Data breaches,Public
+someId,01.1.2016,Hacking/Cracking,Public
+someId,01.1.2016,Botnets,Private
+someId,01.1.2016,Hacking/Cracking,Private
+someId,01.1.2016,Cyber espionage,International
+someId,01.1.2016,Data breaches,Public
+someId,01.1.2016,Spam,Public
+someId,01.1.2016,Spam,International
+someId,01.1.2016,Cyber espionage,Private
+someId,01.1.2016,Malicious code,Public
+someId,01.1.2016,Spam,Public
+someId,01.1.2016,Information leakage,Private
+someId,01.1.2016,Illegal content,Private
+someId,01.1.2016,Ransomware/Cryptoware,Public
+someId,01.1.2016,Other,Private
+someId,01.1.2016,Data breaches,Public
+someId,01.1.2016,Data breaches,Private
+someId,01.1.2016,Information leakage,Private
+someId,01.1.2016,Other,Private
+someId,01.1.2016,Cyber espionage,Public
+someId,01.1.2016,Botnets,Public
+someId,01.1.2016,Phishing,Public
+someId,01.1.2016,Injection attacks,Private
+someId,01.1.2016,Hacking/Cracking,Public
+someId,01.1.2016,Botnets,Private
+someId,01.1.2016,Illegal content,Public
+someId,01.1.2016,Botnets,Private
+someId,01.1.2016,Ransomware/Cryptoware,Private
+someId,01.1.2016,Cyber espionage,Public
+someId,01.1.2016,Illegal content,Private
+someId,01.1.2016,Illegal content,International
+someId,01.1.2016,Information leakage,Public
+someId,01.1.2016,Injection attacks,Private
+someId,01.1.2016,Malicious code,International
+someId,01.1.2016,Spam,Private
+someId,01.1.2016,Phishing,Private
+someId,01.1.2016,Illegal content,International
+someId,01.1.2016,Information leakage,Private
+someId,01.1.2016,Phishing,Public
+someId,01.1.2016,Illegal content,International
+someId,01.1.2016,Other,Private
+someId,01.1.2016,Illegal content,Private
+someId,01.1.2016,Spam,Public
+someId,01.1.2016,Ransomware/Cryptoware,International
+someId,01.1.2016,Denial of service,Private
+someId,01.1.2016,Cyber espionage,Private
+someId,01.1.2016,Hacking/Cracking,International
+someId,01.2.2016,Hacking/Cracking,International
+someId,01.2.2016,Illegal content,Public
+someId,01.2.2016,Cyber espionage,Public
+someId,01.2.2016,Spam,Public
+someId,01.2.2016,Data breaches,International
+someId,01.2.2016,Data breaches,Private
+someId,01.2.2016,Spam,Public
+someId,01.2.2016,Ransomware/Cryptoware,Public
+someId,01.2.2016,Data breaches,Public
+someId,01.2.2016,Denial of service,International
+someId,01.2.2016,Illegal content,Public
+someId,01.2.2016,Botnets,Private
+someId,01.2.2016,Ransomware/Cryptoware,Private
+someId,01.2.2016,Spam,Private
+someId,01.2.2016,Data breaches,Public
+someId,01.2.2016,Botnets,Public
+someId,01.2.2016,Illegal content,Private
+someId,01.2.2016,Phishing,Private
+someId,01.2.2016,Data breaches,Public
+someId,01.2.2016,Malicious code,Private
+someId,01.2.2016,Cyber espionage,Public
+someId,01.2.2016,Botnets,International
+someId,01.2.2016,Hacking/Cracking,Private
+someId,01.2.2016,Other,Public
+someId,01.2.2016,Spam,Public
+someId,01.2.2016,Cyber espionage,International
+someId,01.2.2016,Cyber espionage,Public
+someId,01.2.2016,Ransomware/Cryptoware,Private
+someId,01.2.2016,Spam,Public
+someId,01.2.2016,Illegal content,Public
+someId,01.2.2016,Denial of service,Private
+someId,01.2.2016,Cyber espionage,Private
+someId,01.2.2016,Injection attacks,Private
+someId,01.2.2016,Phishing,Private
+someId,01.2.2016,Phishing,Private
+someId,01.2.2016,Botnets,Private
+someId,01.2.2016,Spam,International
+someId,01.2.2016,Denial of service,Public
+someId,01.2.2016,Botnets,International
+someId,01.2.2016,Botnets,Private
+someId,01.2.2016,Malicious code,International
+someId,01.2.2016,Hacking/Cracking,International
+someId,01.2.2016,Illegal content,Public
+someId,01.2.2016,Information leakage,Public
+someId,01.2.2016,Spam,Public
+someId,01.2.2016,Malicious code,Private
+someId,01.2.2016,Botnets,Public
+someId,01.2.2016,Phishing,Public
+someId,01.2.2016,Spam,International
+someId,01.2.2016,Illegal content,Public
+someId,01.2.2016,Data breaches,International
+someId,01.2.2016,Data breaches,Private
+someId,01.2.2016,Hacking/Cracking,Private
+someId,01.2.2016,Information leakage,Public
+someId,01.2.2016,Hacking/Cracking,Public
+someId,01.2.2016,Spam,International
+someId,01.2.2016,Hacking/Cracking,International
+someId,01.2.2016,Information leakage,Private
+someId,01.2.2016,Other,Private
+someId,01.2.2016,Ransomware/Cryptoware,Public
+someId,01.2.2016,Data breaches,Private
+someId,01.2.2016,Ransomware/Cryptoware,Public
+someId,01.2.2016,Illegal content,Private
+someId,01.2.2016,Malicious code,Public
+someId,01.2.2016,Hacking/Cracking,Private
+someId,01.2.2016,Ransomware/Cryptoware,Private
+someId,01.2.2016,Malicious code,Public
+someId,01.2.2016,Spam,Public
+someId,01.2.2016,Botnets,Public
+someId,01.2.2016,Injection attacks,Private
+someId,01.2.2016,Information leakage,Public
+someId,01.2.2016,Spam,International
+someId,01.2.2016,Phishing,Private
+someId,01.2.2016,Illegal content,Public
+someId,01.2.2016,Information leakage,Private
+someId,01.2.2016,Botnets,Private
+someId,01.2.2016,Botnets,International
+someId,01.2.2016,Malicious code,Private
+someId,01.2.2016,Botnets,Public
+someId,01.2.2016,Illegal content,Private
+someId,01.2.2016,Information leakage,International
+someId,01.2.2016,Injection attacks,International
+someId,01.2.2016,Phishing,Private
+someId,01.2.2016,Spam,Private
+someId,01.2.2016,Cyber espionage,Public
+someId,01.2.2016,Cyber espionage,International
+someId,01.2.2016,Botnets,International
+someId,01.2.2016,Other,Private
+someId,01.2.2016,Hacking/Cracking,Private
+someId,01.2.2016,Ransomware/Cryptoware,Public
+someId,01.2.2016,Phishing,Public
+someId,01.2.2016,Injection attacks,Private
+someId,01.2.2016,Malicious code,Public
+someId,01.2.2016,Botnets,Public
+someId,01.2.2016,Botnets,International
+someId,01.2.2016,Injection attacks,International
+someId,01.2.2016,Denial of service,Public
+someId,01.2.2016,Denial of service,Private
+someId,01.2.2016,Injection attacks,International
+someId,01.2.2016,Botnets,Public
+someId,01.2.2016,Cyber espionage,Public
+someId,01.2.2016,Denial of service,Public
+someId,01.2.2016,Spam,Private
+someId,01.2.2016,Malicious code,Private
+someId,01.2.2016,Hacking/Cracking,Public
+someId,01.2.2016,Data breaches,Private
+someId,01.2.2016,Data breaches,International
+someId,01.2.2016,Information leakage,Private
+someId,01.2.2016,Spam,Public
+someId,01.2.2016,Denial of service,International
+someId,01.2.2016,Information leakage,Public
+someId,01.2.2016,Hacking/Cracking,International
+someId,01.2.2016,Injection attacks,Public
+someId,01.2.2016,Information leakage,Public
+someId,01.2.2016,Illegal content,Private
+someId,01.2.2016,Data breaches,Private
+someId,01.2.2016,Injection attacks,Private
+someId,01.2.2016,Other,Public
+someId,01.2.2016,Malicious code,Private
+someId,01.2.2016,Denial of service,Private
+someId,01.2.2016,Injection attacks,Public
+someId,01.2.2016,Malicious code,Public
+someId,01.2.2016,Denial of service,International
+someId,01.2.2016,Spam,Private
+someId,01.2.2016,Ransomware/Cryptoware,Public
+someId,01.2.2016,Information leakage,Public
+someId,01.2.2016,Ransomware/Cryptoware,Public
+someId,01.2.2016,Injection attacks,Private
+someId,01.2.2016,Cyber espionage,Public
+someId,01.2.2016,Cyber espionage,Private
+someId,01.2.2016,Other,Public
+someId,01.2.2016,Data breaches,International
+someId,01.2.2016,Ransomware/Cryptoware,International
+someId,01.2.2016,Cyber espionage,International
+someId,01.2.2016,Denial of service,Public
+someId,01.2.2016,Cyber espionage,International
+someId,01.2.2016,Cyber espionage,Public
+someId,01.2.2016,Information leakage,Private
+someId,01.2.2016,Spam,International
+someId,01.2.2016,Illegal content,Private
+someId,01.2.2016,Injection attacks,Private
+someId,01.2.2016,Information leakage,Private
+someId,01.2.2016,Denial of service,International
+someId,01.2.2016,Denial of service,International
+someId,01.2.2016,Botnets,Private
+someId,01.2.2016,Hacking/Cracking,Public
+someId,01.2.2016,Phishing,Private
+someId,01.2.2016,Ransomware/Cryptoware,Private
+someId,01.2.2016,Malicious code,International
+someId,01.2.2016,Ransomware/Cryptoware,Public
+someId,01.2.2016,Denial of service,Private
+someId,01.2.2016,Injection attacks,Private
+someId,01.2.2016,Injection attacks,Public
+someId,01.2.2016,Information leakage,Public
+someId,01.2.2016,Botnets,International
+someId,01.2.2016,Injection attacks,International
+someId,01.2.2016,Information leakage,International
+someId,01.2.2016,Other,International
+someId,01.2.2016,Malicious code,Private
+someId,01.2.2016,Cyber espionage,Private
+someId,01.2.2016,Phishing,Public
+someId,01.2.2016,Botnets,International
+someId,01.2.2016,Hacking/Cracking,Public
+someId,01.2.2016,Injection attacks,Private
+someId,01.2.2016,Phishing,International
+someId,01.2.2016,Injection attacks,Private
+someId,01.2.2016,Ransomware/Cryptoware,International
+someId,01.2.2016,Spam,Private
+someId,01.2.2016,Malicious code,Public
+someId,01.2.2016,Spam,International
+someId,01.2.2016,Phishing,Private
+someId,01.2.2016,Malicious code,Public
+someId,01.2.2016,Malicious code,Private
+someId,01.2.2016,Illegal content,Public
+someId,01.2.2016,Malicious code,Public
+someId,01.2.2016,Injection attacks,Public
+someId,01.2.2016,Data breaches,International
+someId,01.2.2016,Injection attacks,Private
+someId,01.2.2016,Data breaches,Private
+someId,01.2.2016,Ransomware/Cryptoware,Public
+someId,01.2.2016,Malicious code,International
+someId,01.2.2016,Spam,Private
+someId,01.2.2016,Illegal content,Public
+someId,01.2.2016,Malicious code,Private
+someId,01.2.2016,Illegal content,International
+someId,01.2.2016,Hacking/Cracking,International
+someId,01.2.2016,Data breaches,Public
+someId,01.2.2016,Injection attacks,Public
+someId,01.2.2016,Ransomware/Cryptoware,Private
+someId,01.2.2016,Illegal content,International
+someId,01.2.2016,Phishing,Public
+someId,01.2.2016,Other,International
+someId,01.2.2016,Denial of service,Private
+someId,01.2.2016,Data breaches,International
+someId,01.2.2016,Illegal content,Public
+someId,01.2.2016,Information leakage,Public
+someId,01.2.2016,Botnets,Private
+someId,01.2.2016,Ransomware/Cryptoware,Public
+someId,01.2.2016,Other,International
+someId,01.2.2016,Data breaches,International
+someId,01.2.2016,Hacking/Cracking,International
+someId,01.2.2016,Cyber espionage,Public
+someId,01.2.2016,Data breaches,Public
+someId,01.2.2016,Cyber espionage,Private
+someId,01.2.2016,Phishing,Private
+someId,01.2.2016,Ransomware/Cryptoware,Public
+someId,01.2.2016,Denial of service,Private
+someId,01.2.2016,Ransomware/Cryptoware,International
+someId,01.2.2016,Spam,Public
+someId,01.2.2016,Hacking/Cracking,Public
+someId,01.2.2016,Spam,International
+someId,01.2.2016,Data breaches,International
+someId,01.2.2016,Illegal content,Public
+someId,01.2.2016,Phishing,Public
+someId,01.2.2016,Ransomware/Cryptoware,Public
+someId,01.2.2016,Cyber espionage,International
+someId,01.2.2016,Phishing,Private
+someId,01.2.2016,Botnets,Public
+someId,01.2.2016,Ransomware/Cryptoware,International
+someId,01.2.2016,Malicious code,Public
+someId,01.2.2016,Spam,International
+someId,01.2.2016,Botnets,Public
+someId,01.2.2016,Malicious code,Public
+someId,01.2.2016,Illegal content,International
+someId,01.2.2016,Malicious code,Public
+someId,01.2.2016,Injection attacks,Public
+someId,01.2.2016,Injection attacks,International
+someId,01.2.2016,Data breaches,Private
+someId,01.2.2016,Denial of service,Public
+someId,01.2.2016,Illegal content,Public
+someId,01.2.2016,Botnets,International
+someId,01.2.2016,Malicious code,International
+someId,01.2.2016,Information leakage,International
+someId,01.2.2016,Spam,International
+someId,01.2.2016,Spam,International
+someId,01.2.2016,Hacking/Cracking,International
+someId,01.2.2016,Other,International
+someId,01.2.2016,Other,International
+someId,01.2.2016,Illegal content,Public
+someId,01.2.2016,Ransomware/Cryptoware,Public
+someId,01.2.2016,Phishing,Public
+someId,01.2.2016,Malicious code,Public
+someId,01.2.2016,Information leakage,Private
+someId,01.2.2016,Data breaches,Public
+someId,01.2.2016,Botnets,Public
+someId,01.2.2016,Injection attacks,Private
+someId,01.2.2016,Data breaches,Private
+someId,01.2.2016,Information leakage,International
+someId,01.2.2016,Other,Private
+someId,01.2.2016,Botnets,Private
+someId,01.2.2016,Information leakage,Private
+someId,01.2.2016,Denial of service,Public
+someId,01.2.2016,Other,Private
+someId,01.2.2016,Information leakage,International
+someId,01.2.2016,Botnets,International
+someId,01.2.2016,Information leakage,Public
+someId,01.2.2016,Other,Private
+someId,01.2.2016,Malicious code,Private
+someId,01.2.2016,Spam,Public
+someId,01.2.2016,Illegal content,Public
+someId,01.2.2016,Botnets,International
+someId,01.2.2016,Hacking/Cracking,International
+someId,01.2.2016,Ransomware/Cryptoware,Public
+someId,01.2.2016,Hacking/Cracking,Private
+someId,01.2.2016,Hacking/Cracking,Private
+someId,01.2.2016,Hacking/Cracking,Public
+someId,01.2.2016,Ransomware/Cryptoware,Public
+someId,01.2.2016,Malicious code,International
+someId,01.2.2016,Illegal content,International
+someId,01.2.2016,Information leakage,Public
+someId,01.2.2016,Botnets,International
+someId,01.2.2016,Illegal content,Public
+someId,01.2.2016,Hacking/Cracking,Private
+someId,01.2.2016,Data breaches,International
+someId,01.2.2016,Cyber espionage,Public
+someId,01.2.2016,Injection attacks,International
+someId,01.2.2016,Other,Private
+someId,01.2.2016,Illegal content,International
+someId,01.2.2016,Spam,International
+someId,01.2.2016,Information leakage,International
+someId,01.2.2016,Cyber espionage,Public
+someId,01.2.2016,Cyber espionage,Public
+someId,01.2.2016,Data breaches,International
+someId,01.2.2016,Hacking/Cracking,Private
+someId,01.2.2016,Spam,Private
+someId,01.2.2016,Hacking/Cracking,International
+someId,01.2.2016,Illegal content,Public
+someId,01.2.2016,Ransomware/Cryptoware,Private
+someId,01.2.2016,Ransomware/Cryptoware,Private
+someId,01.2.2016,Malicious code,Private
+someId,01.2.2016,Illegal content,Public
