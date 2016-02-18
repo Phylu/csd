@@ -2,7 +2,7 @@
  * Created by janosch on 26.01.16.
  */
 
-var CSD = (function ($, Chartist, _) {
+var CSD = (function ($, Chartist, jStat) {
     var csd = {};
     var incidentsDatabase, advisoriesDatabase, typeColumn, sectorColumn, likelihoodColumn, impactColumn;
     var monthLabels = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -945,4 +945,4 @@ var CSD = (function ($, Chartist, _) {
 
 
     return csd;
-}(jQuery, Chartist, _));
+}(jQuery, Chartist, jStat));
