@@ -1,0 +1,34 @@
+{
+  "name": "csd",
+  "version": "1.0.0",
+  "description": "Cyber Security Dashboard Module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phylu/csd.git"
+  },
+  "author": "Janosch Maier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Phylu/csd/issues"
+  },
+  "homepage": "https://github.com/Phylu/csd#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "chartist": "^0.9.5",
+    "chartist-plugin-legend": "^0.2.1",
+    "chartist-plugin-tooltip": "0.0.9",
+    "font-awesome": "^4.5.0",
+    "jquery": "^2.2.0",
+    "jquery-csv": "^0.8.1",
+    "jstat": "^1.5.2",
+    "taffydb": "^2.7.2"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.1"
+  }
+}
