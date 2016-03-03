@@ -5,7 +5,7 @@ var loadIncidents = function(csv) {
     var db = TAFFY(JSON.stringify(data));
 
     // Give Database to CSD
-    CSD.setIncidentsDatabase(db);
+    CSD.addDatabase('incidents', db, 'date');
 
     // Data cleaning for attack type
     var typeMap = {
@@ -14,8 +14,8 @@ var loadIncidents = function(csv) {
         'niet van toepassing': 'Other',
         'malicious code: worms/trojans': 'malicious code',
     };
-    CSD.group('CustomField.{Hulpmiddel}', 'type', typeMap);
-    CSD.setTypeColumn('type');
+    CSD.group('incidents', 'CustomField.{Hulpmiddel}', 'type', typeMap);
+    CSD.addFilterable('type');
 
     // Data cleaning for sectors
     var sectorMap = {
@@ -39,8 +39,8 @@ var loadIncidents = function(csv) {
         internationaal: 'International',
         partners: 'International',
     };
-    CSD.group('CustomField.{Sector}', 'sector', sectorMap);
-    CSD.setSectorColumn('sector');
+    CSD.group('incidents', 'CustomField.{Sector}', 'sector', sectorMap);
+    CSD.addFilterable('sector');
 
 };
 
@@ -51,11 +51,9 @@ var loadAdvisories = function(csv) {
     var db = TAFFY(JSON.stringify(data));
 
     // Give Database to CSD
-    CSD.setAdvisoriesDatabase(db);
-
-    CSD.setImpactColumn('impact');
-    CSD.setLikelihoodColumn('likelihood');
-
+    CSD.addDatabase('advisories', db, 'datetime');
+    CSD.addFilterable('impact');
+    CSD.addFilterable('likelihood');
 };
 
 
@@ -82,9 +80,9 @@ var createDashboard = function() {
      * ==================
      */
     CSD.line('#incidents', 'Reported Incidents', 'Reported Incidents shows how many incidents were reported to the NCSC in total for the last months.',
-        CSD.getLabels(),
+        CSD.getLabels('incidents'),
         new CSD.DataQuery().incidents().monthly(12, 2),
-        CSD.getLegend(2));
+        CSD.getLegend('incidents', 2));
 
 
     /*
@@ -96,7 +94,7 @@ var createDashboard = function() {
         attackNumbers[type] = new CSD.DataQuery().incidents({type: type}).monthly(12)[0];
     }
     CSD.areaSeries('#incidents-type', 'Incidents per Type', 'Incidents per Type shows the number of incidents reported to the NCSC where a specific attack type was used.',
-        CSD.getLabels(true),
+        CSD.getLabels('incidents', true),
         attackNumbers);
 
     /*
@@ -137,7 +135,7 @@ var createDashboard = function() {
      * ==========
      */
     CSD.circles('#advisories', 'Critical Security Advisories', 'Critical Security Advisories shows how many security advisories with high impact and high likelihood were published by the NCSC in the last months',
-        CSD.getLabels(true),
+        CSD.getLabels('incidents', true),
         new CSD.DataQuery().advisories({impact: 'H', likelihood: 'H'}).monthly(12)[0]);
 
 
