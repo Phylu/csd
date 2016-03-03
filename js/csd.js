@@ -213,11 +213,11 @@ var CSD = (function ($, Chartist, jStat) {
      */
     csd.group = function (database, oldColumn, newColumn, map) {
         databases[database]().each(function (record) {
-            var newValue = map[record[oldColumn].toLowerCase()];
+            var newValue = map[record[oldColumn]];
             if (typeof newValue == "undefined") {
                 newValue = record[oldColumn];
             }
-            record[newColumn] = newValue.toLowerCase();
+            record[newColumn] = newValue;
         });
     };
 
