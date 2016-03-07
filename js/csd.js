@@ -714,7 +714,7 @@ var CSD = (function ($, Chartist, jStat) {
         var factor = 30 / Math.max(...series);
 
         // Iterate over last 12 months
-        for (var i = Math.min(series.length - 1, 11); i >= 0; i--) {
+        for (var i = 0; i <= Math.min(series.length - 1, 11); i++) {
 
             var size = series[i] * factor;
 
