@@ -7,7 +7,7 @@ var jStat = require ('jstat').jStat;
 Chartist = require('chartist');
 Chartist.plugins = {};
 Chartist.plugins.legend = require('chartist-plugin-legend');
-Chartist.plugins.tooltip = require('chartist-plugin-tooltip');
+Chartist.plugins.tooltips = require('chartist-plugin-tooltip');
 
 var CSD = (function ($, Chartist, jStat) {
     var csd = {};

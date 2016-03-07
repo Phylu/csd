@@ -1,7 +1,8 @@
+require('../css/dashboard.css');
+
 var $ = jQuery = global.jQuery = require('jquery');
 $.csv = require('jquery-csv');
 var TAFFY = require('taffydb').taffy;
-console.log(TAFFY);
 var CSD = require('./csd.js');
 var bootstrap = require('bootstrap');
 

@@ -1,3 +1,9 @@
+@import url("../node_modules/chartist/dist/chartist.min.css");
+@import url("../node_modules/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css");
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("../node_modules/font-awesome/css/font-awesome.min.css");
+
+
 /*
  * General Settings
  * ================
@@ -254,7 +260,7 @@ a.close:hover {
  * Chartist Tooltip Settings
  * =========================
  */
-.ct-tooltip {
+.chartist-tooltip {
     position: absolute;
     display: block;
     min-width: 2em;
@@ -270,8 +276,9 @@ a.close:hover {
     text-align: center;
     pointer-events: none;
     z-index: 1070;
+    opacity: 0;
 }
-.ct-tooltip:before {
+.chartist-tooltip:before {
     content: "";
     position: absolute;
     top: 100%;
@@ -281,4 +288,8 @@ a.close:hover {
     margin-left: -5px;
     border: 5px solid transparent;
     border-top-color: #000;
+}
+
+.chartist-tooltip.tooltip-show {
+    opacity: 1;
 }
