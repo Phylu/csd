@@ -203,6 +203,7 @@ a.close:hover {
 .ct-legend {
     position: absolute;
     right: 15px;
+    padding-left: 0;
     z-index: 10;
     list-style: none;
 }
