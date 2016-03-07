@@ -11,7 +11,7 @@ Chartist.plugins.tooltip = require('chartist-plugin-tooltip');
 
 var CSD = (function ($, Chartist, jStat) {
     var csd = {};
-    var incidentsDatabase, advisoriesDatabase, typeColumn, sectorColumn, likelihoodColumn, impactColumn;
+    var databases = {};
     var monthLabels = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
     /*
@@ -140,10 +140,6 @@ var CSD = (function ($, Chartist, jStat) {
         return this.attr('data-toggle', 'tooltip').attr('data-placement', position).attr('title', description);
     };
 
-    /*
-     * Document Settings
-     */
-
     /**
      * Close overlays when escape is pressed
      */
@@ -160,81 +156,59 @@ var CSD = (function ($, Chartist, jStat) {
      * ==============
      */
 
-    /**
-     * Store the incidents database
-     * Database should be ordered (last attack last)
-     * @param database
-     */
-    csd.setIncidentsDatabase = function (database) {
-        incidentsDatabase = database;
+    csd.addDatabase = function (name, database, dateColumn) {
+        databases[name] = database;
 
         // Create easily searchable date fields
-        incidentsDatabase().each(function (record) {
-            var dat = record.date.split('.');
+        databases[name]().each(function (record) {
+            // TODO: make generic
+            if (dateColumn == 'date') {
+                var dat = record[dateColumn].split('.');
+            } else {
+                var dat = record[dateColumn].split(' ')[0].split('-');
+            }
             record.day = dat[0];
             record.month = dat[1];
             record.year = dat[2];
+
         });
 
-    };
+        /**
+         * Run queryies on database using DataQuery Object
+         * @param filterObject
+         * @returns {*}
+         */
+        csd.DataQuery.prototype[name] = function (filterObject) {
+            this.filterObject = filterObject;
+            this.database = name;
+            return this;
+        };
 
+        /**
+         * Run Query on database internally
+         * @returns {Query}
+         */
+        Query.prototype[name] = function () {
+            this.database = databases[name];
+            return this;
+        };
 
-    /**
-     * Store the advisories database
-     * @param database
-     */
-    csd.setAdvisoriesDatabase = function (database) {
-        advisoriesDatabase = database;
-
-        // Create easily searchable date fields
-        advisoriesDatabase().each(function (record) {
-
-            // Clean data
-            record.datetime = $.trim(record.datetime);
-            record.id = $.trim(record.id);
-            record.version = $.trim(record.version);
-            record.description = $.trim(record.description);
-            record.likelihood = $.trim(record.likelihood);
-            record.impact = $.trim(record.impact);
-
-            // Create searchable date fields
-            var dat = record.datetime.split(' ')[0].split('-');
-            record.day = dat[0];
-            record.month = dat[1];
-            record.year = dat[2];
-        });
     };
 
     /**
-     * Set the name of the type column
-     * @param name
+     * Add a column that can be used for filtering
+     * @param column
      */
-    csd.setTypeColumn = function (name) {
-        typeColumn = name;
-    };
+    csd.addFilterable = function (column) {
 
-    /**
-     * Set the name of the sector column
-     * @param name
-     */
-    csd.setSectorColumn = function (name) {
-        sectorColumn = name;
-    };
+        Query.prototype[column] = function (value) {
+            var compObj = {};
+            compObj[column] = {'likenocase': value};
 
-    /**
-     * Set the name of the likelihood column
-     * @param name
-     */
-    csd.setLikelihoodColumn = function (name) {
-        likelihoodColumn = name;
-    };
+            this.filter.push(compObj);
+            return this;
+        };
 
-    /**
-     * Ste the name of the impact column
-     * @param name
-     */
-    csd.setImpactColumn = function (name) {
-        impactColumn = name;
     };
 
     /**
@@ -243,13 +217,13 @@ var CSD = (function ($, Chartist, jStat) {
      * @param newColumn
      * @param map
      */
-    csd.group = function (oldColumn, newColumn, map) {
-        incidentsDatabase().each(function (record) {
-            var newValue = map[record[oldColumn].toLowerCase()];
+    csd.group = function (database, oldColumn, newColumn, map) {
+        databases[database]().each(function (record) {
+            var newValue = map[record[oldColumn]];
             if (typeof newValue == "undefined") {
                 newValue = record[oldColumn];
             }
-            record[newColumn] = newValue.toLowerCase();
+            record[newColumn] = newValue;
         });
     };
 
@@ -258,9 +232,9 @@ var CSD = (function ($, Chartist, jStat) {
      * @param years     Add years to the label if true
      * @returns {Array}
      */
-    csd.getLabels = function (years) {
-        var latestMonth = incidentsDatabase().last().month;
-        var latestYear = incidentsDatabase().last().year;
+    csd.getLabels = function (database, years) {
+        var latestMonth = databases[database]().last().month;
+        var latestYear = databases[database]().last().year;
 
         var result = [];
 
@@ -285,9 +259,9 @@ var CSD = (function ($, Chartist, jStat) {
      * Get the different years for the legend
      * @param years
      */
-    csd.getLegend = function (years) {
-        var latestMonth = incidentsDatabase().last().month;
-        var latestYear = incidentsDatabase().last().year;
+    csd.getLegend = function (database, years) {
+        var latestMonth = databases[database]().last().month;
+        var latestYear = databases[database]().last().year;
 
         var result = [];
 
@@ -474,40 +448,22 @@ var CSD = (function ($, Chartist, jStat) {
      * Create a Query Object
      * @constructor
      */
-    csd.Query = function () {
+    Query = function () {
         this.filter = [];
         this.database;
     };
 
     /**
-     * Run Query on incidents database
-     * @returns {CSD.Query}
-     */
-    csd.Query.prototype.incidents = function () {
-        this.database = incidentsDatabase;
-        return this;
-    };
-
-    /**
-     * Run Query on advisories database
-     * @returns {CSD.Query}
-     */
-    csd.Query.prototype.advisories = function () {
-        this.database = advisoriesDatabase;
-        return this
-    };
-
-    /**
      * Reset the Query
      */
-    csd.Query.prototype.reset = function () {
+    Query.prototype.reset = function () {
         this.filter = [];
     };
     /**
      * Return the Query Results
      * @returns {V}
      */
-    csd.Query.prototype.get = function () {
+    Query.prototype.get = function () {
         if (this.filter != []) {
             return this.database.apply(this, this.filter).get();
         } else {
@@ -517,7 +473,7 @@ var CSD = (function ($, Chartist, jStat) {
     /**
      * Count the Query Results
      */
-    csd.Query.prototype.count = function () {
+    Query.prototype.count = function () {
         if (this.filter != []) {
             return this.database.apply(this, this.filter).count();
         } else {
@@ -525,61 +481,13 @@ var CSD = (function ($, Chartist, jStat) {
         }
     };
     /**
-     * Filter by Attack Type
-     * @param type
-     * @returns {CSD.Query}
-     */
-    csd.Query.prototype.type = function (type) {
-        var compObj = {};
-        compObj[typeColumn] = {'==': type.toLowerCase()};
-
-        this.filter.push(compObj);
-        return this;
-    };
-    /**
-     * Filter by sector
-     * @param sector
-     * @returns {CSD.Query}
-     */
-    csd.Query.prototype.sector = function (sector) {
-        var compObj = {};
-        compObj[sectorColumn] = {'==': sector.toLowerCase()};
-
-        this.filter.push(compObj);
-        return this;
-    };
-    /**
-     * Filter by impact
-     * @param impact
-     * @returns {CSD.Query}
-     */
-    csd.Query.prototype.impact = function (impact) {
-        var compObj = {};
-        compObj[impactColumn] = {'==': impact};
-
-        this.filter.push(compObj);
-        return this;
-    };
-    /**
-     * Filter by likelihood
-     * @param impact
-     * @returns {CSD.Query}
-     */
-    csd.Query.prototype.likelihood = function (likelihood) {
-        var compObj = {};
-        compObj[likelihoodColumn] = {'==': likelihood};
-
-        this.filter.push(compObj);
-        return this;
-    };
-    /**
      * Filter by Date
      * @param d
      * @param m
      * @param y
-     * @returns {CSD.Query}
+     * @returns {Query}
      */
-    csd.Query.prototype.after = function (d, m, y) {
+    Query.prototype.after = function (d, m, y) {
         var compObj = [
             // Later year than submited
             {year: {gt: y}},
@@ -596,9 +504,9 @@ var CSD = (function ($, Chartist, jStat) {
      * @param d
      * @param m
      * @param y
-     * @returns {CSD.Query}
+     * @returns {Query}
      */
-    csd.Query.prototype.before = function (d, m, y) {
+    Query.prototype.before = function (d, m, y) {
         var compObj = [
             // Later year than submited
             {year: {lt: y}},
@@ -620,15 +528,6 @@ var CSD = (function ($, Chartist, jStat) {
         this.database;
     };
 
-    /**
-     * Filter the incidents
-     * @param filterObject
-     */
-    csd.DataQuery.prototype.incidents = function (filterObject) {
-        this.filterObject = filterObject;
-        this.database = 'incidents';
-        return this;
-    };
 
     csd.DataQuery.prototype.advisories = function (filterObject) {
         this.filterObject = filterObject;
@@ -647,8 +546,8 @@ var CSD = (function ($, Chartist, jStat) {
             years = 1;
         }
 
-        var latestMonth = incidentsDatabase().last().month;
-        var latestYear = incidentsDatabase().last().year;
+        var latestMonth = databases[Object.keys(databases)[0]]().last().month;
+        var latestYear = databases[Object.keys(databases)[0]]().last().year;
 
         var result = [];
 
@@ -661,7 +560,7 @@ var CSD = (function ($, Chartist, jStat) {
                     month += 12;
                     year -= 1;
                 }
-                var query = new csd.Query();
+                var query = new Query();
                 for (var key in this.filterObject) {
                     query[key](this.filterObject[key]);
                 }
@@ -673,8 +572,8 @@ var CSD = (function ($, Chartist, jStat) {
     };
 
     csd.DataQuery.prototype.yearly = function () {
-        var latestMonth = incidentsDatabase().last().month;
-        var latestYear = incidentsDatabase().last().year;
+        var latestMonth = databases[Object.keys(databases)[0]]().last().month;
+        var latestYear = databases[Object.keys(databases)[0]]().last().year;
 
         var startMonth, startYear;
         if (latestMonth == 12) {
@@ -685,7 +584,7 @@ var CSD = (function ($, Chartist, jStat) {
             startYear = latestYear - 1;
         }
 
-        var query = new csd.Query();
+        var query = new Query();
         for (var key in this.filterObject) {
             query[key](this.filterObject[key]);
         }
@@ -705,7 +604,7 @@ var CSD = (function ($, Chartist, jStat) {
      * @param selector
      */
     csd.setLastUpdated = function (selector) {
-        var lastUpdate = incidentsDatabase().last().date;
+        var lastUpdate = databases[Object.keys(databases)[0]]().last().date;
         $(selector).html("Last Update: " + lastUpdate);
     };
 
