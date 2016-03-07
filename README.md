@@ -8,15 +8,15 @@ To compile the data needed for the dashboard, you will need a npm environment:
 https://docs.npmjs.com/getting-started/what-is-npm
 
 Run:
-npm install
-browserify -t browserify-css js/dashboard.js > js/bundle.js
+`npm install`
+`browserify -t browserify-css js/dashboard.js > js/bundle.js`
 
 This should download and install all the needed files.
 
 ## Run Dashboard
 
 Start the node.js webserver (or use any other webserver of your choice) to make sure that the ajax requests work:
-http-server --cors
+`http-server --cors`
 
 Open http://127.0.0.1:8080/ in your browser
 
