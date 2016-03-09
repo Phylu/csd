@@ -1,3 +1,11 @@
+require('../css/dashboard.css');
+
+var $ = jQuery = global.jQuery = require('jquery');
+$.csv = require('jquery-csv');
+var TAFFY = require('taffydb').taffy;
+var CSD = require('./csd.js');
+var bootstrap = require('bootstrap');
+
 var loadIncidents = function(csv) {
 
     // Create Database
@@ -138,7 +146,6 @@ var createDashboard = function() {
         CSD.getLabels('incidents', true),
         new CSD.DataQuery().advisories({impact: 'H', likelihood: 'H'}).monthly(12)[0]);
 
-
     /*
      * Switch On Tooltips
      * ==================
@@ -211,7 +218,5 @@ $(document).ready(function () {
     $("#ideas-close").click(function () {
         $("#ideas").hide();
     });
-
-
 
 });

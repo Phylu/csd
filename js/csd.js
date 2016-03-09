@@ -2,11 +2,17 @@
  * Created by janosch on 26.01.16.
  */
 
+var jQuery = global.$ = global.jQuery = require('jquery');
+var jStat = require ('jstat').jStat;
+Chartist = require('chartist');
+Chartist.plugins = {};
+Chartist.plugins.legend = require('chartist-plugin-legend');
+Chartist.plugins.tooltips = require('chartist-plugin-tooltip');
+
 var CSD = (function ($, Chartist, jStat) {
     var csd = {};
     var databases = {};
     var monthLabels = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
 
     /*
      * Chartist Configurations
@@ -829,3 +835,5 @@ var CSD = (function ($, Chartist, jStat) {
 
     return csd;
 }(jQuery, Chartist, jStat));
+
+module.exports = CSD;

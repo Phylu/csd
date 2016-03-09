@@ -1,3 +1,9 @@
+@import url("../node_modules/chartist/dist/chartist.min.css");
+@import url("../node_modules/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css");
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("../node_modules/font-awesome/css/font-awesome.min.css");
+
+
 /*
  * General Settings
  * ================
@@ -258,7 +264,6 @@ a.close:hover {
 .chartist-tooltip {
     position: absolute;
     display: block;
-    opacity: 0;
     min-width: 2em;
     padding: .5em;
     background: #000;
@@ -272,6 +277,7 @@ a.close:hover {
     text-align: center;
     pointer-events: none;
     z-index: 1070;
+    opacity: 0;
 }
 .chartist-tooltip:before {
     content: "";
@@ -284,6 +290,7 @@ a.close:hover {
     border: 5px solid transparent;
     border-top-color: #000;
 }
+
 .chartist-tooltip.tooltip-show {
     opacity: 1;
 }
