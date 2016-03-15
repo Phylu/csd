@@ -8,6 +8,7 @@ Chartist = require('chartist');
 Chartist.plugins = {};
 Chartist.plugins.legend = require('chartist-plugin-legend');
 Chartist.plugins.tooltips = require('chartist-plugin-tooltip');
+var moment = require('moment');
 
 var CSD = (function ($, Chartist, jStat) {
     var csd = {};
@@ -156,20 +157,20 @@ var CSD = (function ($, Chartist, jStat) {
      * ==============
      */
 
-    csd.addDatabase = function (name, database, dateColumn) {
+    csd.addDatabase = function (name, database, dateColumn, dateFormat) {
         databases[name] = database;
 
         // Create easily searchable date fields
         databases[name]().each(function (record) {
-            // TODO: make generic
-            if (dateColumn == 'date') {
-                var dat = record[dateColumn].split('.');
-            } else {
-                var dat = record[dateColumn].split(' ')[0].split('-');
-            }
-            record.day = dat[0];
-            record.month = dat[1];
-            record.year = dat[2];
+
+            // UTC so we don't have any timezone problems
+            var dat = moment.utc(record[dateColumn], dateFormat);
+
+            record.day = dat.date();
+            // + 1 as months are zero indexed
+            record.month = dat.month() + 1;
+            record.year = dat.year();
+
         });
 
         /**

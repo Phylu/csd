@@ -7,13 +7,12 @@ var CSD = require('./csd.js');
 var bootstrap = require('bootstrap');
 
 var loadIncidents = function(csv) {
-
     // Create Database
     var data = $.csv.toObjects(csv);
     var db = TAFFY(JSON.stringify(data));
 
     // Give Database to CSD
-    CSD.addDatabase('incidents', db, 'date');
+    CSD.addDatabase('incidents', db, 'date', 'DD.MM.YYYY');
 
     // Data cleaning for attack type
     var typeMap = {
@@ -49,7 +48,6 @@ var loadIncidents = function(csv) {
     };
     CSD.group('incidents', 'CustomField.{Sector}', 'sector', sectorMap);
     CSD.addFilterable('sector');
-
 };
 
 var loadAdvisories = function(csv) {
@@ -59,7 +57,7 @@ var loadAdvisories = function(csv) {
     var db = TAFFY(JSON.stringify(data));
 
     // Give Database to CSD
-    CSD.addDatabase('advisories', db, 'datetime');
+    CSD.addDatabase('advisories', db, 'datetime', ['DD-M-YYYY ', 'DD-MM-YYYY']);
     CSD.addFilterable('impact');
     CSD.addFilterable('likelihood');
 };
@@ -143,7 +141,7 @@ var createDashboard = function() {
      * ==========
      */
     CSD.circles('#advisories', 'Critical Security Advisories', 'Critical Security Advisories shows how many security advisories with high impact and high likelihood were published by the NCSC in the last months',
-        CSD.getLabels('incidents', true),
+        CSD.getLabels('advisories', true),
         new CSD.DataQuery().advisories({impact: 'H', likelihood: 'H'}).monthly(12)[0]);
 
     /*
