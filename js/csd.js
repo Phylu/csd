@@ -219,7 +219,7 @@ var CSD = (function ($, Chartist, jStat) {
      */
     csd.group = function (database, oldColumn, newColumn, map) {
         databases[database]().each(function (record) {
-            var newValue = map[record[oldColumn]];
+            var newValue = map[record[oldColumn].toLowerCase()];
             if (typeof newValue == "undefined") {
                 newValue = record[oldColumn];
             }
