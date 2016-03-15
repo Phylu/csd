@@ -170,7 +170,6 @@ var CSD = (function ($, Chartist, jStat) {
             record.day = dat[0];
             record.month = dat[1];
             record.year = dat[2];
-
         });
 
         /**
@@ -528,13 +527,6 @@ var CSD = (function ($, Chartist, jStat) {
         this.database;
     };
 
-
-    csd.DataQuery.prototype.advisories = function (filterObject) {
-        this.filterObject = filterObject;
-        this.database = 'advisories';
-        return this;
-    };
-
     /**
      * Get monthly stuff
      * @param months
@@ -546,8 +538,9 @@ var CSD = (function ($, Chartist, jStat) {
             years = 1;
         }
 
-        var latestMonth = databases[Object.keys(databases)[0]]().last().month;
-        var latestYear = databases[Object.keys(databases)[0]]().last().year;
+        var dateQuery = databases[this.database]().last();
+        var latestMonth = dateQuery.month;
+        var latestYear = dateQuery.year;
 
         var result = [];
 
@@ -572,8 +565,10 @@ var CSD = (function ($, Chartist, jStat) {
     };
 
     csd.DataQuery.prototype.yearly = function () {
-        var latestMonth = databases[Object.keys(databases)[0]]().last().month;
-        var latestYear = databases[Object.keys(databases)[0]]().last().year;
+
+        var dateQuery = databases[this.database]().last();
+        var latestMonth = dateQuery.month;
+        var latestYear = dateQuery.year;
 
         var startMonth, startYear;
         if (latestMonth == 12) {
@@ -603,8 +598,8 @@ var CSD = (function ($, Chartist, jStat) {
      * Set the last updated label according to the last database element
      * @param selector
      */
-    csd.setLastUpdated = function (selector) {
-        var lastUpdate = databases[Object.keys(databases)[0]]().last().date;
+    csd.setLastUpdated = function (selector, database) {
+        var lastUpdate = databases[database]().last().date;
         $(selector).html("Last Update: " + lastUpdate);
     };
 

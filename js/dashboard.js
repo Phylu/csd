@@ -70,7 +70,7 @@ var createDashboard = function() {
      * Create Header
      * =============
      */
-    CSD.setLastUpdated("#updated");
+    CSD.setLastUpdated("#updated", 'incidents');
 
 
     /*
@@ -173,7 +173,7 @@ $(document).ready(function () {
     $.when(
         $.ajax({
             type: "GET",
-            url: "http://127.0.0.1:8080/incidents.csv",
+            url: "incidents.csv",
             dataType: "text",
             success: function (data) {
                 loadIncidents(data);
@@ -184,7 +184,7 @@ $(document).ready(function () {
         }),
         $.ajax({
             type: "GET",
-            url: "http://127.0.0.1:8080/advisories.csv",
+            url: "advisories.csv",
             dataType: "text",
             success: function (data) {
                 loadAdvisories(data);
