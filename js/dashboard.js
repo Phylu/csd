@@ -12,7 +12,7 @@ var loadIncidents = function(csv) {
     var db = TAFFY(JSON.stringify(data));
 
     // Give Database to CSD
-    CSD.addDatabase('incidents', db, 'date', 'DD.MM.YYYY');
+    CSD.addDatabase('incidents', db);
 
     // Data cleaning for attack type
     var typeMap = {
@@ -22,6 +22,7 @@ var loadIncidents = function(csv) {
         'malicious code: worms/trojans': 'malicious code',
     };
     CSD.group('incidents', 'CustomField.{Hulpmiddel}', 'type', typeMap);
+    CSD.addDateFilterable('incidents', 'date', 'DD.MM.YYYY');
     CSD.addFilterable('type');
 
     // Data cleaning for sectors
@@ -57,7 +58,8 @@ var loadAdvisories = function(csv) {
     var db = TAFFY(JSON.stringify(data));
 
     // Give Database to CSD
-    CSD.addDatabase('advisories', db, 'datetime', ['DD-M-YYYY ', 'DD-MM-YYYY']);
+    CSD.addDatabase('advisories', db);
+    CSD.addDateFilterable('advisories', 'datetime', ['DD-M-YYYY ', 'DD-MM-YYYY']);
     CSD.addFilterable('impact');
     CSD.addFilterable('likelihood');
 };

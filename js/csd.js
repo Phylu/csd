@@ -157,21 +157,8 @@ var CSD = (function ($, Chartist, jStat) {
      * ==============
      */
 
-    csd.addDatabase = function (name, database, dateColumn, dateFormat) {
+    csd.addDatabase = function (name, database) {
         databases[name] = database;
-
-        // Create easily searchable date fields
-        databases[name]().each(function (record) {
-
-            // UTC so we don't have any timezone problems
-            var dat = moment.utc(record[dateColumn], dateFormat);
-
-            record.day = dat.date();
-            // + 1 as months are zero indexed
-            record.month = dat.month() + 1;
-            record.year = dat.year();
-
-        });
 
         /**
          * Run queryies on database using DataQuery Object
@@ -209,6 +196,27 @@ var CSD = (function ($, Chartist, jStat) {
             return this;
         };
 
+    };
+
+    /**
+     * Add date filtering capability to the database
+     * Needed to run DataQuery.monthly() / DataQuery.yearly()
+     * @param database
+     * @param dateColumn
+     */
+    csd.addDateFilterable = function (database, dateColumn, dateFormat) {
+        // Create easily searchable date fields
+        databases[database]().each(function (record) {
+
+            // UTC so we don't have any timezone problems
+            var dat = moment.utc(record[dateColumn], dateFormat);
+
+            record.day = dat.date();
+            // + 1 as months are zero indexed
+            record.month = dat.month() + 1;
+            record.year = dat.year();
+
+        });
     };
 
     /**
