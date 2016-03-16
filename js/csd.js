@@ -157,6 +157,11 @@ var CSD = (function ($, Chartist, jStat) {
      * ==============
      */
 
+    /**
+     * Add a new database to store data
+     * @param name
+     * @param database
+     */
     csd.addDatabase = function (name, database) {
         databases[name] = database;
 
@@ -188,6 +193,11 @@ var CSD = (function ($, Chartist, jStat) {
      */
     csd.addFilterable = function (column) {
 
+        /**
+         * Filter querys by column
+         * @param value
+         * @returns {*}
+         */
         Query.prototype[column] = function (value) {
             var compObj = {};
             compObj[column] = {'likenocase': value};
@@ -573,6 +583,9 @@ var CSD = (function ($, Chartist, jStat) {
         return result;
     };
 
+    /**
+     * Get data for the last year
+     */
     csd.DataQuery.prototype.yearly = function () {
 
         var dateQuery = databases[this.database]().last();
